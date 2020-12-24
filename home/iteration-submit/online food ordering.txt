@@ -1,0 +1,1615 @@
+ #include<iostream>
+#include<cstring>
+#include<fstream>
+#include<math.h>
+#include<ctime>
+#include<windows.h>
+#include<iomanip>
+using namespace std;
+template< class T >
+ bool isEqual( T x, T y ) {
+ return ( x == y );
+ } 
+
+class person{
+	protected:
+	string name,f_name,address,ph_no,e_mail;
+	public:
+	void setname(string n)
+	{
+		name=n;
+	}
+	void setfname(string f)
+	{
+		f_name=f;
+	}
+	void setaddress(string add)
+	{
+		address=add;
+	}
+	void setph_no(string p)
+	{
+		ph_no=p;
+	}
+	void setemail(string e)
+	{
+		e_mail=e;
+	}
+	string getname()
+{
+	return name;
+}
+	string getfname()
+{
+	return f_name;
+}
+	string getaddress()
+{
+	return address;
+}
+	string getphno()
+{
+	return ph_no;
+}
+	string getemail()
+{
+	return e_mail;
+}
+virtual  void menu(){
+	cout<<"Ramail"<<endl;
+}
+};
+class customer:public person
+{protected:
+	string cus_id,cus_order_id;
+	string password,cpass;
+	
+	public:
+	virtual	void menu(){
+	cout<<"\n\n\n\t  "<<"**********  1 LOGIN       **********"<<endl;
+    cout<<"\t  "<<"**********  2 SIGN UP      **********" <<endl;
+    cout<<"\t  "<<"**********  3 Exit         **********" <<endl;
+		}
+		
+	string setcus_id (string s)
+	{
+		cus_id=s;
+	}
+		string getcus_id()
+    {
+	return cus_id;
+    }
+   void login()
+   {
+   cout<<"enter user name: "<<endl;
+   	cin>>name;
+	cout<<"enter your password: "<<endl;
+   	cin>>password;
+   	ifstream inf;
+   	inf.open("database.txt");
+   	while(!inf.eof())
+   	{
+   		inf>>cus_id>>cpass;
+   		if(name==cus_id && password==cpass)
+   		{cout<<"LOGIN SUCCESFULLY"<<endl;
+		   }
+   		
+	   }
+   	inf.close();
+   }
+   void signup()
+   {
+   	 
+   	
+ 
+   	cout<<"enter your name: "<<endl;
+   	cin>>name;
+   	cout<<"enter your email: "<<endl;
+   	cin>>e_mail;
+   	cout<<"enter your phone number: "<<endl;
+   	cin>>ph_no;
+   	cout<<"enter your password: "<<endl;
+   	cin>>password;
+   	cout<<"enter your address: "<<endl;
+   	cin>>address;
+   	ofstream outf;
+   	outf.open("database.txt",ios::app);
+   	outf<<name<<" "<<password<<" "<<ph_no<<" "<<e_mail<<" "<<address<<endl;
+   	outf.close();
+   	
+   	
+   }
+   	void exit()
+	{
+     cout<<"\n\n\t\t*********thank you**********\n\n";
+	}
+   int select_resturant(int no)
+   {	
+	
+   }
+   int payment(int amount)
+   {
+	
+   }
+	
+   }; 
+
+class order{
+	int total_price,order_id,code;
+	string getd;
+		int pid,pprice,pquantity;
+ 	string pname;
+	public:
+		void menu1()
+		{
+			
+	ifstream pfs;
+	pfs.open("menu1.txt",ios::in);
+	pfs>>pid>>code>>pname>>pprice>>pquantity;
+	
+	while(!pfs.eof())
+	{
+		cout<<"\t\t["<<pid<<"] : "<<pname<<"  (Rs."<<pprice<<")  Quantity ("<<pquantity<<") "<<endl;
+		pfs>>pid>>code>>pname>>pprice>>pquantity;
+	}
+	pfs.close();
+	
+		}
+		
+		void menu2()
+		{
+			ifstream pfs;
+	pfs.open("menu2.txt",ios::in);
+	pfs>>pid>>code>>pname>>pprice>>pquantity;
+	
+	while(!pfs.eof())
+	{
+		cout<<"\t\t["<<pid<<"] : "<<pname<<"  (Rs."<<pprice<<")  Quantity ("<<pquantity<<")"<<endl;
+		pfs>>pid>>code>>pname>>pprice>>pquantity;
+	}
+	pfs.close();
+	
+		}
+		void menu3()
+		{
+		ifstream pfs;
+	pfs.open("menu3.txt",ios::in);
+	pfs>>pid>>code>>pname>>pprice>>pquantity;
+	
+	while(!pfs.eof())
+	{
+		cout<<"\t\t["<<pid<<"] : "<<pname<<"  (Rs."<<pprice<<")  Quantity ("<<pquantity<<")"<<endl;
+		pfs>>pid>>code>>pname>>pprice>>pquantity;
+	}
+	pfs.close();
+		}
+		void menu4()
+		{
+			ifstream pfs;
+	pfs.open("menu4.txt",ios::in);
+	pfs>>pid>>code>>pname>>pprice>>pquantity;
+	
+	while(!pfs.eof())
+	{
+		cout<<"\t\t["<<pid<<"] : "<<pname<<"  (Rs."<<pprice<<")  Quantity ("<<pquantity<<")"<<endl;
+		pfs>>pid>>code>>pname>>pprice>>pquantity;
+	}
+	pfs.close();
+		}
+};
+
+class rel_admin {
+
+	string name1, name2;
+public:
+	rel_admin()
+	{
+		name1 = "null";
+		name2 = "null";
+	}
+	rel_admin(string n1, string n2)
+	{
+		name1 = n1;
+		name2 = n2;
+	}
+	void setn1(string n1)
+	{
+		name1 = n1;
+	}
+	void setn2(string n2)
+	{
+		name2 = n2;
+	}
+	string getn1()
+	{
+		return name1;
+	}
+	string gettn2()
+	{
+		return name2;
+	}
+};
+class rel_customer {
+	string relation;
+	rel_admin obj;
+public:
+	rel_customer()
+	{
+		relation = "null";
+
+	}
+
+	rel_customer(string r, string n1, string n2)
+	{
+		relation = r;
+		obj.setn1(n1);
+		obj.setn2(n2);
+	}
+	string getrel()
+	{
+		return relation;
+	}
+	void display()
+	{
+		system("pause");
+		cout << "\t***********************\n";
+
+		cout << "\n\t : " << "foood ordering system :\n" << endl;
+		cout << "\t***********************\n";
+		cout << "\t\t: " << getrel()<<" impact btw  " << obj.getn1() <<" and "<<obj.gettn2()  <<"  :"<< endl;
+	cout << "\t***********************\n";
+	}
+};
+class admin: public person {
+	int pid,b1,a1,p1;
+	string n1;
+	public:
+	
+	friend istream &  operator >>(istream &obj,person &obj2)
+	{
+
+		obj2.setname(" ");
+		obj2.setfname(" ");
+		obj2.setaddress(" ");
+		obj2.setph_no(" ");
+		obj2.setemail(" ");
+
+		return obj;
+
+	}
+	
+	 friend ostream & operator <<(ostream &obj, person &obj2)
+	{
+		
+		
+		obj << "you entered name is : " << obj2.getname()<< endl;
+		obj << "your father name is : " << obj2.getfname()<< endl;
+		obj << "your address is  :" << obj2.getaddress()<< endl;
+		obj << "your phone no  is :" << obj2.getphno()<<endl;
+		obj << "your email is :" << obj2.getemail()<< endl;
+	
+	
+		return obj;	
+	}
+	void up()
+	{ 
+	ofstream off;
+	off.open("mainmenu.txt");
+	ifstream iff,iff1,iff2,iff3;
+	iff.open("menu1.txt",ios::in);
+	iff1.open("menu2.txt",ios::in);
+	iff2.open("menu3.txt",ios::in);
+	iff3.open("menu4.txt",ios::in);
+	while(iff>>pid>>b1>>n1>>p1>>a1)
+	{
+		off<<pid<<" "<<b1<<" "<<n1<<" "<<p1<<" "<<a1<<endl;
+	}
+		while(iff1>>pid>>b1>>n1>>p1>>a1)
+	{
+		off<<pid<<" "<<b1<<" "<<n1<<" "<<p1<<" "<<a1<<endl;
+	}
+		while(iff2>>pid>>b1>>n1>>p1>>a1)
+	{
+		off<<pid<<" "<<b1<<" "<<n1<<" "<<p1<<" "<<a1<<endl;
+	}
+		while(iff3>>pid>>b1>>n1>>p1>>a1)
+	{
+		off<<pid<<" "<<b1<<" "<<n1<<" "<<p1<<" "<<a1<<endl;
+	}
+	
+	iff.close();
+	iff1.close();
+	iff2.close();
+	iff3.close();	
+	off.close();
+		}	
+	void menu()
+	{
+		cout<<"\n\n\n";
+	cout<<"\t  "<<"**********  1 Update       **********"<<endl;
+    cout<<"\t  "<<"**********  2 Search       **********" <<endl;
+    cout<<"\t  "<<"**********  3 Delete       **********" <<endl;
+    cout<<"\t  "<<"**********  4 Show record  **********" <<endl;
+    cout<<"\t  "<<"**********  5 Exit         **********" <<endl;
+	}
+	void update(){
+		int code,nm;
+		p:system("cls");
+		 	cout<<"\t\t\t***FOR UPDATION***"<<endl;
+		 	cout<<"\t  "<<"**********  1 menu1       **********"<<endl;
+    		cout<<"\t  "<<"**********  2 menu2       **********" <<endl;
+    		cout<<"\t  "<<"**********  3 menu3       **********" <<endl;
+    		cout<<"\t  "<<"**********  4 menu4       **********" <<endl;
+    		cout<<"select one option (1to4) : ";
+    		cin>>nm;
+    		if(nm==1){
+			
+	 		cout<<"\tEnter product code"<<endl;
+    		cin>>code;
+  
+			ifstream pfs;
+			pfs.open("menu1.txt",ios::in);
+		while(!pfs.eof())
+			{ ahhu:
+			pfs>>pid>>b1>>n1>>p1>>a1;
+		 
+	
+			if(isEqual(code,b1)==true)
+		{
+			system("cls");
+	 	no:
+	 	int u1;
+	 	int press;
+	 	cout<<"\t1: for add quantity  ";    cout<<"\t\t2: for change price.  \n";
+	 	cout<<"\tpress (1 or 2)";
+	 	cin>>press;
+	 		if(press==1)
+	 		{
+	 			cout<<"quantity available in stock ="<<a1<<endl<<endl;
+				cout<<"Enter Added Quantity"<<endl;
+				cin>>u1;
+				a1=a1+u1;
+				ofstream fout;
+				fout.open("record2.txt", ios::app);
+				fout<<pid<<" "<<b1<<" "<<n1<<" "<<p1<<" "<<a1<<endl;
+				fout.close();
+				cout << "\n\trecord updated\n";
+				goto ahhu; 
+	 			
+			 }
+			else if(press==2)
+			
+			{
+			 	cout<<"existing price is = "<<p1<<endl<<endl;
+				cout<<"Enter new price "<<endl;
+				cin>>u1;
+				ofstream fout;
+				fout.open("record2.txt", ios::app);
+				fout<<pid<<" "<<b1<<" "<<n1<<" "<<u1<<" "<<a1<<endl;
+				fout.close();
+				cout << "\n\trecord updated\n";
+				//system("cls");
+				goto ahhu; 
+			 	 }
+			else	 	 	
+			{
+				
+				cout<<"select corect option :"<<endl;
+			 	goto no ;
+			 }
+	 	}
+	 else{
+	 	if(pfs==0)
+	 		{	break;
+	 		}
+	 		ofstream fout;
+				fout.open("record2.txt", ios::app);
+				fout<<pid<<" "<<b1<<" "<<n1<<" "<<p1<<" "<<a1<<endl;
+				fout.close();
+			}
+	}
+		pfs.close();
+	remove("menu1.txt");
+	rename("record2.txt", "menu1.txt");
+
+}
+else if (nm==2)
+{
+	
+	
+	 		cout<<"\tEnter product code"<<endl;
+    		cin>>code;
+  
+			ifstream pfs1;
+			pfs1.open("menu2.txt",ios::in);
+		while(!pfs1.eof())
+			{ ah:
+			pfs1>>pid>>b1>>n1>>p1>>a1;
+		 
+	
+			if(isEqual(code,b1)==true)
+		{
+			system("cls");
+	 	n:
+	 	int u1;
+	 	int press;
+	 	cout<<"\t1: for add quantity  ";    cout<<"\t\t2: for change price.  \n";
+	 	cout<<"\tpress (1 or 2)";
+	 	cin>>press;
+	 		if(press==1)
+	 		{
+	 			cout<<"quantity available in stock ="<<a1<<endl<<endl;
+				cout<<"Enter Added Quantity"<<endl;
+				cin>>u1;
+				a1=a1+u1;
+				ofstream fout1;
+				fout1.open("record2.txt", ios::app);
+				fout1<<pid<<" "<<b1<<" "<<n1<<" "<<p1<<" "<<a1<<endl;
+				fout1.close();
+				cout << "\n\trecord updated\n";
+				goto ah; 
+	 			
+			 }
+			else if(press==2)
+			
+			{
+			 	cout<<"existing price is = "<<p1<<endl<<endl;
+				cout<<"Enter new price "<<endl;
+				cin>>u1;
+				ofstream fout1;
+				fout1.open("record2.txt", ios::app);
+				fout1<<pid<<" "<<b1<<" "<<n1<<" "<<u1<<" "<<a1<<endl;
+				fout1.close();
+				cout << "\n\trecord updated\n";
+				//system("cls");
+				goto ah; 
+			 	 }
+			else	 	 	
+			{
+				
+				cout<<"select corect option :"<<endl;
+			 	goto n ;
+			 }
+	 	}
+	 else{
+	 	if(pfs1==0)
+	 		{	break;
+	 		}
+	 		ofstream fout1;
+				fout1.open("record2.txt", ios::app);
+				fout1<<pid<<" "<<b1<<" "<<n1<<" "<<p1<<" "<<a1<<endl;
+				fout1.close();
+			}
+	}
+		pfs1.close();
+	remove("menu2.txt");
+	rename("record2.txt", "menu2.txt");
+
+	
+}
+else if (nm==3)
+{
+	
+	
+	 		cout<<"\tEnter product code"<<endl;
+    		cin>>code;
+  
+			ifstream pfs2;
+			pfs2.open("menu4.txt",ios::in);
+		while(!pfs2.eof())
+			{ ahhu2:
+			pfs2>>pid>>b1>>n1>>p1>>a1;
+		 
+	
+			if(isEqual(code,b1)==true)
+		{
+			system("cls");
+	 	no2:
+	 	int u1;
+	 	int press;
+	 	cout<<"\t1: for add quantity  ";    cout<<"\t\t2: for change price.  \n";
+	 	cout<<"\tpress (1 or 2)";
+	 	cin>>press;
+	 		if(press==1)
+	 		{
+	 			cout<<"quantity available in stock ="<<a1<<endl<<endl;
+				cout<<"Enter Added Quantity"<<endl;
+				cin>>u1;
+				a1=a1+u1;
+				ofstream fout2;
+				fout2.open("record2.txt", ios::app);
+				fout2<<pid<<" "<<b1<<" "<<n1<<" "<<p1<<" "<<a1<<endl;
+				fout2.close();
+				cout << "\n\trecord updated\n";
+				goto ahhu2; 
+	 			
+			 }
+			else if(press==2)
+			
+			{
+			 	cout<<"existing price is = "<<p1<<endl<<endl;
+				cout<<"Enter new price "<<endl;
+				cin>>u1;
+				ofstream fout2;
+				fout2.open("record2.txt", ios::app);
+				fout2<<pid<<" "<<b1<<" "<<n1<<" "<<u1<<" "<<a1<<endl;
+				fout2.close();
+				cout << "\n\trecord updated\n";
+				//system("cls");
+				goto ahhu2; 
+			 	 }
+			else	 	 	
+			{
+				
+				cout<<"select corect option :"<<endl;
+			 	goto no2 ;
+			 }
+	 	}
+	 else{
+	 	if(pfs2==0)
+	 		{	break;
+	 		}
+	 		ofstream fout2;
+				fout2.open("record2.txt", ios::app);
+				fout2<<pid<<" "<<b1<<" "<<n1<<" "<<p1<<" "<<a1<<endl;
+				fout2.close();
+			}
+	}
+		pfs2.close();
+	remove("menu3.txt");
+	rename("record2.txt", "menu3.txt");
+
+	
+}
+else if( nm==4)
+{
+	
+	 		cout<<"\tEnter product code"<<endl;
+    		cin>>code;
+  
+			ifstream pfs3;
+			pfs3.open("menu4.txt",ios::in);
+		while(!pfs3.eof())
+			{ ahhu3:
+			pfs3>>pid>>b1>>n1>>p1>>a1;
+		 
+	
+			if(isEqual(code,b1)==true)
+		{
+			system("cls");
+	 	no3:
+	 	int u1;
+	 	int press;
+	 	cout<<"\t1: for add quantity  ";    cout<<"\t\t2: for change price.  \n";
+	 	cout<<"\tpress (1 or 2)";
+	 	cin>>press;
+	 		if(press==1)
+	 		{
+	 			cout<<"quantity available in stock ="<<a1<<endl<<endl;
+				cout<<"Enter Added Quantity"<<endl;
+				cin>>u1;
+				a1=a1+u1;
+				ofstream fout3;
+				fout3.open("record2.txt", ios::app);
+				fout3<<pid<<" "<<b1<<" "<<n1<<" "<<p1<<" "<<a1<<endl;
+				fout3.close();
+				cout << "\n\trecord updated\n";
+				goto ahhu3; 
+	 			
+			 }
+			else if(press==2)
+			
+			{
+			 	cout<<"existing price is = "<<p1<<endl<<endl;
+				cout<<"Enter new price "<<endl;
+				cin>>u1;
+				ofstream fout3;
+				fout3.open("record2.txt", ios::app);
+				fout3<<pid<<" "<<b1<<" "<<n1<<" "<<u1<<" "<<a1<<endl;
+				fout3.close();
+				cout << "\n\trecord updated\n";
+				//system("cls");
+				goto ahhu3; 
+			 	 }
+			else	 	 	
+			{
+				
+				cout<<"select corect option :"<<endl;
+			 	goto no3 ;
+			 }
+	 	}
+	 else{
+	 	if(pfs3==0)
+	 		{	break;
+	 		}
+	 		ofstream fout3;
+				fout3.open("record2.txt", ios::app);
+				fout3<<pid<<" "<<b1<<" "<<n1<<" "<<p1<<" "<<a1<<endl;
+				fout3.close();
+			}
+	}
+		pfs3.close();
+	remove("menu4.txt");
+	rename("record2.txt", "menu4.txt");
+
+}
+else {
+	cout<<"****wrong input****\n";
+	goto p;
+}
+	}
+	void search(){
+			int code;
+		 cout<<"\t\t\t***FOR SEARCH***"<<endl;
+	 
+	 cout<<"\tEnter product code"<<endl;
+    cin>>code;
+  
+	ifstream pfs;
+	pfs.open("mainmenu.txt",ios::in);
+		while(!pfs.eof())
+	{ ahh:
+		pfs>>pid>>b1>>n1>>p1>>a1;
+	if(isEqual(code,b1)==true)
+	{
+	  cout<<"\t product name    : "<<n1<<endl;
+      cout<<"\t product code    : "<<b1<<endl;
+	  cout<<"\t product price   : "<<p1<<endl;
+  	  cout<<"\t available quantity : "<<a1<<endl;
+  	
+		 
+    }
+	}
+       } 
+void deletee(){
+	int code,nm;
+		p: system("cls");
+		 	cout<<"\t  "<<"**********  1 menu1       **********"<<endl;
+    		cout<<"\t  "<<"**********  2 menu2       **********" <<endl;
+    		cout<<"\t  "<<"**********  3 menu3       **********" <<endl;
+    		cout<<"\t  "<<"**********  4 menu4       **********" <<endl;
+    		cout<<"select one option (1to4) : ";
+    		cin>>nm;
+    		if(nm==1){
+		 cout<<"\t\t\t***FOR DELETE***"<<endl;
+	 int del=0;
+	 
+	 cout<<"\tEnter product code"<<endl;
+    cin>>code;
+    
+	ifstream pfs;
+	pfs.open("menu1.txt",ios::in);
+		while(!pfs.eof())
+	{ ahh:
+		pfs>>pid>>b1>>n1>>p1>>a1;
+		
+	if(isEqual(code,b1)==true)
+	{
+		cout<<"\n\tquantity available in stock ="<<a1<<endl<<endl;
+	dele:	cout<<"how much you want to delete? = ";
+		cin>>del;
+		if(del>a1)
+		{
+			cout<<"\n\t\t\"please enter less than available quntity\"\n";
+			goto dele;
+		}
+		
+		else
+		{
+		a1=a1-del;
+		ofstream fout;
+				fout.open("record2.txt", ios::app);
+				fout<<pid<<" "<<b1<<" "<<n1<<" "<<p1<<" "<<a1<<endl;
+				fout.close();
+		cout<<"\n*********DELETED SUSSECFULLY********\n\n";
+		
+	           }
+          }
+          	 else{
+	 	if(pfs==0)
+	 		{	break;
+	 		}
+	 		ofstream fout;
+				fout.open("record2.txt", ios::app);
+				fout<<pid<<" "<<b1<<" "<<n1<<" "<<p1<<" "<<a1<<endl;
+				fout.close();
+			}
+       }
+       	pfs.close();
+	remove("menu1.txt");
+	rename("record2.txt", "menu1.txt");
+}
+else if(nm==2)
+{
+	cout<<"\t\t\t***FOR DELETE***"<<endl;
+	 int del=0;
+	 
+	 cout<<"\tEnter product code"<<endl;
+    cin>>code;
+    
+	ifstream pfs1;
+	pfs1.open("menu2.txt",ios::in);
+		while(!pfs1.eof())
+	{ ahh1:
+		pfs1>>pid>>b1>>n1>>p1>>a1;
+		
+	if(isEqual(code,b1)==true)
+	{
+		cout<<"\n\tquantity available in stock ="<<a1<<endl<<endl;
+	dele1:	cout<<"how much you want to delete? = ";
+		cin>>del;
+		if(del>a1)
+		{
+			cout<<"\n\t\t\"please enter less than available quntity\"\n";
+			goto dele1;
+		}
+		
+		else
+		{
+		a1=a1-del;
+		ofstream fout1;
+				fout1.open("record2.txt", ios::app);
+				fout1<<pid<<" "<<b1<<" "<<n1<<" "<<p1<<" "<<a1<<endl;
+				fout1.close();
+		cout<<"\n*********DELETED SUSSECFULLY********\n\n";
+		
+	           }
+          }
+          	 else{
+	 	if(pfs1==0)
+	 		{	break;
+	 		}
+	 		ofstream fout1;
+				fout1.open("record2.txt", ios::app);
+				fout1<<pid<<" "<<b1<<" "<<n1<<" "<<p1<<" "<<a1<<endl;
+				fout1.close();
+			}
+       }
+       	pfs1.close();
+	remove("menu2.txt");
+	rename("record2.txt", "menu2.txt");
+
+}
+else if(nm==3)
+{
+	cout<<"\t\t\t***FOR DELETE***"<<endl;
+	 int del=0;
+	 
+	 cout<<"\tEnter product code"<<endl;
+    cin>>code;
+    
+	ifstream pfs3;
+	pfs3.open("menu3.txt",ios::in);
+		while(!pfs3.eof())
+	{ ahh3:
+		pfs3>>pid>>b1>>n1>>p1>>a1;
+		
+	if(isEqual(code,b1)==true)
+	{
+		cout<<"\n\tquantity available in stock ="<<a1<<endl<<endl;
+	dele3:	cout<<"how much you want to delete? = ";
+		cin>>del;
+		if(del>a1)
+		{
+			cout<<"\n\t\t\"please enter less than available quntity\"\n";
+			goto dele3;
+		}
+		
+		else
+		{
+		a1=a1-del;
+		ofstream fout3;
+				fout3.open("record2.txt", ios::app);
+				fout3<<pid<<" "<<b1<<" "<<n1<<" "<<p1<<" "<<a1<<endl;
+				fout3.close();
+		cout<<"\n*********DELETED SUSSECFULLY********\n\n";
+		
+	           }
+          }
+          	 else{
+	 	if(pfs3==0)
+	 		{	break;
+	 		}
+	 		ofstream fout3;
+				fout3.open("record2.txt", ios::app);
+				fout3<<pid<<" "<<b1<<" "<<n1<<" "<<p1<<" "<<a1<<endl;
+				fout3.close();
+			}
+       }
+       	pfs3.close();
+	remove("menu3.txt");
+	rename("record2.txt", "menu3.txt");
+
+}
+else if (nm==4)
+{
+	cout<<"\t\t\t***FOR DELETE***"<<endl;
+	 int del=0;
+	 
+	 cout<<"\tEnter product code"<<endl;
+    cin>>code;
+    
+	ifstream pfs4;
+	pfs4.open("menu4.txt",ios::in);
+		while(!pfs4.eof())
+	{ ahh4:
+		pfs4>>pid>>b1>>n1>>p1>>a1;
+		
+	if(isEqual(code,b1)==true)
+	{
+		cout<<"\n\tquantity available in stock ="<<a1<<endl<<endl;
+	dele4:	cout<<"how much you want to delete? = ";
+		cin>>del;
+		if(del>a1)
+		{
+			cout<<"\n\t\t\"please enter less than available quntity\"\n";
+			goto dele4;
+		}
+		
+		else
+		{
+		a1=a1-del;
+		ofstream fout4;
+				fout4.open("record2.txt", ios::app);
+				fout4<<pid<<" "<<b1<<" "<<n1<<" "<<p1<<" "<<a1<<endl;
+				fout4.close();
+		cout<<"\n*********DELETED SUSSECFULLY********\n\n";
+		
+	           }
+          }
+          	 else{
+	 	if(pfs4==0)
+	 		{	break;
+	 		}
+	 		ofstream fout4;
+				fout4.open("record2.txt", ios::app);
+				fout4<<pid<<" "<<b1<<" "<<n1<<" "<<p1<<" "<<a1<<endl;
+				fout4.close();
+			}
+       }
+       	pfs4.close();
+	remove("menu4.txt");
+	rename("record2.txt", "menu4.txt");
+
+}
+else
+{
+	cout<<"****WRONG INPUT****\n";
+	goto p;
+}
+    }
+    void showrecord()
+    {
+    		ifstream ifs;
+		ifs.open("pp.txt",ios::in);
+		char ch;
+		ch=ifs.get();
+		while(!ifs.eof())
+		{
+			cout<<ch;
+			ch=ifs.get();
+		}
+		ifs.close();
+		
+	}
+	void exit()
+	{
+     cout<<"\n\n\t\t*********thank you**********\n\n";
+	}
+};
+class resturant{
+	order ord;
+	
+	public:
+		int checkresturant(int n)
+		{
+			
+		}
+		int timee()
+{
+	SYSTEMTIME a;
+	GetLocalTime (&a);
+	cout<<"DATE: "<<a.wMonth<<"/";
+	cout<<a.wDay<<"/";
+	cout<<a.wYear<<endl;
+	
+ 	cout<<"Time: "<<a.wHour<<":";
+    cout<<a.wMinute<<":";
+    cout<<a.wSecond<<endl;
+ 
+	
+}
+		void checkorder()
+		{  int r1,o1;
+		int price, quantity, order, bill = 0;
+	char ch;
+		int pid,pprice,pquantity,code;
+ 	string pname,nem,aad;
+ 	system("cls");
+ 	        cout<<"******************************************************************\n";
+			cout<<"\t\trestaurent list:"<<endl;
+			cout<<"\t\t1:Fast Restaurent"<<endl;
+			cout<<"\t\t2:Desi Restaurent"<<endl;
+			cout<<"\t\t3:MaCdonald Shakes"<<endl;
+			cout<<"\t\t4:Maro Tandoor"<<endl;
+			cout<<"******************************************************************\n";
+			A:
+			cout<<"Enter NO for selsction: ";
+			cin>>r1;
+			
+			
+			if (r1==1)
+		{
+				string pass, n,p,ph,em,add,f;
+				ord.menu1();
+			
+			 cout<<" enter your password again = ";
+            cin>>pass;
+        Aaa:
+	cout<<"\n\t\tEnter Your Order (One Order At a Time): ";
+	cin>>order;
+	
+     ifstream pfs;
+	ofstream ofs;
+	ofs.open("temp.txt",ios::out|ios::app);
+	pfs.open("menu1.txt",ios::in);
+	pfs>>pid>>code>>pname>>pprice>>pquantity;
+	
+	while(!pfs.eof())
+	{
+		if(order==pid){
+
+           int b;
+			cout<<"\n\t\tHow Much You Want: ";
+			cin>>quantity;
+			b= quantity * pprice;
+		
+			pquantity=pquantity-quantity;
+			ofs<<pid<<" "<<code<<" "<<pname<<" "<<pprice<<" "<<pquantity<<endl;
+         	ofstream oop;
+         	oop.open("aho.txt",ios::app);
+         	oop<<pname<<" "<<quantity<<" "<<b<<endl;
+         	oop.close();
+         		bill=b+bill;
+			
+		}
+		else{
+			
+			ofs<<pid<<" "<<code<<" "<<pname<<" "<<pprice<<" "<<pquantity<<endl;	
+		}
+		
+		pfs>>pid>>code>>pname>>pprice>>pquantity;
+	}
+	pfs.close();
+	ofs.close();
+
+	remove("menu1.txt");
+	rename("temp.txt","menu1.txt");
+	cout<<"\n\t\tAny Other Thing You Want (y/n): ";
+	cin>>ch;
+	if(ch=='y'||ch=='Y')
+			{
+				goto Aaa;
+			}
+			else 
+			{
+				ifstream inff;
+   	        inff.open("database.txt");
+   	while(!inff.eof())
+   	{
+   		inff>>n>>p>>ph>>em>>add;
+   		if(pass==p)
+   		{
+   				ofstream wr;
+			wr.open("bill.txt",ios::app);
+			wr<<n<<" "<<ph<<" "<<pname<<" "<<quantity<<" "<<bill<<" "<<add<<endl;
+			wr.close();
+		   }
+   		
+	   }
+   	inff.close();
+			
+				string item ,h2,b,na,hn,ae;
+				ifstream read;
+read.open("bill.txt",ios::app);
+	read>>na>>hn>>item>>h2>>b>>ae;
+	read.close();
+	
+	   
+   	system("cls");
+   	
+cout<<"*******************************************************\n\n";	
+cout<<"____________________________________________\n";					
+cout<<"          food Ordering       \n";
+cout<<"____________________________________________\n";
+timee();
+cout<<"____________________________________________\n";
+cout<<"item"<<"         "<<"quantity"<<"  "<<"bill"<<endl;
+cout<<"____________________________________________\n";
+    cout<<"customer name is     "<<na<<endl;
+    cout<<"customer number is   "<<hn<<endl;
+    ifstream iip;
+	iip.open("aho.txt",ios::in);
+		while(iip>>na>>h2>>b)
+   	{
+   	
+
+   		
+	cout<<na<<"         "<<h2<<"   "<<b<<endl;
+}
+iip.close();
+	cout<<"____________________________________________\n";
+
+
+    cout<<"Your Bill is of Rs        "<<bill<<endl<<endl;
+    cout<<"*******************************************************\n\n";
+remove("bill.txt");
+
+
+ofstream ko;
+ko.open("pp.txt",ios::app);
+
+ko<<"*******************************************************\n\n";	
+ko<<"____________________________________________\n";					
+ko<<"          food Ordering       \n";
+ko<<"____________________________________________\n";
+ko<<"____________________________________________\n";
+ko<<"item"<<"         "<<"quantity"<<"  "<<"bill"<<endl;
+ko<<"____________________________________________\n";
+    ko<<"customer name is     "<<na<<endl;
+    ko<<"customer number is   "<<hn<<endl;
+    ifstream iip1;
+	iip1.open("aho.txt",ios::in);
+		while(iip1>>na>>h2>>b)
+   	{
+   	
+   		
+	ko<<na<<"         "<<h2<<"   "<<b<<endl;
+}
+iip1.close();
+	ko<<"____________________________________________\n";
+
+
+    ko<<"Your Bill is of Rs        "<<bill<<endl<<endl;
+    ko<<"*******************************************************\n\n";
+ko.close();
+			}
+			
+			}
+		
+		
+		
+		
+		
+		else if(r1==2)
+			{
+				
+				string pass, n,p,ph,em,add,f;
+				ord.menu2();
+			
+			 cout<<" enter your password again = ";
+            cin>>pass;
+        Aaa1:
+	cout<<"\n\t\tEnter Your Order (One Order At a Time): ";
+	cin>>order;
+	
+     ifstream pfs;
+	ofstream ofs;
+	ofs.open("temp.txt",ios::out|ios::app);
+	pfs.open("menu2.txt",ios::in);
+	pfs>>pid>>code>>pname>>pprice>>pquantity;
+	
+	while(!pfs.eof())
+	{
+		if(order==pid){
+
+           int b;
+			cout<<"\n\t\tHow Much You Want: ";
+			cin>>quantity;
+			b= quantity * pprice;
+		
+			pquantity=pquantity-quantity;
+			ofs<<pid<<" "<<code<<" "<<pname<<" "<<pprice<<" "<<pquantity<<endl;
+         	ofstream oop;
+         	oop.open("aho.txt",ios::app);
+         	oop<<pname<<" "<<quantity<<" "<<b<<endl;
+         	oop.close();
+         		bill=b+bill;
+			
+		}
+		else{
+			
+			ofs<<pid<<" "<<code<<" "<<pname<<" "<<pprice<<" "<<pquantity<<endl;	
+		}
+		
+		pfs>>pid>>code>>pname>>pprice>>pquantity;
+	}
+	pfs.close();
+	ofs.close();
+
+	remove("menu2.txt");
+	rename("temp.txt","menu2.txt");
+	cout<<"\n\t\tAny Other Thing You Want (y/n): ";
+	cin>>ch;
+	if(ch=='y'||ch=='Y')
+			{
+				goto Aaa1;
+			}
+			else 
+			{
+				ifstream inff;
+   	        inff.open("database.txt");
+   	while(!inff.eof())
+   	{
+   		inff>>n>>p>>ph>>em>>add;
+   		if(pass==p)
+   		{
+   				ofstream wr;
+			wr.open("bill.txt",ios::app);
+			wr<<n<<" "<<ph<<" "<<pname<<" "<<quantity<<" "<<bill<<" "<<add<<endl;
+			wr.close();
+		   }
+   		
+	   }
+   	inff.close();
+			
+				string item ,h2,b,na,hn,ae;
+				ifstream read;
+read.open("bill.txt",ios::app);
+	read>>na>>hn>>item>>h2>>b>>ae;
+	read.close();
+	
+	   
+   	system("cls");
+cout<<"*******************************************************\n\n";	
+cout<<"____________________________________________\n";					
+cout<<"          food Ordering       \n";
+cout<<"____________________________________________\n";
+timee();
+cout<<"____________________________________________\n";
+cout<<"item"<<"         "<<"quantity"<<"  "<<"bill"<<endl;
+cout<<"____________________________________________\n";
+    cout<<"customer name is     "<<na<<endl;
+    cout<<"customer number is   "<<hn<<endl;
+    ifstream iip;
+	iip.open("aho.txt",ios::in);
+		while(iip>>na>>h2>>b)
+   	{
+   	
+   		
+	cout<<na<<"         "<<h2<<"   "<<b<<endl;
+}
+iip.close();
+	cout<<"____________________________________________\n";
+
+
+    cout<<"Your Bill is of Rs        "<<bill<<endl<<endl;
+    cout<<"*******************************************************\n\n";
+
+remove("bill.txt");
+
+ofstream ko;
+ko.open("pp.txt",ios::app);
+
+ko<<"*******************************************************\n\n";	
+ko<<"____________________________________________\n";					
+ko<<"          food Ordering       \n";
+ko<<"____________________________________________\n";
+ko<<"____________________________________________\n";
+ko<<"item"<<"         "<<"quantity"<<"  "<<"bill"<<endl;
+ko<<"____________________________________________\n";
+    ko<<"customer name is     "<<na<<endl;
+    ko<<"customer number is   "<<hn<<endl;
+    ifstream iip2;
+	iip2.open("aho.txt",ios::in);
+		while(iip2>>na>>h2>>b)
+   	{
+   	
+   		
+	ko<<na<<"         "<<h2<<"   "<<b<<endl;
+}
+iip2.close();
+	ko<<"____________________________________________\n";
+
+
+    ko<<"Your Bill is of Rs        "<<bill<<endl<<endl;
+    ko<<"*******************************************************\n\n";
+ko.close();
+
+			}
+			
+			}
+				
+		else if(r1==3)
+			{
+				
+				string pass, n,p,ph,em,add,f;
+				ord.menu3();
+			
+			 cout<<" enter your password again = ";
+            cin>>pass;
+        Aaa2:
+	cout<<"\n\t\tEnter Your Order (One Order At a Time): ";
+	cin>>order;
+	
+     ifstream pfs;
+	ofstream ofs;
+	ofs.open("temp.txt",ios::out|ios::app);
+	pfs.open("menu3.txt",ios::in);
+	pfs>>pid>>code>>pname>>pprice>>pquantity;
+	
+	while(!pfs.eof())
+	{
+		if(order==pid){
+
+           int b;
+			cout<<"\n\t\tHow Much You Want: ";
+			cin>>quantity;
+			b= quantity * pprice;
+		
+			pquantity=pquantity-quantity;
+			ofs<<pid<<" "<<code<<" "<<pname<<" "<<pprice<<" "<<pquantity<<endl;
+         	ofstream oop;
+         	oop.open("aho.txt",ios::app);
+         	oop<<pname<<" "<<quantity<<" "<<b<<endl;
+         	oop.close();
+         		bill=b+bill;
+			
+		}
+		else{
+			
+			ofs<<pid<<" "<<code<<" "<<pname<<" "<<pprice<<" "<<pquantity<<endl;	
+		}
+		
+		pfs>>pid>>code>>pname>>pprice>>pquantity;
+	}
+	pfs.close();
+	ofs.close();
+
+	remove("menu3.txt");
+	rename("temp.txt","menu3.txt");
+	cout<<"\n\t\tAny Other Thing You Want (y/n): ";
+	cin>>ch;
+	if(ch=='y'||ch=='Y')
+			{
+				goto Aaa2;
+			}
+			else 
+			{
+				ifstream inff;
+   	        inff.open("database.txt");
+   	while(!inff.eof())
+   	{
+   		inff>>n>>p>>ph>>em>>add;
+   		if(pass==p)
+   		{
+   				ofstream wr;
+			wr.open("bill.txt",ios::app);
+			wr<<n<<" "<<ph<<" "<<pname<<" "<<quantity<<" "<<bill<<" "<<add<<endl;
+			wr.close();
+		   }
+   		
+	   }
+   	inff.close();
+			
+				string item ,h2,b,na,hn,ae;
+				ifstream read;
+read.open("bill.txt",ios::app);
+	read>>na>>hn>>item>>h2>>b>>ae;
+	read.close();
+	
+	   
+   	system("cls");
+cout<<"*******************************************************\n\n";	
+cout<<"____________________________________________\n";					
+cout<<"          food Ordering       \n";
+cout<<"____________________________________________\n";
+timee();
+cout<<"____________________________________________\n";
+cout<<"item"<<"         "<<"quantity"<<"  "<<"bill"<<endl;
+cout<<"____________________________________________\n";
+    cout<<"customer name is     "<<na<<endl;
+    cout<<"customer number is   "<<hn<<endl;
+    ifstream iip;
+	iip.open("aho.txt",ios::in);
+		while(iip>>na>>h2>>b)
+   	{
+   	
+  		
+	cout<<na<<"         "<<h2<<"   "<<b<<endl;
+}
+iip.close();
+	cout<<"____________________________________________\n";
+
+
+    cout<<"Your Bill is of Rs        "<<bill<<endl<<endl;
+    cout<<"*******************************************************\n\n";
+
+remove("bill.txt");
+
+ofstream ko;
+ko.open("pp.txt",ios::app);
+
+ko<<"*******************************************************\n\n";	
+ko<<"____________________________________________\n";					
+ko<<"          food Ordering       \n";
+ko<<"____________________________________________\n";
+ko<<"____________________________________________\n";
+ko<<"item"<<"         "<<"quantity"<<"  "<<"bill"<<endl;
+ko<<"____________________________________________\n";
+    ko<<"customer name is     "<<na<<endl;
+    ko<<"customer number is   "<<hn<<endl;
+    ifstream iip3;
+	iip3.open("aho.txt",ios::in);
+		while(iip3>>na>>h2>>b)
+   	{
+   	
+   		
+   		
+	ko<<na<<"         "<<h2<<"   "<<b<<endl;
+}
+iip3.close();
+	ko<<"____________________________________________\n";
+
+
+    ko<<"Your Bill is of Rs        "<<bill<<endl<<endl;
+    ko<<"*******************************************************\n\n";
+ko.close();
+
+			}
+			
+			}
+			
+			
+			
+			
+		else if(r1==4)
+			{
+				
+				string pass, n,p,ph,em,add,f;
+				ord.menu4();
+			
+			 cout<<" enter your password again = ";
+            cin>>pass;
+        Aaa3:
+	cout<<"\n\t\tEnter Your Order (One Order At a Time): ";
+	cin>>order;
+	
+     ifstream pfs;
+	ofstream ofs;
+	ofs.open("temp.txt",ios::out|ios::app);
+	pfs.open("menu4.txt",ios::in);
+	pfs>>pid>>code>>pname>>pprice>>pquantity;
+	
+	while(!pfs.eof())
+	{
+		if(order==pid){
+
+           int b;
+			cout<<"\n\t\tHow Much You Want: ";
+			cin>>quantity;
+			b= quantity * pprice;
+		
+			pquantity=pquantity-quantity;
+			ofs<<pid<<" "<<code<<" "<<pname<<" "<<pprice<<" "<<pquantity<<endl;
+         	ofstream oop;
+         	oop.open("aho.txt",ios::app);
+         	oop<<pname<<" "<<quantity<<" "<<b<<endl;
+         	oop.close();
+         		bill=b+bill;
+			
+		}
+		else{
+			
+			ofs<<pid<<" "<<code<<" "<<pname<<" "<<pprice<<" "<<pquantity<<endl;	
+		}
+		
+		pfs>>pid>>code>>pname>>pprice>>pquantity;
+	}
+	pfs.close();
+	ofs.close();
+
+	remove("menu4.txt");
+	rename("temp.txt","menu4.txt");
+	cout<<"\n\t\tAny Other Thing You Want (y/n): ";
+	cin>>ch;
+	if(ch=='y'||ch=='Y')
+			{
+				goto Aaa3;
+			}
+			else 
+			{
+				ifstream inff;
+   	        inff.open("database.txt");
+   	while(!inff.eof())
+   	{
+   		inff>>n>>p>>ph>>em>>add;
+   		if(pass==p)
+   		{
+   				ofstream wr;
+			wr.open("bill.txt",ios::app);
+			wr<<n<<" "<<ph<<" "<<pname<<" "<<quantity<<" "<<bill<<" "<<add<<endl;
+			wr.close();
+		   }
+   		
+	   }
+   	inff.close();
+			
+				string item ,h2,b,na,hn,ae;
+				ifstream read;
+read.open("bill.txt",ios::app);
+	read>>na>>hn>>item>>h2>>b>>ae;
+	read.close();
+	
+	   
+   	system("cls");
+cout<<"*******************************************************\n\n";	
+cout<<"____________________________________________\n";					
+cout<<"          food Ordering       \n";
+cout<<"____________________________________________\n";
+timee();
+cout<<"____________________________________________\n";
+cout<<"item"<<"         "<<"quantity"<<"  "<<"bill"<<endl;
+cout<<"____________________________________________\n";
+    cout<<"customer name is     "<<na<<endl;
+    cout<<"customer number is   "<<hn<<endl;
+    ifstream iip;
+	iip.open("aho.txt",ios::in);
+		while(iip>>na>>h2>>b)
+   	{
+   	
+   		
+   		
+	cout<<na<<"         "<<h2<<"   "<<b<<endl;
+}
+iip.close();
+	cout<<"____________________________________________\n";
+
+
+    cout<<"Your Bill is of Rs        "<<bill<<endl<<endl;
+    cout<<"*******************************************************\n\n";
+
+remove("bill.txt");
+
+
+ofstream ko;
+ko.open("pp.txt",ios::app);
+
+ko<<"*******************************************************\n\n";	
+ko<<"____________________________________________\n";					
+ko<<"          food Ordering       \n";
+ko<<"____________________________________________\n";
+ko<<"____________________________________________\n";
+ko<<"item"<<"         "<<"quantity"<<"  "<<"bill"<<endl;
+ko<<"____________________________________________\n";
+    ko<<"customer name is     "<<na<<endl;
+    ko<<"customer number is   "<<hn<<endl;
+    ifstream iip4;
+	iip4.open("aho.txt",ios::in);
+		while(iip4>>na>>h2>>b)
+   	{
+   	
+   		//iip>>na>>h2>>b;
+   		
+	ko<<na<<"         "<<h2<<"   "<<b<<endl;
+}
+iip4.close();
+	ko<<"____________________________________________\n";
+
+
+    ko<<"Your Bill is of Rs        "<<bill<<endl<<endl;
+    ko<<"*******************************************************\n\n";
+ko.close();
+
+			}
+			
+			}
+			else
+			{
+			cout<<"Enter correct no for selection!"<<endl;
+			goto A;
+			}
+		}
+		bool delivery_the_order()
+		{
+			
+			
+		}
+};
+
+int main(){
+	m:
+	int chos,choos;
+		cout << "\n\n\n\t\t**************************************************** \n";
+	cout << "\t\t*  1 : Admin.                                                   *\n";
+	cout << "\t\t*  2 : Customer.                                                *\n";
+	cout << "\t\t*  3 : Exit.                                                    *\n";
+	cout << "\t\t********************** *********************************\n";
+
+    cout<<"\n"<<"\t\tchosse one option (1 to 3)";
+    cin>>chos;	
+     admin adminn;
+     customer c;
+    person *ptr;
+    if (chos==1){
+    	o:
+    		system("cls");
+    	ptr=&adminn;
+    	ptr->menu();
+    				cout<<"\n"<<"\t\tchosse one option (1 to 5)";
+    				cin>>choos;
+    			if(choos==1)
+    				{
+    	         adminn.update();
+    	         goto o;
+					}
+				else if(choos==2)
+    				{
+    			adminn.search();
+    			goto o;
+					}
+	
+				else if(choos==3)
+    				{
+    	        adminn.deletee();
+    	        goto o;
+					}
+				else if(choos==4)
+				
+				    {
+				    	system("cls");
+				 adminn.showrecord();   	
+				 
+					}
+					
+				else if(choos==5)
+				    {
+				    	adminn.exit();
+				    	system("cls");
+				    	goto m;
+					}
+				else
+					{
+						cout<<"\n\t****wrong input****\n";
+					}
+	
+	}
+	else if(chos==2){
+		p:
+			system("cls");
+	ptr=&c;
+    ptr->menu();
+    	cout<<"\n"<<"\t\tchosse one option (1 to 3)";
+    				cin>>choos;
+    			if(choos==1)
+    				{
+    	         c.login();
+    	         system("cls");
+    	         resturant r;
+    			r.checkorder();
+					}
+				else if(choos==2)
+    				{
+    			c.signup();
+    			goto p;
+					}
+				else if(choos==3)
+					{
+				c.exit();
+				system("cls");
+				goto m;		
+					}
+				else
+					{
+						cout<<"\n\t****wrong input****\n";
+					}
+}
+    else if (chos==3)
+	{
+		adminn.up();
+		string s;
+
+
+	system("pause");
+	return 0;
+}

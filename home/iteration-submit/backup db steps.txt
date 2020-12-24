@@ -1,0 +1,20 @@
+Export DB
+firt right clcik on db
+Then click on task >> backup
+Popup window will open
+you can chnage the destination path if required.
+Then click on ok
+Backup is generted.
+
+Import back
+Right Click on database
+Select the restore option
+popup window will open, 
+In sourse selec the device , click on '...' button,
+popup window will open,
+from the click on add button, select the backup file which needs to restore.
+after that click ok button.
+complete
+
+
+
