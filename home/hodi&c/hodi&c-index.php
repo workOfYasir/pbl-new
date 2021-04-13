@@ -1,7 +1,7 @@
 
 <?php
-
- session_start();
+include("../constants.php");
+session_start();
  
   if(empty($_SESSION["userName"]) || $_SESSION["userType"]!="HODI&C")
  {

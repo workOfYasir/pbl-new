@@ -13,7 +13,6 @@
 
 <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ?>bootstrap/css/bootstrap.min.css">
 
-<link rel="stylesheet" type="text/css" href="<?php echo SITE_URL ?>assets/icon/themify-icons/themify-icons.css">
 
 <link rel="stylesheet" type="text/css" href="<?php echo SITE_URL ?>assets/icon/icofont/css/icofont.css">
 
@@ -32,26 +31,25 @@
 <link rel="stylesheet" type="text/css" href="<?php echo SITE_URL ?>assets/css/ionicons.css">
 <link rel="stylesheet" type="text/css" href="<?php echo SITE_URL ?>assets/css/jquery.mCustomScrollbar.css">
 
-<link href="https://fonts.googleapis.com/css?family=Mada:300,400,500,600,700" rel="stylesheet">
 
-<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ?>bootstrap/css/bootstrap.min.css">
 
 <link rel="stylesheet" type="text/css" href="<?php echo SITE_URL ?>assets/icon/themify-icons/themify-icons.css">
 
-<link rel="stylesheet" type="text/css" href="<?php echo SITE_URL ?>assets/icon/icofont/css/icofont.css">
 
-<link rel="stylesheet" type="text/css" href="<?php echo SITE_URL ?>assets/pages/flag-icon/flag-icon.min.css">
 
-<link rel="stylesheet" type="text/css" href="<?php echo SITE_URL ?>assets/pages/menu-search/css/component.css">
+<link rel="stylesheet" type="text/css" href="<?php echo SITE_URL ?>assets/icon/SVG-animated/svg-weather.css">
 
-<link rel="stylesheet" type="text/css" href="<?php echo SITE_URL ?>assets/css/style.css">
 
-<link rel="stylesheet" type="text/css" href="<?php echo SITE_URL ?>assets/css/linearicons.css">
-<link rel="stylesheet" type="text/css" href="<?php echo SITE_URL ?>assets/css/simple-line-icons.css">
-<link rel="stylesheet" type="text/css" href="<?php echo SITE_URL ?>assets/css/ionicons.css">
-<link rel="stylesheet" type="text/css" href="<?php echo SITE_URL ?>assets/css/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="<?php echo SITE_URL ?>assets/pages/dashboard/horizontal-timeline/css/style.css">
 
- 	<script src="<?php echo SITE_URL ?>ckeditor/ckeditor.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo SITE_URL ?>assets/pages/dashboard/amchart/css/amchart.css">
+
+<link rel="stylesheet" type="text/css" href="<?php echo SITE_URL ?>assets/pages/widget/calender/pignose.calendar.min.css">
+
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script src="<?php echo SITE_URL ?>ckeditor/ckeditor.js"></script>
 
 </head>
 <body>
