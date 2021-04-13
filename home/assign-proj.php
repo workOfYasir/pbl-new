@@ -467,12 +467,6 @@ include 'manager_nav.php';
 <div class="row">
 
 
-
- 
- 
-  
-
-
 <div class="modal fade modal-flex" id="Modal-tab" tabindex="-1" role="dialog">
 <div class="modal-dialog" role="document">
 <div class="modal-content">

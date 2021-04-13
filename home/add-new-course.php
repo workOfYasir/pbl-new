@@ -12,6 +12,8 @@ session_start();
  $userType=$_SESSION["userType"];
  $userRoll=$_SESSION["userRoll"];
 
+$departmentQuery = mysqli_query($conn,"SELECT * FROM `department`")
+
 
 ?><!DOCTYPE html>
 
@@ -416,13 +418,13 @@ session_start();
 <form action="saveCourse" method="POST" class="j-pro" id="j-pro"     >
 
 <div class="j-content">
-
 <div class="j-row">
 <div class="j-span6 j-unit">
 <div class="j-input">
 <label class="j-icon-right" for="first_name">
 <i class="icofont icofont-address-book"></i>
 </label>
+
 <input autocomplete="off" type="text" id="first_name" name="name" placeholder="Course Name" required/>
  </div>
 </div>
@@ -431,12 +433,29 @@ session_start();
 <label class="j-icon-right" for="last_name">
 <i class="icofont icofont-beaker"></i>
 </label>
-<input autocomplete="off" pattern="[0-9]*" type="text" id="last_name" name="level" placeholder="Level" required/>
-</div>
+<select name="department" required>
+    <option value="disabled">---select department----</option>
+
+<?php while ($depart = mysqli_fetch_array($departmentQuery)) {
+    ?><option value="<?php echo $depart['dept_id']; ?>"><?php echo $depart['dept_name']; ?></option>
+    <?php
+} ?>
+</select>
 </div>
 </div>
 
- <div class="j-row">
+
+<div class="j-span6 j-unit">
+<div class="j-input">
+<label class="j-icon-right" for="last_name">
+<i class="icofont icofont-beaker"></i>
+</label>
+<input autocomplete="off" pattern="[0-9]*" type="text" id="last_name" name="level" placeholder="Level" required/>
+</div>
+</div>
+
+
+ 
 <div class="j-span6 j-unit">
 <div class="j-input">
 <label class="j-icon-right" for="first_name">
@@ -454,7 +473,6 @@ session_start();
 </div>
 </div>
 </div>
- 
  
 
  
