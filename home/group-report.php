@@ -27,7 +27,7 @@ $departmentQuery = mysqli_query($conn, "SELECT * FROM `department`")
 <head>
     <title>PBL | Students</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <?php
     if (isset($_GET['course']) && isset($_GET['depart'])) {
 
@@ -47,7 +47,7 @@ WHERE `sc`.`s_course`='$courseID' AND `teacher`.`t_dept`='$deptID'");
         while ($fetchGraph = mysqli_fetch_array($result)) {
             $teacher = $fetchGraph['t_name'];
             $sec = $fetchGraph['s_sec'];
-            $concat = $teacher.'-'.$sec;
+            $concat = $teacher . '-' . $sec;
             $dept = $fetchGraph['t_dept'];
             $result2 = mysqli_query($conn, "SELECT COUNT(*) as num FROM `g_members`
      INNER JOIN `groupleader` ON `g_members`.`gid`=`groupleader`.`gid`
@@ -56,14 +56,14 @@ WHERE `sc`.`s_course`='$courseID' AND `teacher`.`t_dept`='$deptID'");
             $groupCreated = $count['num'];
 
             array_push($dataPoints1, array("label" => $concat, "y" => $groupCreated));
-            
+
             //print_r($dataPoints1);
             $result3 = mysqli_query($conn, "SELECT count(*) as total FROM `student_course` WHERE `s_sec`='$sec' AND `s_course`='$courseID' ");
             $count2 = mysqli_fetch_assoc($result3);
             $totalStudent = $count2['total'];
-            
+
             $notCreatedGroup = $totalStudent - $groupCreated;
-            
+
             array_push($dataPoints2, array("label" => $concat, "y" => $notCreatedGroup));
         }
     }
@@ -109,6 +109,7 @@ WHERE `sc`.`s_course`='$courseID' AND `teacher`.`t_dept`='$deptID'");
         window.onload = function() {
 
             var chart = new CanvasJS.Chart("chartContainer", {
+                exportEnabled: true,
                 animationEnabled: true,
                 theme: "light2",
                 title: {
@@ -151,7 +152,6 @@ WHERE `sc`.`s_course`='$courseID' AND `teacher`.`t_dept`='$deptID'");
             }
 
         }
-        
     </script>
 
 </head>
@@ -239,179 +239,176 @@ WHERE `sc`.`s_course`='$courseID' AND `teacher`.`t_dept`='$deptID'");
 
 
 
-<div class="pcoded-main-container">
-    <div class="pcoded-wrapper">
+            <div class="pcoded-main-container">
+                <div class="pcoded-wrapper">
 
-        <?php
-
-
-        include 'manager_nav.php';
+                    <?php
 
 
-        ?>
+                    include 'manager_nav.php';
+
+
+                    ?>
 
 
 
-    <div class="pcoded-content">
-        <div class="pcoded-inner-content">
+                    <div class="pcoded-content">
+                        <div class="pcoded-inner-content">
 
-            <div class="main-b ody">
-                <div class="page-w rapper">
-
-
+                            <div class="main-b ody">
+                                <div class="page-w rapper">
 
 
 
 
 
-                <div class="row">
-                    <div class="col-sm-12">
 
-                        <div class="card">
-                            <div class="card-header">
-                                <h5>Group Reports</h5>
-                                <div class="card-header-right">
-                                    <i class="icofont icofont-rounded-down"></i>
-                                    <i class="icofont icofont-refresh"></i>
-                                    <i class="icofont icofont-close-circled"></i>
-                                </div>
-                            </div>
 
-                            <div class="card-block">
-                                <form action="">
-<fieldset>
-                            <div class="form-row">
-                                
-                            <div class="form-group col-md-6">
-                                <label for="sel_depart">Departments</label>
-                                 
+                                    <div class="row">
+                                        <div class="col-sm-12">
 
-                                    <select class="form-select" aria-label="Default select example" id="sel_depart" name="depart">
-                                        <option value="0">- Select -</option>
-                                        <?php
-                                        // Fetch Department
-                                        $sql_department = "SELECT * FROM department";
-                                        $department_data = mysqli_query($conn, $sql_department);
-                                        while ($row = mysqli_fetch_assoc($department_data)) {
-                                            $departid = $row['dept_id'];
-                                            $depart_name = $row['dept_name'];
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <h5>Group Reports</h5>
+                                                    <div class="card-header-right">
+                                                        <i class="icofont icofont-rounded-down"></i>
+                                                        <i class="icofont icofont-refresh"></i>
+                                                        <i class="icofont icofont-close-circled"></i>
+                                                    </div>
+                                                </div>
 
-                                            // Option
-                                            echo "<option value='" . $departid . "' >" . $depart_name . "</option>";
-                                        }
-                                        ?>
-                                    </select></div>
-                                    <div class="clear"></div>
+                                                <div class="card-block">
+                                                    <form action="">
+                                                        <fieldset>
+                                                            <div class="form-row">
 
-                                  
+                                                                <div class="form-group col-md-6">
+                                                                    <label for="sel_depart">Departments</label>
 
-                                    <div class="form-group col-md-6">
-                                <label for="sel_user">Courses</label>
-                                
-                                <select class="form-select" aria-label="Default select example" id="sel_user" name="course">
-                                    <option value="0">- Select -</option>
-                                </select>
-                                </div>
-                            </div>
-                                </fieldset>
-                                
-                                <div class="col-md-12 text-center">
-                                <input type="submit" class="btn btn-primary m-10 " name="submit" onclick="name(this);" value="submit">
-                                </div>
-                               
-                            </form>
 
-                        </div>
-                    </div>
-                </div>
-            </div>
+                                                                    <select class="form-select" aria-label="Default select example" id="sel_depart" name="depart">
+                                                                        <option value="0">- Select -</option>
+                                                                        <?php
+                                                                        // Fetch Department
+                                                                        $sql_department = "SELECT * FROM department";
+                                                                        $department_data = mysqli_query($conn, $sql_department);
+                                                                        while ($row = mysqli_fetch_assoc($department_data)) {
+                                                                            $departid = $row['dept_id'];
+                                                                            $depart_name = $row['dept_name'];
 
-            </head>
-
-                <body>
-<<<<<<< HEAD
-                    <div id="chartContainer" style="height: 380px; width: 85%;"></div>
-=======
-                    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
->>>>>>> 9a8e0876a00f443bb11978d2af1e5956e613c845
-                    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+                                                                            // Option
+                                                                            echo "<option value='" . $departid . "' >" . $depart_name . "</option>";
+                                                                        }
+                                                                        ?>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="clear"></div>
 
 
 
+                                                                <div class="form-group col-md-6">
+                                                                    <label for="sel_user">Courses</label>
+
+                                                                    <select class="form-select" aria-label="Default select example" id="sel_user" name="course">
+                                                                        <option value="0">- Select -</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </fieldset>
+
+                                                        <div class="col-md-12 text-center">
+                                                            <input type="submit" class="btn btn-primary m-10 " name="submit" onclick="name(this);" value="submit">
+                                                        </div>
+
+                                                    </form>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+<div class="container">
+                                    <div id="chartContainer" style="height: 380px; width: 90%;">
+                                    </div>
+                                    </div>
+                                    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
 
-                    <!-- <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
-                    <script type="text/javascript" src="../bower_components/jquery/js/jquery.min.js"></script>
-                    <script type="text/javascript" src="../bower_components/jquery-ui/js/jquery-ui.min.js"></script>
-                    <script type="text/javascript" src="../bower_components/popper.js/js/popper.min.js"></script>
-                    <script type="text/javascript" src="../bower_components/bootstrap/js/bootstrap.min.js"></script>
 
-                    <script type="text/javascript" src="../bower_components/jquery-slimscroll/js/jquery.slimscroll.js"></script>
 
-                    <script type="text/javascript" src="../bower_components/modernizr/js/modernizr.js"></script>
-                    <script type="text/javascript" src="../bower_components/modernizr/js/css-scrollbars.js"></script>
 
-                    <script type="text/javascript" src="../bower_components/classie/js/classie.js"></script>
+                                    <!-- <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
+                                    <script type="text/javascript" src="../bower_components/jquery/js/jquery.min.js"></script>
+                                    <script type="text/javascript" src="../bower_components/jquery-ui/js/jquery-ui.min.js"></script>
+                                    <script type="text/javascript" src="../bower_components/popper.js/js/popper.min.js"></script>
+                                    <script type="text/javascript" src="../bower_components/bootstrap/js/bootstrap.min.js"></script>
 
-                    <script src="../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-                    <script src="../bower_components/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-                    <script src="assets/pages/data-table/js/jszip.min.js"></script>
-                    <script src="assets/pages/data-table/js/pdfmake.min.js"></script>
-                    <script src="assets/pages/data-table/js/vfs_fonts.js"></script>
-                    <script src="assets/pages/data-table/extensions/responsive/js/dataTables.responsive.min.js"></script>
-                    <script src="../bower_components/datatables.net-buttons/js/buttons.print.min.js"></script>
-                    <script src="../bower_components/datatables.net-buttons/js/buttons.html5.min.js"></script>
-                    <script src="../bower_components/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
-                    <script src="../bower_components/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-                    <script src="../bower_components/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+                                    <script type="text/javascript" src="../bower_components/jquery-slimscroll/js/jquery.slimscroll.js"></script>
 
-                    <script type="text/javascript" src="../bower_components/i18next/js/i18next.min.js"></script>
-                    <script type="text/javascript" src="../bower_components/i18next-xhr-backend/js/i18nextXHRBackend.min.js"></script>
-                    <script type="text/javascript" src="../bower_components/i18next-browser-languagedetector/js/i18nextBrowserLanguageDetector.min.js"></script>
-                    <script type="text/javascript" src="../bower_components/jquery-i18next/js/jquery-i18next.min.js"></script>
+                                    <script type="text/javascript" src="../bower_components/modernizr/js/modernizr.js"></script>
+                                    <script type="text/javascript" src="../bower_components/modernizr/js/css-scrollbars.js"></script>
 
-                    <script src="assets/pages/data-table/extensions/responsive/js/responsive-custom.js"></script>
-                    <script type="text/javascript" src="assets/js/script.js"></script>
-                    <script src="assets/js/pcoded.min.js"></script>
-                    <script src="assets/js/demo-12.js"></script>
-                    <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
-                    
-                    <script src="assets/js/jquery.mousewheel.min.js"></script>
-                    <script type="text/javascript">
-                    
-                        $(document).ready(function() {
+                                    <script type="text/javascript" src="../bower_components/classie/js/classie.js"></script>
 
-                            $("#sel_depart").change(function() {
-                                var deptid = $(this).val();
+                                    <script src="../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+                                    <script src="../bower_components/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+                                    <script src="assets/pages/data-table/js/jszip.min.js"></script>
+                                    <script src="assets/pages/data-table/js/pdfmake.min.js"></script>
+                                    <script src="assets/pages/data-table/js/vfs_fonts.js"></script>
+                                    <script src="assets/pages/data-table/extensions/responsive/js/dataTables.responsive.min.js"></script>
+                                    <script src="../bower_components/datatables.net-buttons/js/buttons.print.min.js"></script>
+                                    <script src="../bower_components/datatables.net-buttons/js/buttons.html5.min.js"></script>
+                                    <script src="../bower_components/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+                                    <script src="../bower_components/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+                                    <script src="../bower_components/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
 
-                                $.ajax({
-                                    url: 'deptcourseajax.php',
-                                    type: 'post',
-                                    data: {
-                                        depart: deptid
-                                    },
-                                    dataType: 'json',
-                                    success: function(response) {
+                                    <script type="text/javascript" src="../bower_components/i18next/js/i18next.min.js"></script>
+                                    <script type="text/javascript" src="../bower_components/i18next-xhr-backend/js/i18nextXHRBackend.min.js"></script>
+                                    <script type="text/javascript" src="../bower_components/i18next-browser-languagedetector/js/i18nextBrowserLanguageDetector.min.js"></script>
+                                    <script type="text/javascript" src="../bower_components/jquery-i18next/js/jquery-i18next.min.js"></script>
 
-                                        var len = response.length;
+                                    <script src="assets/pages/data-table/extensions/responsive/js/responsive-custom.js"></script>
+                                    <script type="text/javascript" src="assets/js/script.js"></script>
+                                    <script src="assets/js/pcoded.min.js"></script>
+                                    <script src="assets/js/demo-12.js"></script>
+                                    <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
 
-                                        $("#sel_user").empty();
-                                        for (var i = 0; i < len; i++) {
-                                            var id = response[i]['c_id'];
-                                            var name = response[i]['c_name'];
+                                    <script src="assets/js/jquery.mousewheel.min.js"></script>
+                                    <script type="text/javascript">
+                                        $(document).ready(function() {
 
-                                            $("#sel_user").append("<option value='" + id + "'>" + name + "</option>");
+                                            $("#sel_depart").change(function() {
+                                                var deptid = $(this).val();
 
-                                        }
-                                    }
-                                });
-                            });
+                                                $.ajax({
+                                                    url: 'deptcourseajax.php',
+                                                    type: 'post',
+                                                    data: {
+                                                        depart: deptid
+                                                    },
+                                                    dataType: 'json',
+                                                    success: function(response) {
 
-                        });
-                    </script>
+                                                        var len = response.length;
 
-                </body>
+                                                        $("#sel_user").empty();
+                                                        for (var i = 0; i < len; i++) {
+                                                            var id = response[i]['c_id'];
+                                                            var name = response[i]['c_name'];
 
-                                    <!-- Mirrored from html.codedthemes.com/mash-able/light/tabs.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Sep 2019 14:09:10 GMT -->
+                                                            $("#sel_user").append("<option value='" + id + "'>" + name + "</option>");
+
+                                                        }
+                                                    }
+                                                });
+                                            });
+
+                                        });
+                                    </script>
+
+</body>
+
+<!-- Mirrored from html.codedthemes.com/mash-able/light/tabs.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Sep 2019 14:09:10 GMT -->
 
 </html>

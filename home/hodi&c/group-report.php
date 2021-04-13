@@ -109,6 +109,7 @@ WHERE `sc`.`s_course`='$courseID' AND `teacher`.`t_dept`='$deptID'");
         window.onload = function() {
 
             var chart = new CanvasJS.Chart("chartContainer", {
+                exportEnabled: true,
                 animationEnabled: true,
                 theme: "light2",
                 title: {
