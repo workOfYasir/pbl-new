@@ -126,7 +126,7 @@ $userRoll = $_SESSION["userRoll"];
                 exportEnabled: true,
 	animationEnabled: true,
 	title:{
-		text: "State Operating Funds"
+		text: "Survey Stats"
 	},
 	legend:{
 		cursor: "pointer",
