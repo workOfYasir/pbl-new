@@ -231,7 +231,7 @@
             </a>
         </li>
         <li class=" ">
-            <a href="view-all-teachers" data-i18n="nav.navigate.navbar-inverse">
+            <a href="view-all-hods" data-i18n="nav.navigate.navbar-inverse">
                 <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
                 <span class="pcoded-mtext">View All HODs</span>
                 <span class="pcoded-mcaret"></span>

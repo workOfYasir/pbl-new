@@ -7,7 +7,7 @@ include '../connection.php';
 	   $email = strtoupper($_POST['email']);
 	   $dept = $_POST['dept'];
 	   
-	   $session = $session."-".$year;
+	  
 
  
  
