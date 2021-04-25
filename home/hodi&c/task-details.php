@@ -32,32 +32,31 @@ session_start();
 <meta name="keywords" content="Flat ui, Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
 <meta name="author" content="#">
 
-<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
 
 <link href="https://fonts.googleapis.com/css?family=Mada:300,400,500,600,700" rel="stylesheet">
 
-<link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../../bower_components/bootstrap/css/bootstrap.min.css">
 
-<link rel="stylesheet" type="text/css" href="../bower_components/switchery/css/switchery.min.css">
+<link rel="stylesheet" type="text/css" href="../../bower_components/switchery/css/switchery.min.css">
 
-<link rel="stylesheet" type="text/css" href="assets/icon/simple-line-icons/css/simple-line-icons.css">
+<link rel="stylesheet" type="text/css" href="../assets/icon/simple-line-icons/css/simple-line-icons.css">
 
-<link rel="stylesheet" type="text/css" href="assets/icon/themify-icons/themify-icons.css">
+<link rel="stylesheet" type="text/css" href="../assets/icon/themify-icons/themify-icons.css">
 
-<link rel="stylesheet" type="text/css" href="assets/icon/icofont/css/icofont.css">
+<link rel="stylesheet" type="text/css" href="../assets/icon/icofont/css/icofont.css">
 
-<link rel="stylesheet" type="text/css" href="assets/pages/flag-icon/flag-icon.min.css">
+<link rel="stylesheet" type="text/css" href="../assets/pages/flag-icon/flag-icon.min.css">
 
-<link rel="stylesheet" type="text/css" href="assets/pages/menu-search/css/component.css">
+<link rel="stylesheet" type="text/css" href="../assets/pages/menu-search/css/component.css">
 
-<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 
-<link rel="stylesheet" type="text/css" href="assets/css/linearicons.css">
-<link rel="stylesheet" type="text/css" href="assets/css/simple-line-icons.css">
-<link rel="stylesheet" type="text/css" href="assets/css/ionicons.css">
-<link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.css">
-</head>
-<body>
+<link rel="stylesheet" type="text/css" href="../assets/css/linearicons.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/simple-line-icons.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/ionicons.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/jquery.mCustomScrollbar.css">
+<?php include("../links.php"); ?>
 
 <div class="theme-loader">
 <div class="ball-scale">
@@ -78,7 +77,7 @@ session_start();
 <i class="ti-search"></i>
 </a>
 <a href="#">
-<img class="" src="assets/images/auth/loginn.png" alt="Theme-Logo" height="60px;" width="60px;" />
+<img class="" src="../assets/images/auth/loginn.png" alt="Theme-Logo" height="60px;" width="60px;" />
 </a>
 <a class="mobile-options">
 <i class="ti-more"></i>
@@ -104,7 +103,7 @@ session_start();
  
 <li class="user-profile header-notification">
 <a href="#!">
-<img src="assets/images/user.png" alt="User-Profile-Image">
+<img src="../assets/images/user.png" alt="User-Profile-Image">
 <span><?php echo $userName;    ?></span>
 <i class="ti-angle-down"></i>
 </a>
@@ -146,22 +145,22 @@ session_start();
 <div class="dummy-column">
 <h2>Popular</h2>
 <a class="dummy-media-object" href="#!">
-<img src="assets/images/avatar-1.png" alt="PagePreloadingEffect" />
+<img src="../assets/images/avatar-1.png" alt="PagePreloadingEffect" />
 <h3>Page Preloading Effect</h3>
 </a>
 <a class="dummy-media-object" href="#!">
-<img src="assets/images/avatar-1.png" alt="DraggableDualViewSlideshow" />
+<img src="../assets/images/avatar-1.png" alt="DraggableDualViewSlideshow" />
 <h3>Draggable Dual-View Slideshow</h3>
 </a>
 </div>
 <div class="dummy-column">
 <h2>Recent</h2>
 <a class="dummy-media-object" href="#!">
-<img src="assets/images/avatar-1.png" alt="TooltipStylesInspiration" />
+<img src="../assets/images/avatar-1.png" alt="TooltipStylesInspiration" />
 <h3>Tooltip Styles Inspiration</h3>
 </a>
 <a class="dummy-media-object" href="#!">
-<img src="assets/images/avatar-1.png" alt="NotificationStyles" />
+<img src="../assets/images/avatar-1.png" alt="NotificationStyles" />
 <h3>Notification Styles Inspiration</h3>
 </a>
 </div>
@@ -343,7 +342,7 @@ $result = $conn->query($sql);
 <div class="media">
 <div class="media-left media-middle photo-table">
 <a href="#">
-<img class="img-circle" src="assets/images/avatar-1.png" alt="chat-user">
+<img class="img-circle" src="../assets/images/avatar-1.png" alt="chat-user">
 </a>
 </div>
 <div class="media-body">
@@ -383,7 +382,7 @@ $result = $conn->query($sql);
 <div class="media">
 <div class="media-left media-middle photo-table">
 <a href="#">
-<img class="img-circle" src="assets/images/avatar-1.png" alt="chat-user">
+<img class="img-circle" src="../assets/images/avatar-1.png" alt="chat-user">
 </a>
 </div>
 <div class="media-body">
@@ -455,7 +454,7 @@ else
 <div class="col-md-6 col-xl-3">
 <div class="card thumb-block">
 <div class="thumb-img">
-<img src="assets/images/task/task-u4.jpg" class="img-fluid width-100" alt="task-u4.jpg">
+<img src="../assets/images/task/task-u4.jpg" class="img-fluid width-100" alt="task-u4.jpg">
 <div class="caption-hover">
 <span>
 <a target="_blank" href="<?php echo $file; ?>" class="btn btn-primary btn-sm"><i class="icofont icofont-ui-zoom-in"></i> </a>
@@ -524,33 +523,33 @@ else
 </div>
 
  
-<script type="text/javascript" src="../bower_components/jquery/js/jquery.min.js"></script>
-<script type="text/javascript" src="../bower_components/jquery-ui/js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="../bower_components/popper.js/js/popper.min.js"></script>
-<script type="text/javascript" src="../bower_components/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../bower_components/jquery/js/jquery.min.js"></script>
+<script type="text/javascript" src="../../bower_components/jquery-ui/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../bower_components/popper.js/js/popper.min.js"></script>
+<script type="text/javascript" src="../../bower_components/bootstrap/js/bootstrap.min.js"></script>
 
-<script type="text/javascript" src="../bower_components/jquery-slimscroll/js/jquery.slimscroll.js"></script>
+<script type="text/javascript" src="../../bower_components/jquery-slimscroll/js/jquery.slimscroll.js"></script>
 
-<script type="text/javascript" src="../bower_components/modernizr/js/modernizr.js"></script>
-<script type="text/javascript" src="../bower_components/modernizr/js/css-scrollbars.js"></script>
+<script type="text/javascript" src="../../bower_components/modernizr/js/modernizr.js"></script>
+<script type="text/javascript" src="../../bower_components/modernizr/js/css-scrollbars.js"></script>
 
-<script type="text/javascript" src="../bower_components/classie/js/classie.js"></script>
+<script type="text/javascript" src="../../bower_components/classie/js/classie.js"></script>
 
-<script src="../bower_components/countdown/js/jquery.countdown.js"></script>
-<script src="assets/pages/counter/task-detail.js"></script>
+<script src="../../bower_components/countdown/js/jquery.countdown.js"></script>
+<script src="../assets/pages/counter/task-detail.js"></script>
 
-<script type="text/javascript" src="../bower_components/switchery/js/switchery.min.js"></script>
+<script type="text/javascript" src="../../bower_components/switchery/js/switchery.min.js"></script>
 
-<script type="text/javascript" src="../bower_components/i18next/js/i18next.min.js"></script>
-<script type="text/javascript" src="../bower_components/i18next-xhr-backend/js/i18nextXHRBackend.min.js"></script>
-<script type="text/javascript" src="../bower_components/i18next-browser-languagedetector/js/i18nextBrowserLanguageDetector.min.js"></script>
-<script type="text/javascript" src="../bower_components/jquery-i18next/js/jquery-i18next.min.js"></script>
+<script type="text/javascript" src="../../bower_components/i18next/js/i18next.min.js"></script>
+<script type="text/javascript" src="../../bower_components/i18next-xhr-backend/js/i18nextXHRBackend.min.js"></script>
+<script type="text/javascript" src="../../bower_components/i18next-browser-languagedetector/js/i18nextBrowserLanguageDetector.min.js"></script>
+<script type="text/javascript" src="../../bower_components/jquery-i18next/js/jquery-i18next.min.js"></script>
 
-<script type="text/javascript" src="assets/js/script.js"></script>
-<script src="assets/js/pcoded.min.js"></script>
-<script src="assets/js/demo-12.js"></script>
-<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
-<script src="assets/js/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="../assets/js/script.js"></script>
+<script src="../assets/js/pcoded.min.js"></script>
+<script src="../assets/js/demo-12.js"></script>
+<script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../assets/js/jquery.mousewheel.min.js"></script>
 
 <script>
     // Multiple swithces
@@ -564,7 +563,4 @@ else
         });
     });
 </script>
-</body>
-
-<!-- Mirrored from html.codedthemes.com/mash-able/light/task-detail.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Sep 2019 14:17:28 GMT -->
-</html>
+<?php include("../scripts.php"); ?>

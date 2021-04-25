@@ -21,8 +21,8 @@ $sid=$_GET['id'];
 <head>
 <title>PBL | Evaluation </title>
 
-<link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/css/bootstrap.min.css">
-<script type="text/javascript" src="../bower_components/bootstrap/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../bower_components/bootstrap/css/bootstrap.min.css">
+<script type="text/javascript" src="../../bower_components/bootstrap/js/bootstrap.min.js"></script>
 
 <style>
 #qid {

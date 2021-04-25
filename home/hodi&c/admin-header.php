@@ -8,7 +8,7 @@
 <i class="ti-search"></i>
 </a>
 <a href="index-2.html">
-<img class="img-fluid" src="assets/images/logo.png" alt="Theme-Logo" />
+<img class="img-fluid" src="../assets/images/logo.png" alt="Theme-Logo" />
 </a>
 <a class="mobile-options">
 <i class="ti-more"></i>
@@ -67,7 +67,7 @@
 </li>
 <li>
 <div class="media">
-<img class="d-flex align-self-center" src="assets/images/user.png" alt="Generic placeholder image">
+<img class="d-flex align-self-center" src="../assets/images/user.png" alt="Generic placeholder image">
 <div class="media-body">
 <h5 class="notification-user">John Doe</h5>
  <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
@@ -77,7 +77,7 @@
 </li>
 <li>
 <div class="media">
-<img class="d-flex align-self-center" src="assets/images/user.png" alt="Generic placeholder image">
+<img class="d-flex align-self-center" src="../assets/images/user.png" alt="Generic placeholder image">
 <div class="media-body">
 <h5 class="notification-user">Joseph William</h5>
 <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
@@ -87,7 +87,7 @@
 </li>
 <li>
 <div class="media">
-<img class="d-flex align-self-center" src="assets/images/user.png" alt="Generic placeholder image">
+<img class="d-flex align-self-center" src="../assets/images/user.png" alt="Generic placeholder image">
 <div class="media-body">
 <h5 class="notification-user">Sara Soudein</h5>
 <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
@@ -105,7 +105,7 @@
 </li>
 <li class="user-profile header-notification">
 <a href="#!">
-<img src="assets/images/user.png" alt="User-Profile-Image">
+<img src="../assets/images/user.png" alt="User-Profile-Image">
 <span>John Doe</span>
 <i class="ti-angle-down"></i>
 </a>
@@ -159,22 +159,22 @@
 <div class="dummy-column">
 <h2>Popular</h2>
 <a class="dummy-media-object" href="#!">
-<img src="assets/images/avatar-1.png" alt="PagePreloadingEffect" />
+<img src="../assets/images/avatar-1.png" alt="PagePreloadingEffect" />
 <h3>Page Preloading Effect</h3>
 </a>
 <a class="dummy-media-object" href="#!">
-<img src="assets/images/avatar-1.png" alt="DraggableDualViewSlideshow" />
+<img src="../assets/images/avatar-1.png" alt="DraggableDualViewSlideshow" />
 <h3>Draggable Dual-View Slideshow</h3>
 </a>
 </div>
 <div class="dummy-column">
 <h2>Recent</h2>
 <a class="dummy-media-object" href="#!">
-<img src="assets/images/avatar-1.png" alt="TooltipStylesInspiration" />
+<img src="../assets/images/avatar-1.png" alt="TooltipStylesInspiration" />
 <h3>Tooltip Styles Inspiration</h3>
 </a>
 <a class="dummy-media-object" href="#!">
-<img src="assets/images/avatar-1.png" alt="NotificationStyles" />
+<img src="../assets/images/avatar-1.png" alt="NotificationStyles" />
 <h3>Notification Styles Inspiration</h3>
 </a>
 </div>
@@ -213,7 +213,7 @@
 <div class="main-friend-list">
 <div class="media userlist-box" data-id="1" data-status="online" data-username="Josephin Doe" data-toggle="tooltip" data-placement="left" title="Josephin Doe">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-1.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-1.png" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -222,7 +222,7 @@
 </div>
 <div class="media userlist-box" data-id="2" data-status="online" data-username="Lary Doe" data-toggle="tooltip" data-placement="left" title="Lary Doe">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/task/task-u1.jpg" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/task/task-u1.jpg" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -231,7 +231,7 @@
 </div>
 <div class="media userlist-box" data-id="3" data-status="online" data-username="Alice" data-toggle="tooltip" data-placement="left" title="Alice">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-2.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-2.png" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -240,7 +240,7 @@
 </div>
 <div class="media userlist-box" data-id="4" data-status="online" data-username="Alia" data-toggle="tooltip" data-placement="left" title="Alia">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/task/task-u2.jpg" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/task/task-u2.jpg" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -249,7 +249,7 @@
 </div>
 <div class="media userlist-box" data-id="5" data-status="online" data-username="Suzen" data-toggle="tooltip" data-placement="left" title="Suzen">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/task/task-u3.jpg" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/task/task-u3.jpg" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -258,7 +258,7 @@
 </div>
 <div class="media userlist-box" data-id="6" data-status="offline" data-username="Michael Scofield" data-toggle="tooltip" data-placement="left" title="Michael Scofield">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-3.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-3.png" alt="Generic placeholder image">
 <div class="live-status bg-danger"></div>
 </a>
 <div class="media-body">
@@ -267,7 +267,7 @@
 </div>
 <div class="media userlist-box" data-id="7" data-status="online" data-username="Irina Shayk" data-toggle="tooltip" data-placement="left" title="Irina Shayk">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-4.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-4.png" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -276,7 +276,7 @@
 </div>
 <div class="media userlist-box" data-id="8" data-status="offline" data-username="Sara Tancredi" data-toggle="tooltip" data-placement="left" title="Sara Tancredi">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-5.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-5.png" alt="Generic placeholder image">
 <div class="live-status bg-danger"></div>
 </a>
 <div class="media-body">
@@ -285,7 +285,7 @@
 </div>
 <div class="media userlist-box" data-id="9" data-status="online" data-username="Samon" data-toggle="tooltip" data-placement="left" title="Samon">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-1.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-1.png" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -294,7 +294,7 @@
 </div>
 <div class="media userlist-box" data-id="10" data-status="online" data-username="Daizy Mendize" data-toggle="tooltip" data-placement="left" title="Daizy Mendize">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/task/task-u3.jpg" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/task/task-u3.jpg" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -303,7 +303,7 @@
 </div>
 <div class="media userlist-box" data-id="11" data-status="offline" data-username="Loren Scofield" data-toggle="tooltip" data-placement="left" title="Loren Scofield">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-3.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-3.png" alt="Generic placeholder image">
 <div class="live-status bg-danger"></div>
 </a>
 <div class="media-body">
@@ -312,7 +312,7 @@
 </div>
 <div class="media userlist-box" data-id="12" data-status="online" data-username="Shayk" data-toggle="tooltip" data-placement="left" title="Shayk">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-4.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-4.png" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -321,7 +321,7 @@
 </div>
 <div class="media userlist-box" data-id="13" data-status="offline" data-username="Sara" data-toggle="tooltip" data-placement="left" title="Sara">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/task/task-u3.jpg" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/task/task-u3.jpg" alt="Generic placeholder image">
 <div class="live-status bg-danger"></div>
 </a>
 <div class="media-body">
@@ -330,7 +330,7 @@
 </div>
 <div class="media userlist-box" data-id="14" data-status="online" data-username="Doe" data-toggle="tooltip" data-placement="left" title="Doe">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-1.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-1.png" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -339,7 +339,7 @@
 </div>
 <div class="media userlist-box" data-id="15" data-status="online" data-username="Lary" data-toggle="tooltip" data-placement="left" title="Lary">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/task/task-u1.jpg" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/task/task-u1.jpg" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -378,7 +378,7 @@
 </div>
 <div class="media chat-messages">
 <a class="media-left photo-table" href="#!">
-<img class="media-object img-circle m-t-5" src="assets/images/avatar-1.png" alt="Generic placeholder image">
+<img class="media-object img-circle m-t-5" src="../assets/images/avatar-1.png" alt="Generic placeholder image">
 </a>
 <div class="media-body chat-menu-content">
 <div class="">
@@ -396,7 +396,7 @@
 </div>
 <div class="media-right photo-table">
 <a href="#!">
-<img class="media-object img-circle m-t-5" src="assets/images/avatar-2.png" alt="Generic placeholder image">
+<img class="media-object img-circle m-t-5" src="../assets/images/avatar-2.png" alt="Generic placeholder image">
 </a>
 </div>
 </div>

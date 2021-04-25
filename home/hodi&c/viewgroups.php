@@ -19,28 +19,27 @@
 <meta name="keywords" content="Flat ui, Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
 <meta name="author" content="#">
 
-<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
 
 <link href="https://fonts.googleapis.com/css?family=Mada:300,400,500,600,700" rel="stylesheet">
 
-<link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../../bower_components/bootstrap/css/bootstrap.min.css">
 
-<link rel="stylesheet" type="text/css" href="assets/icon/themify-icons/themify-icons.css">
+<link rel="stylesheet" type="text/css" href="../assets/icon/themify-icons/themify-icons.css">
 
-<link rel="stylesheet" type="text/css" href="assets/icon/icofont/css/icofont.css">
+<link rel="stylesheet" type="text/css" href="../assets/icon/icofont/css/icofont.css">
 
-<link rel="stylesheet" type="text/css" href="assets/pages/flag-icon/flag-icon.min.css">
+<link rel="stylesheet" type="text/css" href="../assets/pages/flag-icon/flag-icon.min.css">
 
-<link rel="stylesheet" type="text/css" href="assets/pages/menu-search/css/component.css">
+<link rel="stylesheet" type="text/css" href="../assets/pages/menu-search/css/component.css">
 
-<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 
-<link rel="stylesheet" type="text/css" href="assets/css/linearicons.css">
-<link rel="stylesheet" type="text/css" href="assets/css/simple-line-icons.css">
-<link rel="stylesheet" type="text/css" href="assets/css/ionicons.css">
-<link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.css">
-</head>
-<body>
+<link rel="stylesheet" type="text/css" href="../assets/css/linearicons.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/simple-line-icons.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/ionicons.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/jquery.mCustomScrollbar.css">
+<?php include("../links.php"); ?>
 
 <div class="theme-loader">
 <div class="ball-scale">
@@ -61,7 +60,7 @@
 <i class="ti-search"></i>
 </a>
 <a href="index-2.html">
-<img class="img-fluid" src="assets/images/logo.png" alt="Theme-Logo" />
+<img class="img-fluid" src="../assets/images/logo.png" alt="Theme-Logo" />
 </a>
 <a class="mobile-options">
 <i class="ti-more"></i>
@@ -154,19 +153,19 @@ Mega
 <li class="col-sm-3">
 <h6 class="mega-menu-title">Gallery</h6>
 <div class="row m-b-20">
-<div class="col-sm-4"><img class="img-fluid img-thumbnail" src="assets/images/mega-menu/01.jpg" alt="Gallery-1">
+<div class="col-sm-4"><img class="img-fluid img-thumbnail" src="../assets/images/mega-menu/01.jpg" alt="Gallery-1">
 </div>
-<div class="col-sm-4"><img class="img-fluid img-thumbnail" src="assets/images/mega-menu/02.jpg" alt="Gallery-2">
+<div class="col-sm-4"><img class="img-fluid img-thumbnail" src="../assets/images/mega-menu/02.jpg" alt="Gallery-2">
 </div>
-<div class="col-sm-4"><img class="img-fluid img-thumbnail" src="assets/images/mega-menu/03.jpg" alt="Gallery-3">
+<div class="col-sm-4"><img class="img-fluid img-thumbnail" src="../assets/images/mega-menu/03.jpg" alt="Gallery-3">
 </div>
 </div>
 <div class="row m-b-20">
-<div class="col-sm-4"><img class="img-fluid img-thumbnail" src="assets/images/mega-menu/04.jpg" alt="Gallery-4">
+<div class="col-sm-4"><img class="img-fluid img-thumbnail" src="../assets/images/mega-menu/04.jpg" alt="Gallery-4">
 </div>
-<div class="col-sm-4"><img class="img-fluid img-thumbnail" src="assets/images/mega-menu/05.jpg" alt="Gallery-5">
+<div class="col-sm-4"><img class="img-fluid img-thumbnail" src="../assets/images/mega-menu/05.jpg" alt="Gallery-5">
 </div>
-<div class="col-sm-4"><img class="img-fluid img-thumbnail" src="assets/images/mega-menu/06.jpg" alt="Gallery-6">
+<div class="col-sm-4"><img class="img-fluid img-thumbnail" src="../assets/images/mega-menu/06.jpg" alt="Gallery-6">
 </div>
 </div>
 <button class="btn btn-primary btn-sm btn-block">Browse Gallery</button>
@@ -243,7 +242,7 @@ Mega
 </li>
 <li>
 <div class="media">
-<img class="d-flex align-self-center" src="assets/images/user.png" alt="Generic placeholder image">
+<img class="d-flex align-self-center" src="../assets/images/user.png" alt="Generic placeholder image">
 <div class="media-body">
 <h5 class="notification-user">John Doe</h5>
 <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
@@ -253,7 +252,7 @@ Mega
 </li>
 <li>
 <div class="media">
-<img class="d-flex align-self-center" src="assets/images/user.png" alt="Generic placeholder image">
+<img class="d-flex align-self-center" src="../assets/images/user.png" alt="Generic placeholder image">
 <div class="media-body">
 <h5 class="notification-user">Joseph William</h5>
 <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
@@ -263,7 +262,7 @@ Mega
 </li>
 <li>
 <div class="media">
-<img class="d-flex align-self-center" src="assets/images/user.png" alt="Generic placeholder image">
+<img class="d-flex align-self-center" src="../assets/images/user.png" alt="Generic placeholder image">
 <div class="media-body">
 <h5 class="notification-user">Sara Soudein</h5>
 <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
@@ -281,7 +280,7 @@ Mega
 </li>
 <li class="user-profile header-notification">
  <a href="#!">
-<img src="assets/images/user.png" alt="User-Profile-Image">
+<img src="../assets/images/user.png" alt="User-Profile-Image">
 <span>John Doe</span>
 <i class="ti-angle-down"></i>
 </a>
@@ -335,22 +334,22 @@ Mega
 <div class="dummy-column">
 <h2>Popular</h2>
 <a class="dummy-media-object" href="#!">
-<img src="assets/images/avatar-1.png" alt="PagePreloadingEffect" />
+<img src="../assets/images/avatar-1.png" alt="PagePreloadingEffect" />
 <h3>Page Preloading Effect</h3>
 </a>
 <a class="dummy-media-object" href="#!">
-<img src="assets/images/avatar-1.png" alt="DraggableDualViewSlideshow" />
+<img src="../assets/images/avatar-1.png" alt="DraggableDualViewSlideshow" />
 <h3>Draggable Dual-View Slideshow</h3>
 </a>
 </div>
 <div class="dummy-column">
 <h2>Recent</h2>
  <a class="dummy-media-object" href="#!">
-<img src="assets/images/avatar-1.png" alt="TooltipStylesInspiration" />
+<img src="../assets/images/avatar-1.png" alt="TooltipStylesInspiration" />
 <h3>Tooltip Styles Inspiration</h3>
 </a>
 <a class="dummy-media-object" href="#!">
-<img src="assets/images/avatar-1.png" alt="NotificationStyles" />
+<img src="../assets/images/avatar-1.png" alt="NotificationStyles" />
 <h3>Notification Styles Inspiration</h3>
 </a>
 </div>
@@ -379,7 +378,7 @@ Mega
 <div class="main-friend-list">
 <div class="media userlist-box" data-id="1" data-status="online" data-username="Josephin Doe" data-toggle="tooltip" data-placement="left" title="Josephin Doe">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-1.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-1.png" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -388,7 +387,7 @@ Mega
 </div>
 <div class="media userlist-box" data-id="2" data-status="online" data-username="Lary Doe" data-toggle="tooltip" data-placement="left" title="Lary Doe">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/task/task-u1.jpg" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/task/task-u1.jpg" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -397,7 +396,7 @@ Mega
 </div>
 <div class="media userlist-box" data-id="3" data-status="online" data-username="Alice" data-toggle="tooltip" data-placement="left" title="Alice">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-2.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-2.png" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -406,7 +405,7 @@ Mega
 </div>
 <div class="media userlist-box" data-id="4" data-status="online" data-username="Alia" data-toggle="tooltip" data-placement="left" title="Alia">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/task/task-u2.jpg" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/task/task-u2.jpg" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -415,7 +414,7 @@ Mega
 </div>
 <div class="media userlist-box" data-id="5" data-status="online" data-username="Suzen" data-toggle="tooltip" data-placement="left" title="Suzen">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/task/task-u3.jpg" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/task/task-u3.jpg" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -424,7 +423,7 @@ Mega
 </div>
 <div class="media userlist-box" data-id="6" data-status="offline" data-username="Michael Scofield" data-toggle="tooltip" data-placement="left" title="Michael Scofield">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-3.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-3.png" alt="Generic placeholder image">
 <div class="live-status bg-danger"></div>
 </a>
 <div class="media-body">
@@ -433,7 +432,7 @@ Mega
 </div>
 <div class="media userlist-box" data-id="7" data-status="online" data-username="Irina Shayk" data-toggle="tooltip" data-placement="left" title="Irina Shayk">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-4.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-4.png" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -442,7 +441,7 @@ Mega
 </div>
 <div class="media userlist-box" data-id="8" data-status="offline" data-username="Sara Tancredi" data-toggle="tooltip" data-placement="left" title="Sara Tancredi">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-5.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-5.png" alt="Generic placeholder image">
 <div class="live-status bg-danger"></div>
 </a>
 <div class="media-body">
@@ -451,7 +450,7 @@ Mega
 </div>
 <div class="media userlist-box" data-id="9" data-status="online" data-username="Samon" data-toggle="tooltip" data-placement="left" title="Samon">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-1.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-1.png" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -460,7 +459,7 @@ Mega
 </div>
 <div class="media userlist-box" data-id="10" data-status="online" data-username="Daizy Mendize" data-toggle="tooltip" data-placement="left" title="Daizy Mendize">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/task/task-u3.jpg" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/task/task-u3.jpg" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -469,7 +468,7 @@ Mega
 </div>
 <div class="media userlist-box" data-id="11" data-status="offline" data-username="Loren Scofield" data-toggle="tooltip" data-placement="left" title="Loren Scofield">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-3.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-3.png" alt="Generic placeholder image">
 <div class="live-status bg-danger"></div>
 </a>
 <div class="media-body">
@@ -478,7 +477,7 @@ Mega
 </div>
 <div class="media userlist-box" data-id="12" data-status="online" data-username="Shayk" data-toggle="tooltip" data-placement="left" title="Shayk">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-4.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-4.png" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -487,7 +486,7 @@ Mega
 </div>
 <div class="media userlist-box" data-id="13" data-status="offline" data-username="Sara" data-toggle="tooltip" data-placement="left" title="Sara">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/task/task-u3.jpg" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/task/task-u3.jpg" alt="Generic placeholder image">
 <div class="live-status bg-danger"></div>
 </a>
 <div class="media-body">
@@ -496,7 +495,7 @@ Mega
 </div>
 <div class="media userlist-box" data-id="14" data-status="online" data-username="Doe" data-toggle="tooltip" data-placement="left" title="Doe">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-1.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-1.png" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -505,7 +504,7 @@ Mega
 </div>
 <div class="media userlist-box" data-id="15" data-status="online" data-username="Lary" data-toggle="tooltip" data-placement="left" title="Lary">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/task/task-u1.jpg" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/task/task-u1.jpg" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -526,7 +525,7 @@ Mega
 </div>
 <div class="media chat-messages">
 <a class="media-left photo-table" href="#!">
-<img class="media-object img-circle m-t-5" src="assets/images/avatar-1.png" alt="Generic placeholder image">
+<img class="media-object img-circle m-t-5" src="../assets/images/avatar-1.png" alt="Generic placeholder image">
 </a>
 <div class="media-body chat-menu-content">
 <div class="">
@@ -544,7 +543,7 @@ Mega
 </div>
 <div class="media-right photo-table">
 <a href="#!">
-<img class="media-object img-circle m-t-5" src="assets/images/avatar-2.png" alt="Generic placeholder image">
+<img class="media-object img-circle m-t-5" src="../assets/images/avatar-2.png" alt="Generic placeholder image">
 </a>
 </div>
 </div>
@@ -3088,31 +3087,31 @@ echo '<a >'.$rs['c_name'].'</a>
         <ul class="iew-download">
             <li>
                 <a href="http://www.google.com/chrome/">
-                    <img src="assets/images/browser/chrome.png" alt="Chrome">
+                    <img src="../assets/images/browser/chrome.png" alt="Chrome">
                     <div>Chrome</div>
                 </a>
             </li>
             <li>
                 <a href="https://www.mozilla.org/en-US/firefox/new/">
-                    <img src="assets/images/browser/firefox.png" alt="Firefox">
+                    <img src="../assets/images/browser/firefox.png" alt="Firefox">
                     <div>Firefox</div>
                 </a>
             </li>
             <li>
                 <a href="http://www.opera.com">
-                    <img src="assets/images/browser/opera.png" alt="Opera">
+                    <img src="../assets/images/browser/opera.png" alt="Opera">
                     <div>Opera</div>
                 </a>
             </li>
             <li>
                 <a href="https://www.apple.com/safari/">
-                    <img src="assets/images/browser/safari.png" alt="Safari">
+                    <img src="../assets/images/browser/safari.png" alt="Safari">
                     <div>Safari</div>
                 </a>
             </li>
             <li>
                 <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
-                    <img src="assets/images/browser/ie.png" alt="">
+                    <img src="../assets/images/browser/ie.png" alt="">
                     <div>IE (9 & above)</div>
                 </a>
             </li>
@@ -3123,31 +3122,28 @@ echo '<a >'.$rs['c_name'].'</a>
 <![endif]-->
 
 
-<script type="text/javascript" src="../bower_components/jquery/js/jquery.min.js"></script>
-<script type="text/javascript" src="../bower_components/jquery-ui/js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="../bower_components/popper.js/js/popper.min.js"></script>
-<script type="text/javascript" src="../bower_components/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../bower_components/jquery/js/jquery.min.js"></script>
+<script type="text/javascript" src="../../bower_components/jquery-ui/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../bower_components/popper.js/js/popper.min.js"></script>
+<script type="text/javascript" src="../../bower_components/bootstrap/js/bootstrap.min.js"></script>
 
-<script type="text/javascript" src="../bower_components/jquery-slimscroll/js/jquery.slimscroll.js"></script>
+<script type="text/javascript" src="../../bower_components/jquery-slimscroll/js/jquery.slimscroll.js"></script>
 
-<script type="text/javascript" src="../bower_components/modernizr/js/modernizr.js"></script>
-<script type="text/javascript" src="../bower_components/modernizr/js/css-scrollbars.js"></script>
+<script type="text/javascript" src="../../bower_components/modernizr/js/modernizr.js"></script>
+<script type="text/javascript" src="../../bower_components/modernizr/js/css-scrollbars.js"></script>
 
-<script type="text/javascript" src="../bower_components/classie/js/classie.js"></script>
+<script type="text/javascript" src="../../bower_components/classie/js/classie.js"></script>
 
-<script type="text/javascript" src="assets/pages/task-board/task-board.js"></script>
+<script type="text/javascript" src="../assets/pages/task-board/task-board.js"></script>
 
-<script type="text/javascript" src="../bower_components/i18next/js/i18next.min.js"></script>
-<script type="text/javascript" src="../bower_components/i18next-xhr-backend/js/i18nextXHRBackend.min.js"></script>
-<script type="text/javascript" src="../bower_components/i18next-browser-languagedetector/js/i18nextBrowserLanguageDetector.min.js"></script>
-<script type="text/javascript" src="../bower_components/jquery-i18next/js/jquery-i18next.min.js"></script>
+<script type="text/javascript" src="../../bower_components/i18next/js/i18next.min.js"></script>
+<script type="text/javascript" src="../../bower_components/i18next-xhr-backend/js/i18nextXHRBackend.min.js"></script>
+<script type="text/javascript" src="../../bower_components/i18next-browser-languagedetector/js/i18nextBrowserLanguageDetector.min.js"></script>
+<script type="text/javascript" src="../../bower_components/jquery-i18next/js/jquery-i18next.min.js"></script>
 
-<script type="text/javascript" src="assets/js/script.js"></script>
-<script src="assets/js/pcoded.min.js"></script>
-<script src="assets/js/demo-12.js"></script>
-<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
-<script src="assets/js/jquery.mousewheel.min.js"></script>
-</body>
-
-<!-- Mirrored from html.codedthemes.com/mash-able/light/task-board.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Sep 2019 14:17:26 GMT -->
-</html>
+<script type="text/javascript" src="../assets/js/script.js"></script>
+<script src="../assets/js/pcoded.min.js"></script>
+<script src="../assets/js/demo-12.js"></script>
+<script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../assets/js/jquery.mousewheel.min.js"></script>
+<?php include("../scripts.php"); ?>

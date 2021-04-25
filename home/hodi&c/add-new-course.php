@@ -57,7 +57,7 @@ include("../links.php");
 <i class="ti-search"></i>
 </a>
 <a href="#">
-<img class="" src="assets/images/auth/loginn.png" alt="Theme-Logo" height="60px;" width="60px;" />
+<img class="" src="../assets/images/auth/loginn.png" alt="Theme-Logo" height="60px;" width="60px;" />
 </a>
 <a class="mobile-options">
 <i class="ti-more"></i>
@@ -83,7 +83,7 @@ include("../links.php");
  
 <li class="user-profile header-notification">
 <a href="#!">
-<img src="assets/images/user.png" alt="User-Profile-Image">
+<img src="../assets/images/user.png" alt="User-Profile-Image">
 <span><?php echo $userName;    ?></span>
 <i class="ti-angle-down"></i>
 </a>
@@ -127,7 +127,7 @@ include("../links.php");
 <div class="main-friend-list">
 <div class="media userlist-box" data-id="1" data-status="online" data-username="Josephin Doe" data-toggle="tooltip" data-placement="left" title="Josephin Doe">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-1.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-1.png" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -136,7 +136,7 @@ include("../links.php");
 </div>
 <div class="media userlist-box" data-id="2" data-status="online" data-username="Lary Doe" data-toggle="tooltip" data-placement="left" title="Lary Doe">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/task/task-u1.jpg" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/task/task-u1.jpg" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -145,7 +145,7 @@ include("../links.php");
 </div>
 <div class="media userlist-box" data-id="3" data-status="online" data-username="Alice" data-toggle="tooltip" data-placement="left" title="Alice">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-2.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-2.png" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -154,7 +154,7 @@ include("../links.php");
 </div>
 <div class="media userlist-box" data-id="4" data-status="online" data-username="Alia" data-toggle="tooltip" data-placement="left" title="Alia">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/task/task-u2.jpg" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/task/task-u2.jpg" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -163,7 +163,7 @@ include("../links.php");
 </div>
 <div class="media userlist-box" data-id="5" data-status="online" data-username="Suzen" data-toggle="tooltip" data-placement="left" title="Suzen">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/task/task-u3.jpg" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/task/task-u3.jpg" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -172,7 +172,7 @@ include("../links.php");
 </div>
 <div class="media userlist-box" data-id="6" data-status="offline" data-username="Michael Scofield" data-toggle="tooltip" data-placement="left" title="Michael Scofield">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-3.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-3.png" alt="Generic placeholder image">
 <div class="live-status bg-danger"></div>
 </a>
 <div class="media-body">
@@ -181,7 +181,7 @@ include("../links.php");
 </div>
 <div class="media userlist-box" data-id="7" data-status="online" data-username="Irina Shayk" data-toggle="tooltip" data-placement="left" title="Irina Shayk">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-4.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-4.png" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -190,7 +190,7 @@ include("../links.php");
 </div>
 <div class="media userlist-box" data-id="8" data-status="offline" data-username="Sara Tancredi" data-toggle="tooltip" data-placement="left" title="Sara Tancredi">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-5.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-5.png" alt="Generic placeholder image">
 <div class="live-status bg-danger"></div>
 </a>
 <div class="media-body">
@@ -199,7 +199,7 @@ include("../links.php");
 </div>
 <div class="media userlist-box" data-id="9" data-status="online" data-username="Samon" data-toggle="tooltip" data-placement="left" title="Samon">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-1.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-1.png" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -208,7 +208,7 @@ include("../links.php");
 </div>
 <div class="media userlist-box" data-id="10" data-status="online" data-username="Daizy Mendize" data-toggle="tooltip" data-placement="left" title="Daizy Mendize">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/task/task-u3.jpg" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/task/task-u3.jpg" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -217,7 +217,7 @@ include("../links.php");
 </div>
 <div class="media userlist-box" data-id="11" data-status="offline" data-username="Loren Scofield" data-toggle="tooltip" data-placement="left" title="Loren Scofield">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-3.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-3.png" alt="Generic placeholder image">
 <div class="live-status bg-danger"></div>
 </a>
 <div class="media-body">
@@ -226,7 +226,7 @@ include("../links.php");
 </div>
 <div class="media userlist-box" data-id="12" data-status="online" data-username="Shayk" data-toggle="tooltip" data-placement="left" title="Shayk">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-4.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-4.png" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -235,7 +235,7 @@ include("../links.php");
 </div>
 <div class="media userlist-box" data-id="13" data-status="offline" data-username="Sara" data-toggle="tooltip" data-placement="left" title="Sara">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/task/task-u3.jpg" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/task/task-u3.jpg" alt="Generic placeholder image">
 <div class="live-status bg-danger"></div>
 </a>
 <div class="media-body">
@@ -244,7 +244,7 @@ include("../links.php");
 </div>
 <div class="media userlist-box" data-id="14" data-status="online" data-username="Doe" data-toggle="tooltip" data-placement="left" title="Doe">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-1.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-1.png" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -253,7 +253,7 @@ include("../links.php");
 </div>
 <div class="media userlist-box" data-id="15" data-status="online" data-username="Lary" data-toggle="tooltip" data-placement="left" title="Lary">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/task/task-u1.jpg" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/task/task-u1.jpg" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -274,7 +274,7 @@ include("../links.php");
 </div>
 <div class="media chat-messages">
 <a class="media-left photo-table" href="#!">
-<img class="media-object img-circle m-t-5" src="assets/images/avatar-1.png" alt="Generic placeholder image">
+<img class="media-object img-circle m-t-5" src=../"assets/images/avatar-1.png" alt="Generic placeholder image">
 </a>
 <div class="media-body chat-menu-content">
 <div class="">
@@ -292,7 +292,7 @@ include("../links.php");
 </div>
 <div class="media-right photo-table">
 <a href="#!">
-<img class="media-object img-circle m-t-5" src="assets/images/avatar-2.png" alt="Generic placeholder image">
+<img class="media-object img-circle m-t-5" src=../"assets/images/avatar-2.png" alt="Generic placeholder image">
 </a>
 </div>
 </div>
@@ -484,31 +484,31 @@ include("../links.php");
         <ul class="iew-download">
             <li>
                 <a href="http://www.google.com/chrome/">
-                    <img src="assets/images/browser/chrome.png" alt="Chrome">
+                    <img src=../"assets/images/browser/chrome.png" alt="Chrome">
                     <div>Chrome</div>
                 </a>
             </li>
             <li>
                 <a href="https://www.mozilla.org/en-US/firefox/new/">
-                    <img src="assets/images/browser/firefox.png" alt="Firefox">
+                    <img src=../"assets/images/browser/firefox.png" alt="Firefox">
                     <div>Firefox</div>
                 </a>
             </li>
             <li>
                 <a href="http://www.opera.com">
-                    <img src="assets/images/browser/opera.png" alt="Opera">
+                    <img src=../"assets/images/browser/opera.png" alt="Opera">
                     <div>Opera</div>
                 </a>
             </li>
             <li>
                 <a href="https://www.apple.com/safari/">
-                    <img src="assets/images/browser/safari.png" alt="Safari">
+                    <img src=../"assets/images/browser/safari.png" alt="Safari">
                     <div>Safari</div>
                 </a>
             </li>
             <li>
                 <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
-                    <img src="assets/images/browser/ie.png" alt="">
+                    <img src=../"assets/images/browser/ie.png" alt="">
                     <div>IE (9 & above)</div>
                 </a>
             </li>

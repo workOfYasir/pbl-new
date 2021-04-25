@@ -4,7 +4,7 @@
         <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Navigation</div>
         <ul class="pcoded-item pcoded-left-item">
             <li class="active">
-                <a href="hodi&c-index">
+                <a href="dean-index">
                     <span class="pcoded-micon"><i class="ti-home"></i></span>
                     <span class="pcoded-mtext" data-i18n="nav.animations.main"> Dashboard</span>
                     <span class="pcoded-mcaret"></span>
@@ -46,36 +46,7 @@
                 </ul>
             </li>
 
-            <li class="pcoded-hasmenu">
-                <a href="javascript:void(0)" data-i18n="nav.navigate.main">
-                    <span class="pcoded-micon"><i class="ti-view-list-alt"></i></span>
-                    <span class="pcoded-mtext">Manage Detaptment</span>
-                    <span class="pcoded-mcaret"></span>
-                </a>
-                <ul class="pcoded-submenu">
-                    <li class=" ">
-                        <a href="add-new-dept" data-i18n="nav.navigate.navbar">
-                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                            <span class="pcoded-mtext">Add New Department</span>
-                            <span class="pcoded-mcaret"></span>
-                        </a>
-                    </li>
-                    <li class=" ">
-                        <a href="view-all-dept" data-i18n="nav.navigate.navbar-inverse">
-                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                            <span class="pcoded-mtext">View All Departments</span>
-                            <span class="pcoded-mcaret"></span>
-                        </a>
-                    </li>
-                    <li class=" ">
-                        <a href="view-trash-department" data-i18n="nav.navigate.navbar-with-elements">
-                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                            <span class="pcoded-mtext">View Recycle Departments</span>
-                            <span class="pcoded-mcaret"></span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
+      
 
             <li class="pcoded-hasmenu">
                 <a href="javascript:void(0)" data-i18n="nav.navigate.main">
@@ -214,71 +185,7 @@
                     </li>
                 </ul>
             </li>
-            <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">HOD</div>
-
-<li class="pcoded-hasmenu">
-    <a href="javascript:void(0)" data-i18n="nav.navigate.main">
-        <span class="pcoded-micon"><i class="ti-bar-chart-alt"></i></span>
-        <span class="pcoded-mtext">Manage HODs</span>
-        <span class="pcoded-mcaret"></span>
-    </a>
-    <ul class="pcoded-submenu">
-        <li class=" ">
-            <a href="add-new-hod" data-i18n="nav.navigate.navbar">
-                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                <span class="pcoded-mtext">Add New HOD</span>
-                <span class="pcoded-mcaret"></span>
-            </a>
-        </li>
-        <li class=" ">
-            <a href="view-all-hods" data-i18n="nav.navigate.navbar-inverse">
-                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                <span class="pcoded-mtext">View All HODs</span>
-                <span class="pcoded-mcaret"></span>
-            </a>
-        </li>
-        <li class=" ">
-            <a href="view-trash-teachers" data-i18n="nav.navigate.navbar-with-elements">
-                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                <span class="pcoded-mtext">View Recycle HODs</span>
-                <span class="pcoded-mcaret"></span>
-            </a>
-        </li>
-    </ul>
-</li>
-
-<div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Dean</div>
-
-<li class="pcoded-hasmenu">
-    <a href="javascript:void(0)" data-i18n="nav.navigate.main">
-        <span class="pcoded-micon"><i class="ti-bar-chart-alt"></i></span>
-        <span class="pcoded-mtext">Manage Deans</span>
-        <span class="pcoded-mcaret"></span>
-    </a>
-    <ul class="pcoded-submenu">
-        <li class=" ">
-            <a href="add-new-dean" data-i18n="nav.navigate.navbar">
-                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                <span class="pcoded-mtext">Add New Dean</span>
-                <span class="pcoded-mcaret"></span>
-            </a>
-        </li>
-        <li class=" ">
-            <a href="view-all-deans" data-i18n="nav.navigate.navbar-inverse">
-                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                <span class="pcoded-mtext">View All Deans</span>
-                <span class="pcoded-mcaret"></span>
-            </a>
-        </li>
-        <li class=" ">
-            <a href="view-trash-teachers" data-i18n="nav.navigate.navbar-with-elements">
-                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                <span class="pcoded-mtext">View Recycle Deans</span>
-                <span class="pcoded-mcaret"></span>
-            </a>
-        </li>
-    </ul>
-</li>
+           
             <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Manage Exhibition</div>
             <li class=" ">
                 <a href="view-ruberics">
@@ -305,21 +212,6 @@
                     <span class="pcoded-mcaret"></span>
                 </a>
             </li>
-
-
-
-
-
-
-
-
-
-
         </ul>
-
-
-
-
-
     </div>
 </nav>

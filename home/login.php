@@ -39,11 +39,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			header("Location:evaluator-index");
 		}elseif($row['u_type'] == "HODI&C"){
 			header("Location:hodi&c/hodi&c-index");
+		}elseif($row['u_type'] == "HOD"){
+			header("Location:hodi&c/hodi&c-index");
+		}elseif($row['u_type'] == "DEAN"){
+			header("Location:hodi&c/hodi&c-index");
 		}
  	} else{$passwordERR = "Entered Password Or User Name is Incorrect!!!";
 				$nameERR = "";}
 //else {
-
 // 		$q = "SELECT * FROM users WHERE
 //   u_password='$pass' and
 // 	 u_email='$email' 

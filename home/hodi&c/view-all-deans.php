@@ -162,7 +162,7 @@ session_start();
 <thead>
 <tr>
 <th>Sr#</th>
-<th>Teacher Name</th>
+<th>Dean Name</th>
 <th>Department</th>
 
 <th>Operation</th>
@@ -176,7 +176,7 @@ session_start();
  
 
 include 'connection.php';
-$sql = "SELECT * FROM teacher where is_dell='no'";
+$sql = "SELECT * FROM dean where is_dell='no'";
 
 $result = $conn->query($sql);
 
@@ -190,23 +190,29 @@ if ($result->num_rows > 0) {
      	echo "<tr>";
 		
 	echo "<td>".$ii."</td>";
-	echo "<td>".$rowe['t_name']."</td>";
-	
-	$id = $rowe['t_dept'];
+	echo "<td>".$rowe['name']."</td>";
+  echo "<td>";
+    $sql = mysqli_query($conn,"SELECT * FROM `dean_dept`");
+    while( $sqlresult = $sql->fetch_assoc())
+ 
+{
+   
+    	$id = $sqlresult['dept_id'];
 	
 	
 	$s = "SELECT * FROM department where dept_id= $id ";
 
 $resultt = $conn->query($s);
-	 
-     $roww = $resultt->fetch_assoc();
-  
-	
-	echo "<td>".$roww['dept_name']."</td>";
-	
+$roww = mysqli_fetch_assoc($resultt);
+
+	echo $roww['dept_name'],' ,';
+
+
+}
+echo "</td>";
 	echo '<td class="action-icon">
-<a href="edit-teacher?teacher='.$rowe['t_id'].'" class="m-r-15 text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="icofont icofont-ui-edit"></i></a>
-<a href="#" onclick="delete_teacher('.$rowe['t_id'].')" class="text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="icofont icofont-delete-alt"></i>
+<a href="edit-dean?dean='.$rowe['id'].'" class="m-r-15 text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="icofont icofont-ui-edit"></i></a>
+<a href="#" onclick="delete_dean('.$rowe['id'].')" class="text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="icofont icofont-delete-alt"></i>
 </a>
 </td>';
  
@@ -260,7 +266,7 @@ $resultt = $conn->query($s);
  
 <script>
 
-function delete_teacher(id)
+function delete_dean(id)
 {
 	
 	swal({
@@ -276,7 +282,7 @@ function delete_teacher(id)
       icon: "success",
     });
 	
-	window.location="delete-single-teacher?teacher="+id;
+	window.location="delete-single-dean?dean="+id;
 	
     swal(" Your Selected Teacher has been deleted!");
   } else {

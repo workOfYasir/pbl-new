@@ -50,7 +50,7 @@ session_start();
 <i class="ti-search"></i>
 </a>
 <a href="#">
-<img class="" src="assets/images/auth/loginn.png" alt="Theme-Logo" height="60px;" width="60px;" />
+<img class="" src="../assets/images/auth/loginn.png" alt="Theme-Logo" height="60px;" width="60px;" />
 </a>
 <a class="mobile-options">
 <i class="ti-more"></i>
@@ -76,7 +76,7 @@ session_start();
  
 <li class="user-profile header-notification">
 <a href="#!">
-<img src="assets/images/user.png" alt="User-Profile-Image">
+<img src="../assets/images/user.png" alt="User-Profile-Image">
 <span><?php echo $userName;    ?></span>
 <i class="ti-angle-down"></i>
 </a>

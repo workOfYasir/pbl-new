@@ -76,31 +76,31 @@ WHERE `sc`.`s_course`='$courseID' AND `teacher`.`t_dept`='$deptID'");
     <meta name="keywords" content="Flat ui, Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
     <meta name="author" content="#">
 
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
 
     <link href="https://fonts.googleapis.com/css?family=Mada:300,400,500,600,700" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../bower_components/bootstrap/css/bootstrap.min.css">
 
-    <link rel="stylesheet" type="text/css" href="assets/icon/themify-icons/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="../assets/icon/themify-icons/themify-icons.css">
 
-    <link rel="stylesheet" type="text/css" href="assets/icon/icofont/css/icofont.css">
+    <link rel="stylesheet" type="text/css" href="../assets/icon/icofont/css/icofont.css">
 
-    <link rel="stylesheet" type="text/css" href="assets/pages/flag-icon/flag-icon.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/pages/flag-icon/flag-icon.min.css">
 
-    <link rel="stylesheet" type="text/css" href="assets/pages/menu-search/css/component.css">
+    <link rel="stylesheet" type="text/css" href="../assets/pages/menu-search/css/component.css">
 
-    <link rel="stylesheet" type="text/css" href="../bower_components/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/pages/data-table/css/buttons.dataTables.min.css">
-    <link rel="stylesheet" type="text/css" href="../bower_components/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/pages/data-table/extensions/responsive/css/responsive.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="../../bower_components/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/pages/data-table/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="../../bower_components/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/pages/data-table/extensions/responsive/css/responsive.dataTables.css">
 
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 
-    <link rel="stylesheet" type="text/css" href="assets/css/linearicons.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/simple-line-icons.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/ionicons.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/linearicons.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/simple-line-icons.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/ionicons.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/jquery.mCustomScrollbar.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -155,9 +155,7 @@ WHERE `sc`.`s_course`='$courseID' AND `teacher`.`t_dept`='$deptID'");
         
     </script>
 
-</head>
-
-<body>
+<?php include("../links.php"); ?>
 
     <div class="theme-loader">
         <div class="ball-scale">
@@ -183,7 +181,7 @@ WHERE `sc`.`s_course`='$courseID' AND `teacher`.`t_dept`='$deptID'");
                             <i class="ti-search"></i>
                         </a>
                         <a href="#">
-                            <img class="" src="assets/images/auth/loginn.png" alt="Theme-Logo" height="60px;" width="60px;" />
+                            <img class="" src="../assets/images/auth/loginn.png" alt="Theme-Logo" height="60px;" width="60px;" />
                         </a>
                         <a class="mobile-options">
                             <i class="ti-more"></i>
@@ -209,7 +207,7 @@ WHERE `sc`.`s_course`='$courseID' AND `teacher`.`t_dept`='$deptID'");
 
                                 <li class="user-profile header-notification">
                                     <a href="#!">
-                                        <img src="assets/images/user.png" alt="User-Profile-Image">
+                                        <img src="../assets/images/user.png" alt="User-Profile-Image">
                                         <span><?php echo $userName;    ?></span>
                                         <i class="ti-angle-down"></i>
                                     </a>
@@ -331,49 +329,49 @@ WHERE `sc`.`s_course`='$courseID' AND `teacher`.`t_dept`='$deptID'");
 
                 <body>
                     <div id="chartContainer" style="height: 380px; width: 85%;"></div>
-                    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+                    <script src="https://canvasjs.com/../assets/script/canvasjs.min.js"></script>
 
 
 
 
 
                     <!-- <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
-                    <script type="text/javascript" src="../bower_components/jquery/js/jquery.min.js"></script>
-                    <script type="text/javascript" src="../bower_components/jquery-ui/js/jquery-ui.min.js"></script>
-                    <script type="text/javascript" src="../bower_components/popper.js/js/popper.min.js"></script>
-                    <script type="text/javascript" src="../bower_components/bootstrap/js/bootstrap.min.js"></script>
+                    <script type="text/javascript" src="../../bower_components/jquery/js/jquery.min.js"></script>
+                    <script type="text/javascript" src="../../bower_components/jquery-ui/js/jquery-ui.min.js"></script>
+                    <script type="text/javascript" src="../../bower_components/popper.js/js/popper.min.js"></script>
+                    <script type="text/javascript" src="../../bower_components/bootstrap/js/bootstrap.min.js"></script>
 
-                    <script type="text/javascript" src="../bower_components/jquery-slimscroll/js/jquery.slimscroll.js"></script>
+                    <script type="text/javascript" src="../../bower_components/jquery-slimscroll/js/jquery.slimscroll.js"></script>
 
-                    <script type="text/javascript" src="../bower_components/modernizr/js/modernizr.js"></script>
-                    <script type="text/javascript" src="../bower_components/modernizr/js/css-scrollbars.js"></script>
+                    <script type="text/javascript" src="../../bower_components/modernizr/js/modernizr.js"></script>
+                    <script type="text/javascript" src="../../bower_components/modernizr/js/css-scrollbars.js"></script>
 
-                    <script type="text/javascript" src="../bower_components/classie/js/classie.js"></script>
+                    <script type="text/javascript" src="../../bower_components/classie/js/classie.js"></script>
 
-                    <script src="../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-                    <script src="../bower_components/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-                    <script src="assets/pages/data-table/js/jszip.min.js"></script>
-                    <script src="assets/pages/data-table/js/pdfmake.min.js"></script>
-                    <script src="assets/pages/data-table/js/vfs_fonts.js"></script>
-                    <script src="assets/pages/data-table/extensions/responsive/js/dataTables.responsive.min.js"></script>
-                    <script src="../bower_components/datatables.net-buttons/js/buttons.print.min.js"></script>
-                    <script src="../bower_components/datatables.net-buttons/js/buttons.html5.min.js"></script>
-                    <script src="../bower_components/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
-                    <script src="../bower_components/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-                    <script src="../bower_components/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+                    <script src="../../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+                    <script src="../../bower_components/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+                    <script src="../assets/pages/data-table/js/jszip.min.js"></script>
+                    <script src="../assets/pages/data-table/js/pdfmake.min.js"></script>
+                    <script src="../assets/pages/data-table/js/vfs_fonts.js"></script>
+                    <script src="../assets/pages/data-table/extensions/responsive/js/dataTables.responsive.min.js"></script>
+                    <script src="../../bower_components/datatables.net-buttons/js/buttons.print.min.js"></script>
+                    <script src="../../bower_components/datatables.net-buttons/js/buttons.html5.min.js"></script>
+                    <script src="../../bower_components/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+                    <script src="../../bower_components/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+                    <script src="../../bower_components/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
 
-                    <script type="text/javascript" src="../bower_components/i18next/js/i18next.min.js"></script>
-                    <script type="text/javascript" src="../bower_components/i18next-xhr-backend/js/i18nextXHRBackend.min.js"></script>
-                    <script type="text/javascript" src="../bower_components/i18next-browser-languagedetector/js/i18nextBrowserLanguageDetector.min.js"></script>
-                    <script type="text/javascript" src="../bower_components/jquery-i18next/js/jquery-i18next.min.js"></script>
+                    <script type="text/javascript" src="../../bower_components/i18next/js/i18next.min.js"></script>
+                    <script type="text/javascript" src="../../bower_components/i18next-xhr-backend/js/i18nextXHRBackend.min.js"></script>
+                    <script type="text/javascript" src="../../bower_components/i18next-browser-languagedetector/js/i18nextBrowserLanguageDetector.min.js"></script>
+                    <script type="text/javascript" src="../../bower_components/jquery-i18next/js/jquery-i18next.min.js"></script>
 
-                    <script src="assets/pages/data-table/extensions/responsive/js/responsive-custom.js"></script>
-                    <script type="text/javascript" src="assets/js/script.js"></script>
-                    <script src="assets/js/pcoded.min.js"></script>
-                    <script src="assets/js/demo-12.js"></script>
-                    <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+                    <script src="../assets/pages/data-table/extensions/responsive/js/responsive-custom.js"></script>
+                    <script type="text/javascript" src="../assets/js/script.js"></script>
+                    <script src="../assets/js/pcoded.min.js"></script>
+                    <script src="../assets/js/demo-12.js"></script>
+                    <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
                     
-                    <script src="assets/js/jquery.mousewheel.min.js"></script>
+                    <script src="../assets/js/jquery.mousewheel.min.js"></script>
                     <script type="text/javascript">
                     
                         $(document).ready(function() {
@@ -407,8 +405,4 @@ WHERE `sc`.`s_course`='$courseID' AND `teacher`.`t_dept`='$deptID'");
                         });
                     </script>
 
-                </body>
-
-                                    <!-- Mirrored from html.codedthemes.com/mash-able/light/tabs.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Sep 2019 14:09:10 GMT -->
-
-</html>
+     <?php include("../scripts.php"); ?>

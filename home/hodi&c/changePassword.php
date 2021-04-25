@@ -82,21 +82,19 @@ else
 <meta name="keywords" content="Flat ui, Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
 <meta name="author" content="#">
 
-<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
 
 <link href="https://fonts.googleapis.com/css?family=Mada:300,400,500,600,700" rel="stylesheet">
 
-<link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../../bower_components/bootstrap/css/bootstrap.min.css">
 
-<link rel="stylesheet" type="text/css" href="assets/icon/themify-icons/themify-icons.css">
+<link rel="stylesheet" type="text/css" href="../assets/icon/themify-icons/themify-icons.css">
 
-<link rel="stylesheet" type="text/css" href="assets/icon/icofont/css/icofont.css">
+<link rel="stylesheet" type="text/css" href="../assets/icon/icofont/css/icofont.css">
 
-<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 
-</head>
-<body class="fix-menu">
-	
+<?php include("../links.php"); ?>
  	
 	
 <section >
@@ -132,7 +130,7 @@ else
 <p class="text-inverse text-left"><b>Your Autentification Team</b></p>
 </div>
 <div class="col-4">
-<img src="assets/images/auth/pbllogo.png" alt="small-logo.png" height="70px" width="70px;" style="margin-left:17px;">
+<img src="../assets/images/auth/pbllogo.png" alt="small-logo.png" height="70px" width="70px;" style="margin-left:17px;">
 </div>
 </div>
 </div>
@@ -157,31 +155,31 @@ else
         <ul class="iew-download">
             <li>
                 <a href="http://www.google.com/chrome/">
-                    <img src="assets/images/browser/chrome.png" alt="Chrome">
+                    <img src="../assets/images/browser/chrome.png" alt="Chrome">
                     <div>Chrome</div>
                 </a>
             </li>
             <li>
                 <a href="https://www.mozilla.org/en-US/firefox/new/">
-                    <img src="assets/images/browser/firefox.png" alt="Firefox">
+                    <img src="../assets/images/browser/firefox.png" alt="Firefox">
                     <div>Firefox</div>
                 </a>
             </li>
             <li>
                 <a href="http://www.opera.com">
-                    <img src="assets/images/browser/opera.png" alt="Opera">
+                    <img src="../assets/images/browser/opera.png" alt="Opera">
                     <div>Opera</div>
                 </a>
             </li>
             <li>
                 <a href="https://www.apple.com/safari/">
-                    <img src="assets/images/browser/safari.png" alt="Safari">
+                    <img src="../assets/images/browser/safari.png" alt="Safari">
                     <div>Safari</div>
                 </a>
             </li>
             <li>
                 <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
-                    <img src="assets/images/browser/ie.png" alt="">
+                    <img src="../assets/images/browser/ie.png" alt="">
                     <div>IE (9 & above)</div>
                 </a>
             </li>
@@ -192,21 +190,18 @@ else
 <![endif]-->
 
 
-<script type="text/javascript" src="../bower_components/jquery/js/jquery.min.js"></script>
-<script type="text/javascript" src="../bower_components/jquery-ui/js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="../bower_components/popper.js/js/popper.min.js"></script>
-<script type="text/javascript" src="../bower_components/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../bower_components/jquery/js/jquery.min.js"></script>
+<script type="text/javascript" src="../../bower_components/jquery-ui/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../bower_components/popper.js/js/popper.min.js"></script>
+<script type="text/javascript" src="../../bower_components/bootstrap/js/bootstrap.min.js"></script>
 
-<script type="text/javascript" src="../bower_components/jquery-slimscroll/js/jquery.slimscroll.js"></script>
+<script type="text/javascript" src="../../bower_components/jquery-slimscroll/js/jquery.slimscroll.js"></script>
 
-<script type="text/javascript" src="../bower_components/modernizr/js/modernizr.js"></script>
-<script type="text/javascript" src="../bower_components/modernizr/js/css-scrollbars.js"></script>
+<script type="text/javascript" src="../../bower_components/modernizr/js/modernizr.js"></script>
+<script type="text/javascript" src="../../bower_components/modernizr/js/css-scrollbars.js"></script>
 
-<script type="text/javascript" src="../bower_components/i18next/js/i18next.min.js"></script>
-<script type="text/javascript" src="../bower_components/i18next-xhr-backend/js/i18nextXHRBackend.min.js"></script>
-<script type="text/javascript" src="../bower_components/i18next-browser-languagedetector/js/i18nextBrowserLanguageDetector.min.js"></script>
-<script type="text/javascript" src="../bower_components/jquery-i18next/js/jquery-i18next.min.js"></script>
-</body>
-
-<!-- Mirrored from html.codedthemes.com/mash-able/light/auth-lock-screen.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Sep 2019 14:07:46 GMT -->
-</html>
+<script type="text/javascript" src="../../bower_components/i18next/js/i18next.min.js"></script>
+<script type="text/javascript" src="../../bower_components/i18next-xhr-backend/js/i18nextXHRBackend.min.js"></script>
+<script type="text/javascript" src="../../bower_components/i18next-browser-languagedetector/js/i18nextBrowserLanguageDetector.min.js"></script>
+<script type="text/javascript" src="../../bower_components/jquery-i18next/js/jquery-i18next.min.js"></script>
+<?php include("../scripts.php"); ?>

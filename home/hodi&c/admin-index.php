@@ -19,33 +19,32 @@
 <meta name="keywords" content="flat ui, admin flat ui, Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
 <meta name="author" content="#">
 
-<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
 
 <link href="https://fonts.googleapis.com/css?family=Mada:300,400,500,600,700" rel="stylesheet">
 
-<link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../../bower_components/bootstrap/css/bootstrap.min.css">
 
-<link rel="stylesheet" type="text/css" href="assets/icon/themify-icons/themify-icons.css">
+<link rel="stylesheet" type="text/css" href="../assets/icon/themify-icons/themify-icons.css">
 
-<link rel="stylesheet" type="text/css" href="assets/icon/icofont/css/icofont.css">
+<link rel="stylesheet" type="text/css" href="../assets/icon/icofont/css/icofont.css">
 
-<link rel="stylesheet" type="text/css" href="assets/pages/flag-icon/flag-icon.min.css">
+<link rel="stylesheet" type="text/css" href="../assets/pages/flag-icon/flag-icon.min.css">
 
-<link rel="stylesheet" type="text/css" href="assets/pages/menu-search/css/component.css">
+<link rel="stylesheet" type="text/css" href="../assets/pages/menu-search/css/component.css">
 
-<link rel="stylesheet" type="text/css" href="../bower_components/nvd3/css/nv.d3.css" media="all">
+<link rel="stylesheet" type="text/css" href="../../bower_components/nvd3/css/nv.d3.css" media="all">
 
 
 <link rel="stylesheet" href="../../../www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
 
-<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 
-<link rel="stylesheet" type="text/css" href="assets/css/linearicons.css">
-<link rel="stylesheet" type="text/css" href="assets/css/simple-line-icons.css">
-<link rel="stylesheet" type="text/css" href="assets/css/ionicons.css">
-<link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.css">
-</head>
-<body>
+<link rel="stylesheet" type="text/css" href="../assets/css/linearicons.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/simple-line-icons.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/ionicons.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/jquery.mCustomScrollbar.css">
+<?php include("../links.php"); ?>
 
 <div class="theme-loader">
 <div class="ball-scale">
@@ -301,7 +300,7 @@ include 'admin-header.php';
 <div class="col-lg-6 col-xl-3">
 <div class="card borderless-card">
 <div class="profile-card">
-<img class="img-fluid" src="assets/images/widget/profile-person1.jpg" alt="">
+<img class="img-fluid" src="../assets/images/widget/profile-person1.jpg" alt="">
 <div class="card-block">
 <h3>John Steve</h3>
 <p>UI/UX Designer at CreativesCastle Studio</p>
@@ -531,31 +530,31 @@ include 'admin-header.php';
         <ul class="iew-download">
             <li>
                 <a href="http://www.google.com/chrome/">
-                    <img src="assets/images/browser/chrome.png" alt="Chrome">
+                    <img src="../assets/images/browser/chrome.png" alt="Chrome">
                     <div>Chrome</div>
                 </a>
             </li>
             <li>
                 <a href="https://www.mozilla.org/en-US/firefox/new/">
-                    <img src="assets/images/browser/firefox.png" alt="Firefox">
+                    <img src="../assets/images/browser/firefox.png" alt="Firefox">
                     <div>Firefox</div>
                 </a>
             </li>
             <li>
                 <a href="http://www.opera.com">
-                    <img src="assets/images/browser/opera.png" alt="Opera">
+                    <img src="../assets/images/browser/opera.png" alt="Opera">
                     <div>Opera</div>
                 </a>
             </li>
             <li>
                 <a href="https://www.apple.com/safari/">
-                    <img src="assets/images/browser/safari.png" alt="Safari">
+                    <img src="../assets/images/browser/safari.png" alt="Safari">
                     <div>Safari</div>
                 </a>
             </li>
             <li>
                 <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
-                    <img src="assets/images/browser/ie.png" alt="">
+                    <img src="../assets/images/browser/ie.png" alt="">
                     <div>IE (9 & above)</div>
                 </a>
             </li>
@@ -566,46 +565,43 @@ include 'admin-header.php';
 <![endif]-->
 
 
-<script type="text/javascript" src="../bower_components/jquery/js/jquery.min.js"></script>
-<script type="text/javascript" src="../bower_components/jquery-ui/js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="../bower_components/popper.js/js/popper.min.js"></script>
-<script type="text/javascript" src="../bower_components/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../bower_components/jquery/js/jquery.min.js"></script>
+<script type="text/javascript" src="../../bower_components/jquery-ui/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../bower_components/popper.js/js/popper.min.js"></script>
+<script type="text/javascript" src="../../bower_components/bootstrap/js/bootstrap.min.js"></script>
 
-<script type="text/javascript" src="../bower_components/jquery-slimscroll/js/jquery.slimscroll.js"></script>
+<script type="text/javascript" src="../../bower_components/jquery-slimscroll/js/jquery.slimscroll.js"></script>
 
-<script type="text/javascript" src="../bower_components/modernizr/js/modernizr.js"></script>
-<script type="text/javascript" src="../bower_components/modernizr/js/css-scrollbars.js"></script>
+<script type="text/javascript" src="../../bower_components/modernizr/js/modernizr.js"></script>
+<script type="text/javascript" src="../../bower_components/modernizr/js/css-scrollbars.js"></script>
 
-<script type="text/javascript" src="../bower_components/classie/js/classie.js"></script>
+<script type="text/javascript" src="../../bower_components/classie/js/classie.js"></script>
 
-<script src="../bower_components/d3/js/d3.js"></script>
-<script src="../bower_components/nvd3/js/nv.d3.js"></script>
-<script src="assets/pages/chart/nv-chart/js/stream_layers.js"></script>
+<script src="../../bower_components/d3/js/d3.js"></script>
+<script src="../../bower_components/nvd3/js/nv.d3.js"></script>
+<script src="../assets/pages/chart/nv-chart/js/stream_layers.js"></script>
 
 <script src="../../../www.amcharts.com/lib/3/amcharts.js"></script>
 <script src="../../../www.amcharts.com/lib/3/serial.js"></script>
 <script src="../../../www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
 <script src="../../../www.amcharts.com/lib/3/themes/light.js"></script>
 
-<script src="assets/pages/dashboard/high-chart/js/high-chart.js"></script>
+<script src="../assets/pages/dashboard/high-chart/js/high-chart.js"></script>
 
-<script src="../bower_components/raphael/js/raphael.min.js"></script>
-<script src="../bower_components/morris.js/js/morris.js"></script>
+<script src="../../bower_components/raphael/js/raphael.min.js"></script>
+<script src="../../bower_components/morris.js/js/morris.js"></script>
 
-<script src="assets/pages/chart/echarts/js/echarts-all.js" type="text/javascript"></script>
+<script src="../assets/pages/chart/echarts/js/echarts-all.js" type="text/javascript"></script>
 
-<script type="text/javascript" src="../bower_components/i18next/js/i18next.min.js"></script>
-<script type="text/javascript" src="../bower_components/i18next-xhr-backend/js/i18nextXHRBackend.min.js"></script>
-<script type="text/javascript" src="../bower_components/i18next-browser-languagedetector/js/i18nextBrowserLanguageDetector.min.js"></script>
-<script type="text/javascript" src="../bower_components/jquery-i18next/js/jquery-i18next.min.js"></script>
+<script type="text/javascript" src="../../bower_components/i18next/js/i18next.min.js"></script>
+<script type="text/javascript" src="../../bower_components/i18next-xhr-backend/js/i18nextXHRBackend.min.js"></script>
+<script type="text/javascript" src="../../bower_components/i18next-browser-languagedetector/js/i18nextBrowserLanguageDetector.min.js"></script>
+<script type="text/javascript" src="../../bower_components/jquery-i18next/js/jquery-i18next.min.js"></script>
 
-<script type="text/javascript" src="assets/pages/dashboard/analytic-dashboard.js"></script>
-<script type="text/javascript" src="assets/js/script.js"></script>
-<script src="assets/js/pcoded.min.js"></script>
-<script src="assets/js/demo-12.js"></script>
-<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
-<script src="assets/js/jquery.mousewheel.min.js"></script>
-</body>
-
-<!-- Mirrored from html.codedthemes.com/mash-able/light/dashboard-analytics.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Sep 2019 14:08:48 GMT -->
-</html>
+<script type="text/javascript" src="../assets/pages/dashboard/analytic-dashboard.js"></script>
+<script type="text/javascript" src="../assets/js/script.js"></script>
+<script src="../assets/js/pcoded.min.js"></script>
+<script src="../assets/js/demo-12.js"></script>
+<script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../assets/js/jquery.mousewheel.min.js"></script>
+<?php include("../scripts.php"); ?>

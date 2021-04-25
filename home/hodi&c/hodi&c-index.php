@@ -3,9 +3,15 @@
 include("../constants.php");
 session_start();
  
-  if(empty($_SESSION["userName"]) || $_SESSION["userType"]!="HODI&C")
+  if(empty($_SESSION["userName"]) )
  {
-    header('location:login');
+	 if($_SESSION["userType"]!="HODI&C"){
+		header('location:../login');
+	 }else if($_SESSION["userType"]!="HOD"){
+		header('location:../login');
+	 }else if($_SESSION['userType']!="DEAN"){
+		header('location:../login');
+	 }
 
  }
  include '../connection.php';
@@ -20,7 +26,7 @@ session_start();
 <html lang="en">
  <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
-<title>PBL | HOD I&C</title>
+<title>PBL | <?php echo $userType; ?></title>
 <?php
 include("../links.php"); ?>
  <div class="theme-loader">
@@ -85,7 +91,7 @@ include("../links.php"); ?>
 </a>
 </li>
 <li>
-<a href="logout.php">
+<a href="../logout.php">
 <i class="ti-layout-sidebar-left"></i> Logout
 </a>
 </li>
@@ -343,10 +349,13 @@ include("../links.php"); ?>
 
 <?php
 
-
-include 'hodi&c_nav.php';
-
-
+if($userType=='HODI&C'){
+	include 'hodi&c_nav.php';
+}else if($userType=='HOD'){
+	include 'hod_nav.php';
+}else if($userType=='DEAN'){
+	include 'dean_nav.php';
+}
 ?>
 
 
@@ -749,7 +758,7 @@ $resu = $conn->query($sql);
 
 <div class="col-md-8">
 <div class="row">
-
+<?php if($userType=="DEAN" || $userType=="HODI&C") {?>
 
 
 <div class="col-md-12">
@@ -884,15 +893,6 @@ echo '</tr>';
 </div>
 </div>
 </div>
-  
-  
- <!-- ///////////////////////////////               -->
- <!-- ///////////////////////////////               -->
- <!-- ///////////////////////////////               -->
- <!-- ///////////////////////////////               -->
- 
- 
- 
 
 <div class="modal fade modal-flex" id="Modal-deadtwo" tabindex="-1" role="dialog">
 <div class="modal-dialog" role="document">
@@ -1675,7 +1675,12 @@ echo '</tr>';
 </div>
 </div>
 </div>
+<?php }  else if($userType=="HOD") {?>
 
+
+
+ 
+<?php } ?> 
  
  
  <!-- ///////////////////////////////               -->

@@ -43,64 +43,63 @@ $eid = $roww['e_id'];
 <meta name="keywords" content="flat ui, Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
 <meta name="author" content="#">
 
-<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
 
 <link href="https://fonts.googleapis.com/css?family=Mada:300,400,500,600,700" rel="stylesheet">
 
 
-<link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../../bower_components/bootstrap/css/bootstrap.min.css">
 
-<link rel="stylesheet" type="text/css" href="assets/icon/themify-icons/themify-icons.css">
+<link rel="stylesheet" type="text/css" href="../assets/icon/themify-icons/themify-icons.css">
 
-<link rel="stylesheet" type="text/css" href="assets/icon/icofont/css/icofont.css">
+<link rel="stylesheet" type="text/css" href="../assets/icon/icofont/css/icofont.css">
 
-<link rel="stylesheet" type="text/css" href="assets/pages/flag-icon/flag-icon.min.css">
+<link rel="stylesheet" type="text/css" href="../assets/pages/flag-icon/flag-icon.min.css">
 
-<link rel="stylesheet" type="text/css" href="assets/pages/menu-search/css/component.css">
+<link rel="stylesheet" type="text/css" href="../assets/pages/menu-search/css/component.css">
 
-<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 
-<link rel="stylesheet" type="text/css" href="assets/css/linearicons.css">
-<link rel="stylesheet" type="text/css" href="assets/css/simple-line-icons.css">
-<link rel="stylesheet" type="text/css" href="assets/css/ionicons.css">
-<link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/linearicons.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/simple-line-icons.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/ionicons.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/jquery.mCustomScrollbar.css">
 
-<link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../../bower_components/bootstrap/css/bootstrap.min.css">
 
-<link rel="stylesheet" type="text/css" href="assets/icon/themify-icons/themify-icons.css">
+<link rel="stylesheet" type="text/css" href="../assets/icon/themify-icons/themify-icons.css">
 
-<link rel="stylesheet" type="text/css" href="assets/icon/icofont/css/icofont.css">
+<link rel="stylesheet" type="text/css" href="../assets/icon/icofont/css/icofont.css">
 
-<link rel="stylesheet" type="text/css" href="assets/pages/flag-icon/flag-icon.min.css">
+<link rel="stylesheet" type="text/css" href="../assets/pages/flag-icon/flag-icon.min.css">
 
-<link rel="stylesheet" type="text/css" href="assets/icon/SVG-animated/svg-weather.css">
+<link rel="stylesheet" type="text/css" href="../assets/icon/SVG-animated/svg-weather.css">
 
-<link rel="stylesheet" type="text/css" href="assets/pages/menu-search/css/component.css">
+<link rel="stylesheet" type="text/css" href="../assets/pages/menu-search/css/component.css">
 
-<link rel="stylesheet" type="text/css" href="assets/pages/dashboard/horizontal-timeline/css/style.css">
+<link rel="stylesheet" type="text/css" href="../assets/pages/dashboard/horizontal-timeline/css/style.css">
 
-<link rel="stylesheet" type="text/css" href="assets/pages/dashboard/amchart/css/amchart.css">
+<link rel="stylesheet" type="text/css" href="../assets/pages/dashboard/amchart/css/amchart.css">
 
-<link rel="stylesheet" type="text/css" href="assets/pages/widget/calender/pignose.calendar.min.css">
+<link rel="stylesheet" type="text/css" href="../assets/pages/widget/calender/pignose.calendar.min.css">
 
-<link rel="stylesheet" type="text/css" href="assets/pages/flag-icon/flag-icon.min.css">
+<link rel="stylesheet" type="text/css" href="../assets/pages/flag-icon/flag-icon.min.css">
 
-<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 
-<link rel="stylesheet" type="text/css" href="assets/css/linearicons.css">
-<link rel="stylesheet" type="text/css" href="assets/css/simple-line-icons.css">
-<link rel="stylesheet" type="text/css" href="assets/icon/themify-icons/themify-icons.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/linearicons.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/simple-line-icons.css">
+<link rel="stylesheet" type="text/css" href="../assets/icon/themify-icons/themify-icons.css">
 
-<link rel="stylesheet" type="text/css" href="assets/icon/icofont/css/icofont.css">
+<link rel="stylesheet" type="text/css" href="../assets/icon/icofont/css/icofont.css">
 
-<link rel="stylesheet" type="text/css" href="assets/pages/flag-icon/flag-icon.min.css">
+<link rel="stylesheet" type="text/css" href="../assets/pages/flag-icon/flag-icon.min.css">
 
-<link rel="stylesheet" type="text/css" href="assets/css/ionicons.css">
-<link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/ionicons.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/jquery.mCustomScrollbar.css">
  	<script src="ckeditor/ckeditor.js"></script>
 
-</head>
-<body>
+<?php include("../links.php"); ?>
 
 
   
@@ -125,7 +124,7 @@ $eid = $roww['e_id'];
 <i class="ti-search"></i>
 </a>
 <a href="#">
-<img class="" src="assets/images/auth/loginn.png" alt="Theme-Logo" height="60px;" width="60px;" />
+<img class="" src="../assets/images/auth/loginn.png" alt="Theme-Logo" height="60px;" width="60px;" />
 </a>
 <a class="mobile-options">
 <i class="ti-more"></i>
@@ -151,7 +150,7 @@ $eid = $roww['e_id'];
  
 <li class="user-profile header-notification">
 <a href="#!">
-<img src="assets/images/user.png" alt="User-Profile-Image">
+<img src="../assets/images/user.png" alt="User-Profile-Image">
 <span><?php echo $userName;    ?></span>
 <i class="ti-angle-down"></i>
 </a>
@@ -193,22 +192,22 @@ $eid = $roww['e_id'];
 <div class="dummy-column">
 <h2>Popular</h2>
 <a class="dummy-media-object" href="#!">
-<img src="assets/images/avatar-1.png" alt="PagePreloadingEffect" />
+<img src="../assets/images/avatar-1.png" alt="PagePreloadingEffect" />
 <h3>Page Preloading Effect</h3>
 </a>
 <a class="dummy-media-object" href="#!">
-<img src="assets/images/avatar-1.png" alt="DraggableDualViewSlideshow" />
+<img src="../assets/images/avatar-1.png" alt="DraggableDualViewSlideshow" />
 <h3>Draggable Dual-View Slideshow</h3>
 </a>
 </div>
 <div class="dummy-column">
 <h2>Recent</h2>
 <a class="dummy-media-object" href="#!">
-<img src="assets/images/avatar-1.png" alt="TooltipStylesInspiration" />
+<img src="../assets/images/avatar-1.png" alt="TooltipStylesInspiration" />
 <h3>Tooltip Styles Inspiration</h3>
 </a>
 <a class="dummy-media-object" href="#!">
-<img src="assets/images/avatar-1.png" alt="NotificationStyles" />
+<img src="../assets/images/avatar-1.png" alt="NotificationStyles" />
 <h3>Notification Styles Inspiration</h3>
 </a>
 </div>
@@ -237,7 +236,7 @@ $eid = $roww['e_id'];
 <div class="main-friend-list">
 <div class="media userlist-box" data-id="1" data-status="online" data-username="Josephin Doe" data-toggle="tooltip" data-placement="left" title="Josephin Doe">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-1.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-1.png" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -246,7 +245,7 @@ $eid = $roww['e_id'];
 </div>
 <div class="media userlist-box" data-id="2" data-status="online" data-username="Lary Doe" data-toggle="tooltip" data-placement="left" title="Lary Doe">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/task/task-u1.jpg" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/task/task-u1.jpg" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -255,7 +254,7 @@ $eid = $roww['e_id'];
 </div>
 <div class="media userlist-box" data-id="3" data-status="online" data-username="Alice" data-toggle="tooltip" data-placement="left" title="Alice">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-2.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-2.png" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -264,7 +263,7 @@ $eid = $roww['e_id'];
 </div>
 <div class="media userlist-box" data-id="4" data-status="online" data-username="Alia" data-toggle="tooltip" data-placement="left" title="Alia">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/task/task-u2.jpg" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/task/task-u2.jpg" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -273,7 +272,7 @@ $eid = $roww['e_id'];
 </div>
 <div class="media userlist-box" data-id="5" data-status="online" data-username="Suzen" data-toggle="tooltip" data-placement="left" title="Suzen">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/task/task-u3.jpg" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/task/task-u3.jpg" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -282,7 +281,7 @@ $eid = $roww['e_id'];
 </div>
 <div class="media userlist-box" data-id="6" data-status="offline" data-username="Michael Scofield" data-toggle="tooltip" data-placement="left" title="Michael Scofield">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-3.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-3.png" alt="Generic placeholder image">
 <div class="live-status bg-danger"></div>
  </a>
 <div class="media-body">
@@ -291,7 +290,7 @@ $eid = $roww['e_id'];
 </div>
 <div class="media userlist-box" data-id="7" data-status="online" data-username="Irina Shayk" data-toggle="tooltip" data-placement="left" title="Irina Shayk">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-4.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-4.png" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -300,7 +299,7 @@ $eid = $roww['e_id'];
 </div>
 <div class="media userlist-box" data-id="8" data-status="offline" data-username="Sara Tancredi" data-toggle="tooltip" data-placement="left" title="Sara Tancredi">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-5.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-5.png" alt="Generic placeholder image">
 <div class="live-status bg-danger"></div>
 </a>
 <div class="media-body">
@@ -309,7 +308,7 @@ $eid = $roww['e_id'];
 </div>
 <div class="media userlist-box" data-id="9" data-status="online" data-username="Samon" data-toggle="tooltip" data-placement="left" title="Samon">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-1.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-1.png" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -318,7 +317,7 @@ $eid = $roww['e_id'];
 </div>
 <div class="media userlist-box" data-id="10" data-status="online" data-username="Daizy Mendize" data-toggle="tooltip" data-placement="left" title="Daizy Mendize">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/task/task-u3.jpg" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/task/task-u3.jpg" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -327,7 +326,7 @@ $eid = $roww['e_id'];
 </div>
 <div class="media userlist-box" data-id="11" data-status="offline" data-username="Loren Scofield" data-toggle="tooltip" data-placement="left" title="Loren Scofield">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-3.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-3.png" alt="Generic placeholder image">
 <div class="live-status bg-danger"></div>
 </a>
 <div class="media-body">
@@ -336,7 +335,7 @@ $eid = $roww['e_id'];
 </div>
 <div class="media userlist-box" data-id="12" data-status="online" data-username="Shayk" data-toggle="tooltip" data-placement="left" title="Shayk">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-4.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-4.png" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -345,7 +344,7 @@ $eid = $roww['e_id'];
 </div>
 <div class="media userlist-box" data-id="13" data-status="offline" data-username="Sara" data-toggle="tooltip" data-placement="left" title="Sara">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/task/task-u3.jpg" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/task/task-u3.jpg" alt="Generic placeholder image">
 <div class="live-status bg-danger"></div>
 </a>
 <div class="media-body">
@@ -354,7 +353,7 @@ $eid = $roww['e_id'];
 </div>
 <div class="media userlist-box" data-id="14" data-status="online" data-username="Doe" data-toggle="tooltip" data-placement="left" title="Doe">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/avatar-1.png" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/avatar-1.png" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
  </a>
 <div class="media-body">
@@ -363,7 +362,7 @@ $eid = $roww['e_id'];
 </div>
 <div class="media userlist-box" data-id="15" data-status="online" data-username="Lary" data-toggle="tooltip" data-placement="left" title="Lary">
 <a class="media-left" href="#!">
-<img class="media-object img-circle" src="assets/images/task/task-u1.jpg" alt="Generic placeholder image">
+<img class="media-object img-circle" src="../assets/images/task/task-u1.jpg" alt="Generic placeholder image">
 <div class="live-status bg-success"></div>
 </a>
 <div class="media-body">
@@ -384,7 +383,7 @@ $eid = $roww['e_id'];
 </div>
 <div class="media chat-messages">
 <a class="media-left photo-table" href="#!">
-<img class="media-object img-circle m-t-5" src="assets/images/avatar-1.png" alt="Generic placeholder image">
+<img class="media-object img-circle m-t-5" src="../assets/images/avatar-1.png" alt="Generic placeholder image">
 </a>
 <div class="media-body chat-menu-content">
 <div class="">
@@ -402,7 +401,7 @@ $eid = $roww['e_id'];
 </div>
 <div class="media-right photo-table">
 <a href="#!">
-<img class="media-object img-circle m-t-5" src="assets/images/avatar-2.png" alt="Generic placeholder image">
+<img class="media-object img-circle m-t-5" src="../assets/images/avatar-2.png" alt="Generic placeholder image">
 </a>
 </div>
 </div>
@@ -996,7 +995,7 @@ while ($row = $resultq->fetch_assoc())
 <div class="user-card-block card">
 <div class="card-block">
 <div class="top-card text-center">
-<img height=99 width=99 src="assets/images/widget/avatar-4.png" class="img-responsive" alt="">
+<img height=99 width=99 src="../assets/images/widget/avatar-4.png" class="img-responsive" alt="">
 </div>
 <div class="card-contain text-center p-t-15">
 <h5 class="text-capitalize p-b-10"><?php echo $userName;  ?></h5>
@@ -1053,31 +1052,31 @@ while ($row = $resultq->fetch_assoc())
         <ul class="iew-download">
             <li>
                 <a href="http://www.google.com/chrome/">
-                    <img src="assets/images/browser/chrome.png" alt="Chrome">
+                    <img src="../assets/images/browser/chrome.png" alt="Chrome">
                     <div>Chrome</div>
                 </a>
             </li>
             <li>
                 <a href="https://www.mozilla.org/en-US/firefox/new/">
-                    <img src="assets/images/browser/firefox.png" alt="Firefox">
+                    <img src="../assets/images/browser/firefox.png" alt="Firefox">
                     <div>Firefox</div>
                 </a>
             </li>
             <li>
                 <a href="http://www.opera.com">
-                    <img src="assets/images/browser/opera.png" alt="Opera">
+                    <img src="../assets/images/browser/opera.png" alt="Opera">
                     <div>Opera</div>
                 </a>
             </li>
             <li>
                 <a href="https://www.apple.com/safari/">
-                    <img src="assets/images/browser/safari.png" alt="Safari">
+                    <img src="../assets/images/browser/safari.png" alt="Safari">
                     <div>Safari</div>
                 </a>
             </li>
             <li>
                 <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
-                    <img src="assets/images/browser/ie.png" alt="">
+                    <img src="../assets/images/browser/ie.png" alt="">
                     <div>IE (9 & above)</div>
                 </a>
             </li>
@@ -1088,57 +1087,54 @@ while ($row = $resultq->fetch_assoc())
 <![endif]-->
 
 
-<script type="text/javascript" src="../bower_components/jquery/js/jquery.min.js"></script>
-<script src="../bower_components/jquery-ui/js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="../bower_components/popper.js/js/popper.min.js"></script>
-<script type="text/javascript" src="../bower_components/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../bower_components/jquery/js/jquery.min.js"></script>
+<script src="../../bower_components/jquery-ui/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../bower_components/popper.js/js/popper.min.js"></script>
+<script type="text/javascript" src="../../bower_components/bootstrap/js/bootstrap.min.js"></script>
 
-<script type="text/javascript" src="../bower_components/jquery-slimscroll/js/jquery.slimscroll.js"></script>
+<script type="text/javascript" src="../../bower_components/jquery-slimscroll/js/jquery.slimscroll.js"></script>
 
-<script type="text/javascript" src="../bower_components/modernizr/js/modernizr.js"></script>
-<script type="text/javascript" src="../bower_components/modernizr/js/css-scrollbars.js"></script>
+<script type="text/javascript" src="../../bower_components/modernizr/js/modernizr.js"></script>
+<script type="text/javascript" src="../../bower_components/modernizr/js/css-scrollbars.js"></script>
 
-<script type="text/javascript" src="../bower_components/moment/js/moment.min.js"></script>
-<script type="text/javascript" src="assets/pages/widget/calender/pignose.calendar.min.js"></script>
+<script type="text/javascript" src="../../bower_components/moment/js/moment.min.js"></script>
+<script type="text/javascript" src="../assets/pages/widget/calender/pignose.calendar.min.js"></script>
 
 
-<script src="../bower_components/c3/js/c3.js"></script>
-<script type="text/javascript" src="../bower_components/classie/js/classie.js"></script>
+<script src="../../bower_components/c3/js/c3.js"></script>
+<script type="text/javascript" src="../../bower_components/classie/js/classie.js"></script>
 
-<script src="assets/pages/chart/knob/jquery.knob.js"></script>
-<script type="text/javascript" src="assets/pages/widget/jquery.sparkline.js"></script>
+<script src="../assets/pages/chart/knob/jquery.knob.js"></script>
+<script type="text/javascript" src="../assets/pages/widget/jquery.sparkline.js"></script>
 
-<script src="../bower_components/d3/js/d3.js"></script>
-<script src="../bower_components/rickshaw/js/rickshaw.js"></script>
+<script src="../../bower_components/d3/js/d3.js"></script>
+<script src="../../bower_components/rickshaw/js/rickshaw.js"></script>
 
-<script src="../bower_components/raphael/js/raphael.min.js"></script>
-<script src="../bower_components/morris.js/js/morris.js"></script>
+<script src="../../bower_components/raphael/js/raphael.min.js"></script>
+<script src="../../bower_components/morris.js/js/morris.js"></script>
 
-<script src="assets/pages/chart/float/jquery.flot.js"></script>
-<script src="assets/pages/chart/float/jquery.flot.categories.js"></script>
-<script src="assets/pages/chart/float/jquery.flot.pie.js"></script>
+<script src="../assets/pages/chart/float/jquery.flot.js"></script>
+<script src="../assets/pages/chart/float/jquery.flot.categories.js"></script>
+<script src="../assets/pages/chart/float/jquery.flot.pie.js"></script>
 
-<script type="text/javascript" src="assets/pages/dashboard/horizontal-timeline/js/main.js"></script>
+<script type="text/javascript" src="../assets/pages/dashboard/horizontal-timeline/js/main.js"></script>
 
-<script type="text/javascript" src="assets/pages/dashboard/amchart/js/amcharts.js"></script>
-<script type="text/javascript" src="assets/pages/dashboard/amchart/js/serial.js"></script>
-<script type="text/javascript" src="assets/pages/dashboard/amchart/js/light.js"></script>
-<script type="text/javascript" src="assets/pages/dashboard/amchart/js/custom-amchart.js"></script>
+<script type="text/javascript" src="../assets/pages/dashboard/amchart/js/amcharts.js"></script>
+<script type="text/javascript" src="../assets/pages/dashboard/amchart/js/serial.js"></script>
+<script type="text/javascript" src="../assets/pages/dashboard/amchart/js/light.js"></script>
+<script type="text/javascript" src="../assets/pages/dashboard/amchart/js/custom-amchart.js"></script>
 
-<script type="text/javascript" src="../bower_components/i18next/js/i18next.min.js"></script>
-<script type="text/javascript" src="../bower_components/i18next-xhr-backend/js/i18nextXHRBackend.min.js"></script>
-<script type="text/javascript" src="../bower_components/i18next-browser-languagedetector/js/i18nextBrowserLanguageDetector.min.js"></script>
-<script type="text/javascript" src="../bower_components/jquery-i18next/js/jquery-i18next.min.js"></script>
+<script type="text/javascript" src="../../bower_components/i18next/js/i18next.min.js"></script>
+<script type="text/javascript" src="../../bower_components/i18next-xhr-backend/js/i18nextXHRBackend.min.js"></script>
+<script type="text/javascript" src="../../bower_components/i18next-browser-languagedetector/js/i18nextBrowserLanguageDetector.min.js"></script>
+<script type="text/javascript" src="../../bower_components/jquery-i18next/js/jquery-i18next.min.js"></script>
 
-<script type="text/javascript" src="assets/pages/dashboard/custom-dashboard.js"></script>
-<script type="text/javascript" src="assets/js/script.js"></script>
-<script type="text/javascript" src="assets/pages/accordion/accordion.js"></script>
+<script type="text/javascript" src="../assets/pages/dashboard/custom-dashboard.js"></script>
+<script type="text/javascript" src="../assets/js/script.js"></script>
+<script type="text/javascript" src="../assets/pages/accordion/accordion.js"></script>
 
-<script src="assets/js/pcoded.min.js"></script>
-<script src="assets/js/demo-12.js"></script>
-<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
-<script src="assets/js/jquery.mousewheel.min.js"></script>
-</body>
-
-<!-- Mirrored from html.codedthemes.com/mash-able/light/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Sep 2019 13:58:07 GMT -->
-</html>
+<script src="../assets/js/pcoded.min.js"></script>
+<script src="../assets/js/demo-12.js"></script>
+<script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../assets/js/jquery.mousewheel.min.js"></script>
+<?php include("../scripts.php"); ?>

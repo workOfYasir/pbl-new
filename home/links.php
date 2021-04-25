@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css?family=Mada:300,400,500,600,700" rel="stylesheet">
 
 <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ?>bootstrap/css/bootstrap.min.css">
-
+<link rel="stylesheet" type="text/css" href="<?php echo SITE_URL ?>assets/icon/themify-icons/themify-icons.css">
 
 <link rel="stylesheet" type="text/css" href="<?php echo SITE_URL ?>assets/icon/icofont/css/icofont.css">
 
@@ -33,9 +33,6 @@
 
 
 
-<link rel="stylesheet" type="text/css" href="<?php echo SITE_URL ?>assets/icon/themify-icons/themify-icons.css">
-
-
 
 <link rel="stylesheet" type="text/css" href="<?php echo SITE_URL ?>assets/icon/SVG-animated/svg-weather.css">
 
@@ -46,6 +43,7 @@
 
 <link rel="stylesheet" type="text/css" href="<?php echo SITE_URL ?>assets/pages/widget/calender/pignose.calendar.min.css">
 
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 

@@ -13,13 +13,15 @@ session_start();
  $userRoll=$_SESSION["userRoll"];
 
 
-?><!DOCTYPE html><!DOCTYPE html>
+?><!DOCTYPE html>
+
 <html lang="en">
 
-<!-- Mirrored from html.codedthemes.com/mash-able/light/task-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Sep 2019 14:17:25 GMT -->
+<!-- Mirrored from html.codedthemes.com/mash-able/light/tabs.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Sep 2019 14:09:10 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
-<title>PBL |  Edit Iteration Ruberics</title>
+<title>PBL | Teachers</title>
+
 
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -47,9 +49,9 @@ session_start();
 
 <link rel="stylesheet" type="text/css" href="../assets/pages/menu-search/css/component.css">
 
-<link rel="stylesheet" type="text/css" href="../../bower_components/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
-<link rel="stylesheet" type="text/css" href="../assets/pages/data-table/css/buttons.dataTables.min.css">
-<link rel="stylesheet" type="text/css" href="../../bower_components/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css">
+<link rel="stylesheet" type="text/css" href="../assets/pages/j-pro/css/demo.css">
+<link rel="stylesheet" type="text/css" href="../assets/pages/j-pro/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../assets/pages/j-pro/css/j-pro-modern.css">
 
 <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 
@@ -57,9 +59,26 @@ session_start();
 <link rel="stylesheet" type="text/css" href="../assets/css/simple-line-icons.css">
 <link rel="stylesheet" type="text/css" href="../assets/css/ionicons.css">
 <link rel="stylesheet" type="text/css" href="../assets/css/jquery.mCustomScrollbar.css">
-	<script src="ckeditor/ckeditor.js"></script>
-<?php include("../links.php"); ?>
 
+<link href="https://fonts.googleapis.com/css?family=Mada:300,400,500,600,700" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="../../bower_components/bootstrap/css/bootstrap.min.css">
+
+<link rel="stylesheet" type="text/css" href="../assets/icon/themify-icons/themify-icons.css">
+
+<link rel="stylesheet" type="text/css" href="../assets/icon/icofont/css/icofont.css">
+
+<link rel="stylesheet" type="text/css" href="../assets/pages/flag-icon/flag-icon.min.css">
+
+<link rel="stylesheet" type="text/css" href="../assets/pages/menu-search/css/component.css">
+
+<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+
+<link rel="stylesheet" type="text/css" href="../assets/css/linearicons.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/simple-line-icons.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/ionicons.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/jquery.mCustomScrollbar.css">
+<?php include("../links.php"); ?>
 <div class="theme-loader">
 <div class="ball-scale">
 <div></div>
@@ -69,8 +88,8 @@ session_start();
 <div id="pcoded" class="pcoded">
 <div class="pcoded-overlay-box"></div>
 <div class="pcoded-container navbar-wrapper">
-
-  
+ 
+ 
 <nav class="navbar header-navbar pcoded-header">
 <div class="navbar-wrapper">
 <div class="navbar-logo" data-navbar-theme="theme4"  >
@@ -135,12 +154,13 @@ session_start();
 </div>
 </nav>
  
+
  
 
 <div class="pcoded-main-container">
 <div class="pcoded-wrapper">
 
-  <?php
+ <?php
  
  include 'manager_nav.php';
  
@@ -150,113 +170,156 @@ session_start();
 <div class="pcoded-content">
 <div class="pcoded-inner-content">
 
-
-
-
 <div class="main-body">
 <div class="page-wrapper">
 
-<div class="page-header">
-<div class="page-header-title">
-<h4>Edit Ruberics | Selected Ruberic  &nbsp;&nbsp;&nbsp;
- </div>
-<div class="page-header-breadcrumb">
-<ul class="breadcrumb-title">
-<li class="breadcrumb-item">
-<a href="">
-<i class="icofont icofont-home"></i>
-</a>
-</li>
-<li class="breadcrumb-item"><a href="view-iterations.php">Manage Iteration</a>
-</li>
-<li class="breadcrumb-item"><a href="add-new-iteration.php?course=<?php echo $_GET['course']; ?>">Iteration | Task list</a>
-</li>
-<li class="breadcrumb-item"><a href="view-iterations.php">Manage Ruberics</a>
-</li>
-</ul>
-</div>
-</div>
+ 
 
 
-<div class="page-body">
+ 
+ 
+ 
 <div class="row">
 <div class="col-sm-12">
 
 <div class="card">
 <div class="card-header">
-<h5>Edit Selected Ruberic  </h5>
+<h5>Manage Teachers</h5>
 <div class="card-header-right">
 <i class="icofont icofont-rounded-down"></i>
 <i class="icofont icofont-refresh"></i>
-<i class="icofont icofont-close-circled"></i>
+ 
 </div>
 </div>
-<div class="card-block task-list">
-  <?php
+<div class="card-block tab-icon">
+
+<div class="row">
+<div class="col-lg-12 col-xl-12">
+
+ 
+<ul class="nav nav-tabs md-tabs " role="tablist">
+<li class="nav-item">
+<a class="nav-link active" data-toggle="tab" href="#home7" role="tab"><i class="icofont icofont-home"></i>Edit teacher (Selected) </a>
+<div class="slide"></div>
+</li>
+ 
+</ul>
+
+<div class="tab-content card-block">
+
+
+<div class="tab-pane active" id="home7" role="tabpanel">
+<?php
 // for connection
 
 include 'connection.php';
- 
 
- 
-$iteration = $_GET['iteration'];
-$course = $_GET['course'];
-$ruberics = $_GET['ruberics'];
+$dean = $_GET['dean'];
 
-$sql = "SELECT  * FROM   iterations_ruberics  where  r_id='$ruberics'";
+$sql = "SELECT * FROM dean where id='$dean'";
+$sql2 = mysqli_query($conn,"SELECT * FROM dean_dept");
+
 $result = $conn->query($sql);
- $row = $result->fetch_assoc();
- $r_question = $row['r_question'];
- $weight = $row['weight'];
-	 
-	 ?>
-  
-<div class="tab-pane active" id="tab-home" role="tabpanel">
+$row = $result->fetch_assoc();
+
+?>
+
  
-<form action="save-Edit-Iteration-Ruberics.php" method="POST" enctype="multipart/form-data" >
-Cureent Ruberic Question:
-<input style="margin-bottom:5px;width:50%;" value="<?php echo $r_question;?>" placeholder="Enter Question here ... "  autocomplete="off" type="text"  name="title"  class="form-control" required />
-Current Weightage %:
-<input style="margin-bottom:5px;width:40%;" value="<?php echo $weight;?>"    autocomplete="off" type="number"  max="100" name="weight"  class="form-control" required />
 
-<input hidden value="<?php echo $_GET['iteration'];?>"  autocomplete="off" type="text"  name="iteration"  class="form-control"  />
-<input hidden value="<?php echo $_GET['course'];?>"  autocomplete="off" type="text"  name="course"  class="form-control"  />
-<input hidden value="<?php echo $_GET['ruberics'];?>"  autocomplete="off" type="text"  name="ruberics"  class="form-control"  />
-                         
  
-  
-				 <br>
-					 
-						  <button type="submit" class="btn btn-success float-left">Update Save</button>
- </form>
+<div class="j-wrapper j-wrapper-640" style="margin-top:-30px;">
+<form  autocomplete="off" action="save-edit-dean?dean=<?php echo $dean; ?>" method="post" class="j-pro" id="j-pro" enctype="multipart/form-data" novalidate  >
+
+
+<div class="j-row">
+<div class="j-span12 j-unit">
+<div class="j-input">
+<label class="j-icon-right" for="dean_name">
+<i class="icofont icofont-ui-user"></i>
+</label>
+<input type="text" id="Teacher_name" value="<?php echo $row['name']; ?>" name="name" placeholder="Enter Teacher name" required/>
+ </div>
 </div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<select name="depats[]" class="js-states form-control departs" multiple  required>
+<option value="">Select Department</option>
+<?php
+					
+					// for connection
+                    
+   include 'connection.php';
+
+$sql = "SELECT * FROM department where is_dell='no'";
+
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+
+	
+    while($row3 = mysqli_fetch_assoc($result) )
+     {  
+        $row2 = mysqli_fetch_assoc($sql2);
+		 $apples = $row3['dept_id']; 
+		 $Apples = $row3['dept_name'];
+         $dept_id = $row2['dept_id'];
+if($dept_id==$apples)		 
+{  
+   
+	echo   "<option  value ='".$apples."' selected>".$Apples."</option>";
+}else
+     {  
+         echo   "<option value ='".$apples."'>".$Apples."</option>";
+     }
+}
+}
+		?>
+
+
+</select>
+
+</div>
+</div>
+</div>
+
+<div class="j-response"></div>
+
+
+
+<button type="submit" class="btn btn-primary">Update</button>
+
+
+
+</form>
+</div>
+ 
+ 
+
+
+</div>
+
+
+
  
  
 </div>
 
 
-
 </div>
-
-<script>
- function changeDate(it_id ,cid)
- {
-	 var date= document.getElementById("date"+it_id).value;
-
-	 window.location="changeIterationDate.php?it_id="+it_id+"&course="+cid+"&date="+date;
- 
- }
-</script>
  
 </div>
-</div>
 
 </div>
 </div>
 
-<div id="styleSelector">
 </div>
 </div>
+ 
+
+</div>
+</div>
+ 
 </div>
 </div>
 </div>
@@ -266,7 +329,6 @@ Current Weightage %:
 
 
 <!--[if lt IE 9]>
-
 <div class="ie-warning">
     <h1>Warning!!</h1>
     <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
@@ -321,28 +383,21 @@ Current Weightage %:
 
 <script type="text/javascript" src="../../bower_components/classie/js/classie.js"></script>
 
-<script src="../../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="../../bower_components/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-<script src="../assets/pages/data-table/js/jszip.min.js"></script>
-<script src="../assets/pages/data-table/js/pdfmake.min.js"></script>
-<script src="../assets/pages/data-table/js/vfs_fonts.js"></script>
-<script src="../../bower_components/datatables.net-buttons/js/buttons.print.min.js"></script>
-<script src="../../bower_components/datatables.net-buttons/js/buttons.html5.min.js"></script>
-<script src="../../bower_components/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="../../bower_components/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-<script src="../../bower_components/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
-
-<script type="text/javascript" src="../assets/pages/todo/todo.js"></script>
-
 <script type="text/javascript" src="../../bower_components/i18next/js/i18next.min.js"></script>
 <script type="text/javascript" src="../../bower_components/i18next-xhr-backend/js/i18nextXHRBackend.min.js"></script>
 <script type="text/javascript" src="../../bower_components/i18next-browser-languagedetector/js/i18nextBrowserLanguageDetector.min.js"></script>
 <script type="text/javascript" src="../../bower_components/jquery-i18next/js/jquery-i18next.min.js"></script>
 
-<script src="../assets/pages/data-table/js/data-table-custom.js"></script>
 <script type="text/javascript" src="../assets/js/script.js"></script>
 <script src="../assets/js/pcoded.min.js"></script>
-<script src="../assets/js/demo-12.js"></script>
 <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="../assets/js/jquery.mousewheel.min.js"></script>
-<?php include("../scripts.php"); ?>
+<script src="../assets/js/demo-12.js"></script>
+</body>
+
+<!-- Mirrored from html.codedthemes.com/mash-able/light/tabs.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Sep 2019 14:09:10 GMT -->
+</html>
+
+<?php
+    include("../scripts.php");
+?>

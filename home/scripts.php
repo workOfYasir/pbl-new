@@ -10,6 +10,7 @@
 <script type="text/javascript" src="<?php echo BASE_URL ?>modernizr/js/css-scrollbars.js"></script>
 
 <script type="text/javascript" src="<?php echo BASE_URL ?>moment/js/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script type="text/javascript" src="<?php echo SITE_URL ?>assets/pages/widget/calender/pignose.calendar.min.js"></script>
 
 
@@ -50,6 +51,7 @@
  
 <script type="text/javascript" src="<?php echo BASE_URL ?>i18next/js/i18next.min.js"></script>
 <script type="text/javascript" src="<?php echo BASE_URL ?>i18next-xhr-backend/js/i18nextXHRBackend.min.js"></script>
+
 <script type="text/javascript" src="<?php echo BASE_URL ?>i18next-browser-languagedetector/js/i18nextBrowserLanguageDetector.min.js"></script>
 <script type="text/javascript" src="<?php echo BASE_URL ?>jquery-i18next/js/jquery-i18next.min.js"></script>
 
@@ -66,5 +68,14 @@
 <script src="<?php echo SITE_URL ?>assets/js/demo-12.js"></script>
 <script src="<?php echo SITE_URL ?>assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="<?php echo SITE_URL ?>assets/js/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" >
+$(document).ready(function() {
+    $('.departs').select2({
+        theme: "classic",
+        placeholder: "Select Departments",
+        allowClear: true
+    });
+});
+</script>
 </body>
 </html>
