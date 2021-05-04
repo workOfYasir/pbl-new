@@ -6,7 +6,7 @@ include("../constants.php");
 
 session_start();
 
-if (empty($_SESSION["userName"]) || $_SESSION["userType"] != "HODI&C") {
+if(empty($_SESSION["userName"]) || $_SESSION["userType"]=="Student") {
     header('location:login.php');
 } else {
     include '../connection.php';

@@ -440,8 +440,8 @@ while($row2 = mysqli_fetch_array($toottip)){
     ++$j;
     ++$k;
 ?>
-<input type="text" name="q_id[<?php echo $k; ?>]" value="<?php echo $q_id; ?>">
-<input type="text" name="id" value="<?php echo $id; ?>">
+<input type="hidden" name="q_id[<?php echo $k; ?>]" value="<?php echo $q_id; ?>">
+<input type="hidden" name="id" value="<?php echo $id; ?>">
 		 <div class="quiz" id="quiz" data-toggle="buttons" style=" padding:10px;">
            <label style="margin:10px;" class="element-animation1   btn-default  "> 1 <br> <input type="radio" name="q_answer[<?php echo $j; ?>]" title="<?php echo $row2['rub1']; ?>" value="0" style=" height:20px ; width:20px; " /></label>
            <label style="margin:10px;" class="element-animation1   btn-default  "> 2 <br> <input type="radio" name="q_answer[<?php echo $j; ?>]" value="1" title="<?php echo $row2['rub2']; ?>"  style=" height:20px ; width:20px; "  /></label>

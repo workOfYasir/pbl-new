@@ -2,7 +2,7 @@
 
  session_start();
  
- if(empty($_SESSION["userName"]) || $_SESSION["userType"]!="PBL Manager")
+ if(empty($_SESSION["userName"]) || $_SESSION["userType"]=="Student") 
  {  
     header('location:login.php');
 

@@ -7,7 +7,7 @@ if(isset($_POST['rub3'])){$rub3 = $_POST['rub3'];if($rub3 == ''){ unset($rub3); 
 if(isset($_POST['rub4'])){$rub4 = $_POST['rub4'];if($rub4 == ''){ unset($rub4); }} 
 if(isset($_POST['rub5'])){$rub5 = $_POST['rub5'];if($rub5 == ''){ unset($rub5); }} 
 if(isset($_POST['survey_id'])){$survey_id = $_POST['survey_id'];if($survey_id == ''){ unset($survey_id); }} 
-echo $survey_id;
+
 if(isset($question)){
         $result = mysqli_query($conn,"INSERT INTO survey_questions SET
             question = '$question',
@@ -25,7 +25,7 @@ if(isset($question)){
             ques_id = '$ques_id'                 
      ");
      if($result==true){
-        //  header('Location:add-new-survey.php');
+          header('Location:view-new-survey.php');
      }
      else{
         echo 'Error: query nhe chli';

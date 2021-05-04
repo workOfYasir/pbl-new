@@ -120,7 +120,7 @@ include 'admin-header.php';
 
 
 
-   include 'admin-nav.php';
+   include 'manager-nav.php';
 
 
 ?>

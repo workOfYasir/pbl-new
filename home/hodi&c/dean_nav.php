@@ -11,9 +11,6 @@
                 </a>
             </li>
 
-
-
-
             <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Students</div>
             <li class="pcoded-hasmenu">
                 <a href="javascript:void(0)" data-i18n="nav.navigate.main">
@@ -46,7 +43,7 @@
                 </ul>
             </li>
 
-      
+            <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Course</div>
 
             <li class="pcoded-hasmenu">
                 <a href="javascript:void(0)" data-i18n="nav.navigate.main">

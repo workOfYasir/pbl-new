@@ -1,4 +1,3 @@
-
 <nav class="pcoded-navbar" style="position: absolute !important ;">
 <div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>
 <div class="pcoded-inner-navbar main-menu">
@@ -13,7 +12,9 @@
 </li>
 
 
-
+<?php 
+ if(empty($_SESSION["userName"]) || $_SESSION["userType"]=="Student")  {
+?>
 
 <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Students</div>
 <li class="pcoded-hasmenu">
@@ -108,7 +109,7 @@
 </li>
 </ul>
 </li>
-
+<?php } ?>
 <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Survey</div>
 
 <li class="pcoded-hasmenu">
@@ -181,8 +182,6 @@
 </li>
 </ul>
 
-
-
 <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Teacher</div>
 
 <li class="pcoded-hasmenu">
@@ -215,6 +214,78 @@
 </li>
 </ul>
 </li>
+<?php
+if(empty($_SESSION["userName"]) || $_SESSION["userType"]=="HODI&C")
+ { ?>
+    <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">HOD</div>
+
+    <li class="pcoded-hasmenu">
+        <a href="javascript:void(0)" data-i18n="nav.navigate.main">
+            <span class="pcoded-micon"><i class="ti-bar-chart-alt"></i></span>
+            <span class="pcoded-mtext">Manage HODs</span>
+            <span class="pcoded-mcaret"></span>
+        </a>
+        <ul class="pcoded-submenu">
+            <li class=" ">
+                <a href="add-new-hod" data-i18n="nav.navigate.navbar">
+                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                    <span class="pcoded-mtext">Add New HOD</span>
+                    <span class="pcoded-mcaret"></span>
+                </a>
+            </li>
+            <li class=" ">
+                <a href="view-all-hods" data-i18n="nav.navigate.navbar-inverse">
+                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                    <span class="pcoded-mtext">View All HODs</span>
+                    <span class="pcoded-mcaret"></span>
+                </a>
+            </li>
+            <li class=" ">
+                <a href="view-trash-teachers" data-i18n="nav.navigate.navbar-with-elements">
+                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                    <span class="pcoded-mtext">View Recycle HODs</span>
+                    <span class="pcoded-mcaret"></span>
+                </a>
+            </li>
+        </ul>
+    </li>
+    
+    <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Dean</div>
+    
+    <li class="pcoded-hasmenu">
+        <a href="javascript:void(0)" data-i18n="nav.navigate.main">
+            <span class="pcoded-micon"><i class="ti-bar-chart-alt"></i></span>
+            <span class="pcoded-mtext">Manage Deans</span>
+            <span class="pcoded-mcaret"></span>
+        </a>
+        <ul class="pcoded-submenu">
+            <li class=" ">
+                <a href="add-new-dean" data-i18n="nav.navigate.navbar">
+                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                    <span class="pcoded-mtext">Add New Dean</span>
+                    <span class="pcoded-mcaret"></span>
+                </a>
+            </li>
+            <li class=" ">
+                <a href="view-all-deans" data-i18n="nav.navigate.navbar-inverse">
+                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                    <span class="pcoded-mtext">View All Deans</span>
+                    <span class="pcoded-mcaret"></span>
+                </a>
+            </li>
+            <li class=" ">
+                <a href="view-trash-teachers" data-i18n="nav.navigate.navbar-with-elements">
+                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                    <span class="pcoded-mtext">View Recycle Deans</span>
+                    <span class="pcoded-mcaret"></span>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <?php
+ } 
+
+ ?>
 
 <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Manage Exhibition</div>
 <li class=" ">
@@ -260,3 +331,4 @@
 
 </div>
 </nav>
+<?php // } ?>

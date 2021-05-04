@@ -1,7 +1,7 @@
 <?php
 session_start();
  
-  if(empty($_SESSION["userName"]) || $_SESSION["userType"]!="HODI&C")
+  if(empty($_SESSION["userName"]) || $_SESSION["userType"]=="Student") 
  {
     header('location:login');
 
@@ -140,7 +140,7 @@ session_start();
 </a>
 </li>
 <li>
-<a href="logout">
+<a href="logout.php">
 <i class="ti-layout-sidebar-left"></i> Logout
 </a>
 </li>
