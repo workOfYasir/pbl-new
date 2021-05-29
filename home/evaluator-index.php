@@ -28,7 +28,7 @@ $eid = $roww['e_id'];
 <!-- Mirrored from html.codedthemes.com/mash-able/light/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Sep 2019 13:52:50 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
-<title>PBL | Manager</title>
+<title>PBL | <?php echo $userType; ?>Manager</title>
 
 
 <!--[if lt IE 9]>
@@ -474,9 +474,7 @@ $resultcounName = $conn->query($sqlcounNAme);
 
 $rowcounName = $resultcounName->fetch_assoc();
 
- echo $total = $rowcounName['total'];
- 
- 
+echo $total = $rowcounName['total'];
  
 
 ?>

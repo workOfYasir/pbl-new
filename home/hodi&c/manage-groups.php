@@ -25,7 +25,7 @@
 <!-- Mirrored from html.codedthemes.com/mash-able/light/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Sep 2019 13:52:50 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
-<title>PBL | Student</title>
+<title>PBL | <?php echo $userType; ?>Student</title>
 
 
 <!--[if lt IE 9]>

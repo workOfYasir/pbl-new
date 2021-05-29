@@ -19,7 +19,7 @@ $sid=$_GET['id'];
 
 <html>
 <head>
-<title>PBL | Evaluation </title>
+<title>PBL | <?php echo $userType; ?>Evaluation </title>
 
 <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/css/bootstrap.min.css">
 <script type="text/javascript" src="../bower_components/bootstrap/js/bootstrap.min.js"></script>
