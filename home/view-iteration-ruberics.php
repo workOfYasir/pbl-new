@@ -19,7 +19,7 @@ session_start();
 <!-- Mirrored from html.codedthemes.com/mash-able/light/task-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Sep 2019 14:17:25 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
-<title>PBL | <?php echo $userType; ?>  Iteration Ruberics</title>
+<title>PBL | <?php echo $userType; ?>  </title>
 
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -162,9 +162,6 @@ session_start();
 <li class="nav-item">
 <a class="nav-link active" data-toggle="tab" href="#tab-home" role="tab">Publish New Ruberics</a>
 </li>
- 
- 
- 
 </ul>
 <div class="tab-content modal-body">
 <div class="tab-pane active" id="tab-home" role="tabpanel">
@@ -172,17 +169,17 @@ session_start();
 <form action="saveIterationRuberics.php" method="POST" enctype="multipart/form-data" >
 Ruberic Question:
 <input style="margin-bottom:5px;width:100%;" placeholder="Enter Question here ... "  autocomplete="off" type="text"  name="title"  class="form-control" required />
+Ruberics
+<input type="text" name="rub1" id="rub1" class="form-control"  style="margin-bottom:5px;width:100%;"  placeholder="ruberics 1" required/>
+<input type="text" name="rub2" id="rub2" class="form-control"  style="margin-bottom:5px;width:100%;"  placeholder="ruberics 2" required/>
+<input type="text" name="rub3" id="rub3" class="form-control"  style="margin-bottom:5px;width:100%;"  placeholder="ruberics 3" required/>
+<input type="text" name="rub4" id="rub4" class="form-control"  style="margin-bottom:5px;width:100%;"  placeholder="ruberics 4" required/>
+<input type="text" name="rub5" id="rub5" class="form-control"  style="margin-bottom:5px;width:100%;"  placeholder="ruberics 5" required/>
 Weightage:
 <input style="margin-bottom:5px;width:40%;" value="0"  autocomplete="off" type="number"  max="100" name="weight"  class="form-control" required />
-
 <input hidden value="<?php echo $_GET['iteration'];?>"  autocomplete="off" type="text"  name="iteration"  class="form-control"  />
 <input hidden value="<?php echo $_GET['course'];?>"  autocomplete="off" type="text"  name="course"  class="form-control"  />
-                         
- 
-  
-				 
-					 
-						  <button type="submit" class="btn btn-success float-right">Publish</button>
+<button type="submit" class="btn btn-success float-right">Publish</button>
  </form>
 </div>
  
@@ -238,14 +235,14 @@ Weightage:
 </div>
 <div class="card-block task-list">
 <div>
-<table id="simpletable" class="table dt-responsive task-list-table table-striped table-bordered nowrap">
+<table id="simpletable" style="width:100%" class="table dt-responsive task-list-table table-striped table-bordered nowrap">
 <thead>
 <tr>
 <th>Sr#</th>
 <th>Questions </th>
 <th>Points</th>
 <th>Weightage</th>
- 
+<th>Ruberics</th>
 <th>Action</th>
 </tr>
 </thead>
@@ -274,10 +271,17 @@ echo '
 <td>#'.$i.'</td>
 <td>'.$row['r_question'].'</td>
 <td>'.$row['points'].'</td>
-<td>'.$row['weight'].'%</td>
-
+<td>'.$row['weight'].'%</td>';
+if(empty($row['rub1'])){
+    echo'
+    <td style="width:400px">NULL</td>';
+     
+}else{
+    echo'
+<td style="width:400px">'.$row['rub1'].' , ',$row['rub2'],' , '.$row['rub3'].' , '.$row['rub4'].' , '.$row['rub5'].'</td>';
+}
  
- 
+ echo'
 <td>
 
  

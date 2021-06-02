@@ -26,7 +26,9 @@ session_start();
 <html lang="en">
  <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
-<title>PBL | <?php echo $userType; ?><?php echo $userType; ?></title>
+
+
+
 <?php
 include("../links.php"); ?>
  <div class="theme-loader">
@@ -34,8 +36,6 @@ include("../links.php"); ?>
 <div></div>
 </div>
 </div>
-
-
 
 
 <div id="pcoded" class="pcoded">
@@ -350,11 +350,14 @@ include("../links.php"); ?>
 <?php
 
 if($userType=='HODI&C'){
-	include 'hodi&c_nav.php';
+	include 'hodi&c_nav.php';?>
+	<title>PBL | <?php echo $userType; ?></title><?php
 }else if($userType=='HOD'){
-	include 'hod_nav.php';
+	include 'hod_nav.php';?>
+	<title>PBL | <?php echo $userType; ?></title><?php
 }else if($userType=='DEAN'){
-	include 'dean_nav.php';
+	include 'dean_nav.php';?>
+	<title>PBL | <?php echo $userType; ?></title><?php
 }
 ?>
 

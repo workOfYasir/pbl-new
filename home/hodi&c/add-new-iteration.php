@@ -19,7 +19,7 @@ session_start();
 <!-- Mirrored from html.codedthemes.com/mash-able/light/task-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Sep 2019 14:17:25 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
-<title>PBL | <?php echo $userType; ?>Manage Iterations</title>
+<title>PBL | <?php echo $userType; ?></title>
 
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -297,7 +297,7 @@ echo ' </center>
 &nbsp;
  <a href="view-iteration-ruberics?iteration='.$row['it_id'].'&course='.$_GET['course'].'"><button type="button" class="btn btn-info     btn-mini btn-skew"    >View Ruberics</button> 
 </a> 
-<a href="evaluate-groups?iteration='.$row['it_id'].'&cour='.$_GET['course'].'"><button type="button" class="btn btn-success     btn-mini btn-skew"    >Evaluate Groups</button> 
+<a href="='.$row['it_id'].'&cour='.$_GET['course'].'"><button type="button" class="btn btn-success     btn-mini btn-skew"    >Evaluate Groups</button> 
 </a>
 </td>
 <td class="text-center">
@@ -440,4 +440,4 @@ $i++;
 <script src="../assets/js/demo-12.js"></script>
 <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="../assets/js/jquery.mousewheel.min.js"></script>
-<?php include("../sscripts"); ?>
+<?php include("../scripts.php"); ?>

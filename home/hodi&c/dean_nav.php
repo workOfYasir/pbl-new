@@ -183,7 +183,7 @@
                 </ul>
             </li>
            
-            <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Manage Exhibition</div>
+            <!-- <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Manage Exhibition</div>
             <li class=" ">
                 <a href="view-ruberics">
                     <span class="pcoded-micon"><i class="ti-settings"></i></span>
@@ -199,7 +199,7 @@
                     <span class="pcoded-badge label label-success">NEW</span>
                     <span class="pcoded-mcaret"></span>
                 </a>
-            </li>
+            </li>-->
             <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Ruberics and Iterations</div>
             <li class=" ">
                 <a href="view-iterations">

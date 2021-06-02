@@ -12,9 +12,9 @@
 </a>
 </li>
 <li>
-<a href="add-meeting.php">
+<a href="teacherassigned-group.php">
 <span class="pcoded-micon"><i class="ti-home"></i></span>
-<span class="pcoded-mtext" data-i18n="nav.animations.main"> Meeting</span>
+<span class="pcoded-mtext" data-i18n="nav.animations.main"> Assigned Groups</span>
 <span class="pcoded-mcaret"></span>
 </a>
 </li>

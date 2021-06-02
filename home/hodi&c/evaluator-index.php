@@ -28,7 +28,7 @@ $eid = $roww['e_id'];
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 
 <head>
-    <title>PBL | <?php echo $userType; ?>Evalutor</title>
+    <title>PBL | <?php echo $userType; ?></title>
 
 
     <!--[if lt IE 9]>
@@ -640,10 +640,8 @@ $eid = $roww['e_id'];
                                                                     $sql = "SELECT * FROM  annoucement   where level='1' and fall='F-19'";
                                                                     $resul = $conn->query($sql);
                                                                     if ($resul->num_rows > 0) {
-
                                                                         $i = 1;
                                                                         while ($rw = $resul->fetch_assoc()) {
-
                                                                             echo '<div> 
 <div class="accordion-heading" role="tab" id="headingOne' . $i . '" style="background-color:#E9E9E9;">
 <h3 class="card-title accordion-title">
@@ -719,10 +717,7 @@ Title:
                                                                             $sql = "SELECT * FROM  attachment   where level='1' and fall='F-19'";
                                                                             $resul = $conn->query($sql);
                                                                             if ($resul->num_rows > 0) {
-
-
                                                                                 while ($rw = $resul->fetch_assoc()) {
-
                                                                                     echo '
 <li class="media d-flex m-b-10">
 <div class="m-r-20 v-middle">
@@ -875,8 +870,8 @@ Added by <a href="#">Mr.Zaman</a>
                                                                                 echo '<td>' . $i . ' ' . $row['section'] . '</td>';
                                                                                 echo '<td style="color:green;" >' . $row['proj'] . '</td>';
 
-                                                                                echo '<td><a href="evaluationSheet.php?eid=' . $row['e_id'] . '&&gid=' . $row['grp_id'] . '"><button type="button" class="btn btn-success btn-round btn-mini ">Evaluate</button></a></td>
- ';
+
+
 
                                                                                 echo '<td><a href="add-meeting.php?eid=' . $row['e_id'] . '&&gid=' . $row['grp_id'] . '"><button type="button" class="btn btn-success btn-round btn-mini ">Meetings</button></a>
  </td>';

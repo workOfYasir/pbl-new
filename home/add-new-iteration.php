@@ -19,7 +19,7 @@ session_start();
 <!-- Mirrored from html.codedthemes.com/mash-able/light/task-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Sep 2019 14:17:25 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
-<title>PBL | <?php echo $userType; ?>Manage Iterations</title>
+<title>PBL | <?php echo $userType; ?></title>
 
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>

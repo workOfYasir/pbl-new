@@ -482,7 +482,7 @@ echo '<a >'.$rs['c_name'].'</a>
 
 </div>
  
-<a href="'.$file.'" target="_blank"> <button type="button" class="btn btn-info btn-mini f-right m-1 alert-drop m-b-10"  >Download File</button>
+<a href="'.$file.'" target="_blank" download> <button type="button" class="btn btn-info btn-mini f-right m-1 alert-drop m-b-10"  >Download File</button>
  </a>
 <a href="iteration-evaluation-sheet?gid='.$gid.'&it_id='.$iteration.'&cour='.$cour.'" target="_blank"><button type="button" class="btn btn-success btn-mini f-right m-1 alert-drop m-b-10"  >Evaluate</button>
  </a>

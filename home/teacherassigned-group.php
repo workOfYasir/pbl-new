@@ -32,6 +32,7 @@ $c_name=$coursenamerow['c_name'];
 $rquery =mysqli_query( $conn,"SELECT * FROM `iterations` WHERE `course_id`='$course'");
 $deadlinerow = mysqli_fetch_assoc($rquery);
 $deadline= $deadlinerow['deadline'];
+$it_id= $deadlinerow['it_id'];
 
 ?>
 <!DOCTYPE html>
@@ -186,7 +187,7 @@ top:20px;
  
 <li class="user-profile header-notification">
 <a href="#!">
-<img src="assets/images/user.png" alt="User-Profile-Image">
+<img src="../assets/images/user.png" alt="User-Profile-Image">
 <span><?php echo $userName;    ?></span>
 <i class="ti-angle-down"></i>
 </a>
@@ -255,7 +256,7 @@ top:20px;
 <?php
 
 
-include 'manager_nav.php';
+include 'evaluator_nav.php';
 
 
 ?>
@@ -293,17 +294,11 @@ where assign_projects.e_id = '$eid'
 
  
 </div>
-<div class="col-4">
-
- </div>
-</div>
 
 </div>
 
+</div>
 
-<form action="save.php" method="POST">
- 
-</form>
  
 
 <div class="page-body">
@@ -318,21 +313,20 @@ where assign_projects.e_id = '$eid'
  
 <?php
 
-if($query->num_rows>0){
-while ($row =mysqli_fetch_assoc($query))
-{
-    $gid=$row['grp_id']; 
-    
-    $groupmembrs=mysqli_query($conn,"SELECT * FROM `g_members` INNER JOIN `student`  ON `roll_no` = `s_roll` WHERE `gid`='$gid'");
+if ($query->num_rows>0) {
+    while ($row =mysqli_fetch_assoc($query)) {
 
-$submitiondate=mysqli_query($conn,"SELECT * FROM `iterations_submittion` WHERE `grp_id` = '$gid'");
-$daterow=mysqli_fetch_assoc($submitiondate);
-$date=$daterow['date'];
-$Date= date("d-m-Y", strtotime($date));
-// date now
-$Deadline= date("d-m-Y ", strtotime($deadline));
+         $gid=$row['grp_id'];
 
-?>
+       
+        $groupmembrs=mysqli_query($conn, "SELECT * FROM `g_members` INNER JOIN `student`  ON `roll_no` = `s_roll` WHERE `gid`='$gid'");
+
+        $submitiondate=mysqli_query($conn, "SELECT * FROM `iterations_submittion` WHERE `grp_id` = '$gid' AND `it_id`='$it_id'");
+        $daterow=mysqli_fetch_assoc($submitiondate);
+        $date=$daterow['date'];
+        $Date= date("d-m-Y", strtotime($date));
+        // date now
+        $Deadline= date("d-m-Y ", strtotime($deadline)); ?>
 
 
 
@@ -345,14 +339,12 @@ $Deadline= date("d-m-Y ", strtotime($deadline));
 </div>
 <div class="col-sm-4">
 <?php
-if($Deadline>$Date){?>
+if ($Deadline>$Date) {?>
     <span class="label label-danger f-right">Not Submitted  </span><?php
-}else {?>
+} else {?>
 <span class="label label-success f-right">On Time </span><?php
-}?>
-<!-- <span class="label label-warning f-right">Late Submission  </span>
+} ?>
 
-<span class="label label-success f-right">On Time </span> -->
 
 </div>
 </div>
@@ -374,11 +366,11 @@ if($Deadline>$Date){?>
   <tbody>
   
    
-      <?php while($rows=mysqli_fetch_assoc($groupmembrs)) { ?>
+      <?php while ($rowss=mysqli_fetch_assoc($groupmembrs)) { ?>
         <tr>
-      <td ><?php echo $rows['s_name'];  ?>  </td>
+      <td ><?php echo $rowss['s_name'];  ?>  </td>
       <td> &nbsp&nbsp </td>  
-      <td><?php echo $rows['s_roll']; ?></td>
+      <td><?php echo $rowss['s_roll']; ?></td>
       </tr>
       <?php } ?>
 
@@ -403,17 +395,26 @@ if($Deadline>$Date){?>
 <div  >
  
 
-<a ><?php echo $c_name;?></a>
+<a ><?php echo $c_name; ?></a>
 
 
  
 
 </div>
  
-<a href="" target="_blank"> <button type="button" class="btn btn-info btn-mini f-right m-1 alert-drop m-b-10"  >Download File</button>
+
+ <?php
+
+ if ($Deadline>$Date) {
+     ?>
+ <?php
+ } else {
+     echo '
+<a href="iteration-evaluation-sheet?gid='.$gid.'&it_id='.$it_id.'&cour='.$course.'" target="_blank"><button type="button" class="btn btn-success btn-mini f-right m-1 alert-drop m-b-10"  >Evaluate</button>
  </a>
-<a href="" target="_blank"><button type="button" class="btn btn-success btn-mini f-right m-1 alert-drop m-b-10"  >Evaluate</button>
- </a>
+ <a href="'.$daterow['file'].'" target="_blank" download> <button type="button" class="btn btn-info btn-mini f-right m-1 alert-drop m-b-10"  >Download File</button>
+ </a>';
+ } ?>
  
 
  
@@ -426,9 +427,8 @@ if($Deadline>$Date){?>
 </div>
 
 <?php
-}
-	 
-}else{?>
+    }
+} else {?>
 
  
  
@@ -449,41 +449,16 @@ if($Deadline>$Date){?>
      class="txt-rotate"
      data-period="2000"
      data-rotate=<?php
-	 echo "'" ;
-	 [ "Yet !", "Yet! For This Iteration ", "Yet !", "Yet! For This Iteration ", "Yet !" ];
-	 echo "'"; ?>
+     echo "'" ;
+     [ "Yet !", "Yet! For This Iteration ", "Yet !", "Yet! For This Iteration ", "Yet !" ];
+     echo "'"; ?>
 	 ></span>
 </h3>
 <h4>  </h4></div></center>
 
 
-	<?php }?>
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-
-	 
-	 
-
-
-?>
+	<?php } ?>
+	
 
 
 <script>
@@ -554,7 +529,9 @@ window.onload = function() {
 </div>
 
 </div>
-
+<?php
+// } 
+?>
 </div>
 </div>
 
@@ -673,6 +650,14 @@ $('#confirm-delete').on('show.bs.modal', function(e) {
 <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="assets/js/jquery.mousewheel.min.js"></script>
 </body>
+<script>
+
+function selectChange(val) {
+    //Set the value of action in action attribute of form element.
+    //Submit the form
+    $('#myForm').submit();
+}
+</script>
 
 <!-- Mirrored from html.codedthemes.com/mash-able/light/task-board.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Sep 2019 14:17:26 GMT -->
 </html>

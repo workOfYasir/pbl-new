@@ -2,14 +2,16 @@
 
 session_start();
 
-
+if(empty($_SESSION["userName"]) || $_SESSION["userType"]=="Student") {
+    header('location:login');
+}
 include 'connection.php';
 
 $userName = $_SESSION["userName"];
 $userType = $_SESSION["userType"];
 $userRoll = $_SESSION["userRoll"];
 
-//$departmentQuery = mysqli_query($conn, "SELECT * FROM `department`")
+$departmentQuery = mysqli_query($conn, "SELECT * FROM `department`")
 
 
 ?>
@@ -27,58 +29,33 @@ $userRoll = $_SESSION["userRoll"];
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <?php
-    if (isset($_POST['survey'])) {
+    if (isset($_GET['course']) && isset($_GET['iteration'])) {
 
-        $surveyid = $_POST['survey'];
-        $sql_course = mysqli_query($conn,"SELECT * FROM survey WHERE id = $surveyid ");
+        $courseID = $_GET['course'];
 
-        $courseQuery = mysqli_fetch_array($sql_course);
-        $courseID = $courseQuery['survey_course'];
-        $survey_name = $courseQuery['survey_name'];
 
-        $result = mysqli_query($conn, "SELECT count(*) as total FROM `student_course` WHERE `s_course` = $courseID");
-        $total_count = mysqli_fetch_assoc($result);
-        $total = $total_count['total'];
 
-        $sql_survey = mysqli_query($conn,"SELECT count(*) as filled FROM `survey_awnsers` WHERE `survey_id` = '$surveyid' ");
-        $survey_count = mysqli_fetch_assoc($sql_survey);
-        $surveyFilled = $survey_count['filled'];
-  
-        $notFilled = $total - $surveyFilled;
-    
+        $deptID = $_GET['iteration'];
+
+        $result = mysqli_query($conn, "SELECT count(*) AS `totalGroups` FROM `groupleader` WHERE `course` = '$courseID' ");
+ "SELECT count(*) AS `totalGroups` FROM `groupleader` WHERE `course` = '$courseID'";
+
         $dataPoints1 = array();
         $dataPoints2 = array();
-        $dataPoints3 = array();
-       
-            array_push($dataPoints1, array("name" => "Total", "y" => $total));
-            array_push($dataPoints1, array("name" => "Not Filled", "y" => $notFilled));
-            array_push($dataPoints1, array("name" => "Filled", "y" => $surveyFilled));
+  $fetchGraph = mysqli_fetch_array($result);
         
-       
-
-    //     $dataPoints1 = array();
-    //     $dataPoints2 = array();
-    //     while ($fetchGraph = mysqli_fetch_array($result)) {
-           
-            
-    //         $result2 = mysqli_query($conn, "SELECT COUNT(*) as num FROM `g_members`
-    //  INNER JOIN `groupleader` ON `g_members`.`gid`=`groupleader`.`gid`
-    //  WHERE `groupleader`.`course`='$courseID' AND `groupleader`.`section`='$sec'");
-    //         $count = mysqli_fetch_assoc($result2);
-    //         $groupCreated = $count['num'];
-
-    //         array_push($dataPoints1, array("label" => $concat, "y" => $groupCreated));
-            
-    //         //print_r($dataPoints1);
-    //         $result3 = mysqli_query($conn, "SELECT count(*) as total FROM `student_course` WHERE `s_sec`='$sec' AND `s_course`='$courseID' ");
-    //         $count2 = mysqli_fetch_assoc($result3);
-    //         $totalStudent = $count2['total'];
-            
-    //         $notCreatedGroup = $totalStudent - $groupCreated;
-            
-    //         array_push($dataPoints2, array("label" => $concat, "y" => $notCreatedGroup));
-     //   }
-    }
+          
+            $result2 = mysqli_query($conn, "SELECT COUNT(*) as `submitted` FROM `iterations`
+  
+     WHERE `it_id`='$deptID' ");
+            $count = mysqli_fetch_assoc($result2);
+             
+             $groupCreated = $count['submitted'];      
+              $total=$fetchGraph['totalGroups'];      
+            array_push($dataPoints1, array("label" => 'total', "y" => $total));
+            array_push($dataPoints2, array("label" => 'submitted', "y" => $groupCreated));
+        }
+    
     ?>
 
     <meta charset="utf-8">
@@ -104,7 +81,9 @@ $userRoll = $_SESSION["userRoll"];
 
     <link rel="stylesheet" type="text/css" href="../../bower_components/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" type="text/css" href="../assets/pages/data-table/css/buttons.dataTables.min.css">
+
     <link rel="stylesheet" type="text/css" href="../../bower_components/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css">
+
     <link rel="stylesheet" type="text/css" href="../assets/pages/data-table/extensions/responsive/css/responsive.dataTables.css">
 
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
@@ -122,35 +101,48 @@ $userRoll = $_SESSION["userRoll"];
 
             var chart = new CanvasJS.Chart("chartContainer", {
                 exportEnabled: true,
-	animationEnabled: true,
-	title:{
-		text: "State Operating Funds"
-	},
-	legend:{
-		cursor: "pointer",
-		itemclick: explodePie
-	},
+                animationEnabled: true,
+                theme: "light2",
+                title: {
+                    text: "Iteration Reports"
+                },
+                axisY: {
+                    includeZero: true
+                },
+                legend: {
+                    cursor: "pointer",
+                    verticalAlign: "center",
+                    horizontalAlign: "right",
+                    itemclick: toggleDataSeries
+                },
                 data: [{
-                    type: "pie",
-		showInLegend: true,
-		toolTipContent: "{name}: <strong>{y}%</strong>",
-		indexLabel: "{name} - {y}%",
+                    type: "column",
+                    name: "Total ",
+                    indexLabel: "{y}",
+                    yValueFormatString: "#0.##",
+                    showInLegend: true,
                     dataPoints: <?php echo json_encode($dataPoints1, JSON_NUMERIC_CHECK); ?>
-                }
-                ]
+                }, {
+                    type: "column",
+                    name: "Submitted ",
+                    indexLabel: "{y}",
+                    yValueFormatString: "#0.##",
+                    showInLegend: true,
+                    dataPoints: <?php echo json_encode($dataPoints2, JSON_NUMERIC_CHECK); ?>
+                }]
             });
             chart.render();
+
+            function toggleDataSeries(e) {
+                if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                    e.dataSeries.visible = false;
+                } else {
+                    e.dataSeries.visible = true;
+                }
+                chart.render();
+            }
+
         }
-
-            function explodePie (e) {
-	if(typeof (e.dataSeries.dataPoints[e.dataPointIndex].exploded) === "undefined" || !e.dataSeries.dataPoints[e.dataPointIndex].exploded) {
-		e.dataSeries.dataPoints[e.dataPointIndex].exploded = true;
-	} else {
-		e.dataSeries.dataPoints[e.dataPointIndex].exploded = false;
-	}
-	e.chart.render();
-
-}
         
     </script>
 
@@ -267,7 +259,7 @@ $userRoll = $_SESSION["userRoll"];
 
                         <div class="card">
                             <div class="card-header">
-                                <h5>Group Reports</h5>
+                                <h5>Iteration Reports</h5>
                                 <div class="card-header-right">
                                     <i class="icofont icofont-rounded-down"></i>
                                     <i class="icofont icofont-refresh"></i>
@@ -276,40 +268,49 @@ $userRoll = $_SESSION["userRoll"];
                             </div>
 
                             <div class="card-block">
-                                <form action="" method="POST">
+                                <form action="">
 <fieldset>
                             <div class="form-row">
                                 
                             <div class="form-group col-md-6">
-                                <label for="sel_survey">Choose Survey</label>
+                                <label for="sel_depart">Course</label>
                                  
 
-                                    <select class="form-select" aria-label="Default select example" id="sel_survey" name="survey">
-                                        <option value="0" disabled selected>- Select -</option>
+                                    <select class="form-select" aria-label="Default select example" id="sel_depart" name="course">
+                                        <option value="0">- Select -</option>
                                         <?php
                                         // Fetch Department
-                                        $sql_survey = "SELECT * FROM survey";
-                                        $survey_data = mysqli_query($conn, $sql_survey);
-                                        while ($row = mysqli_fetch_assoc($survey_data)) {
-                                            $surveyid = $row['id'];
-                                            $survey_name = $row['survey_name'];
+                                        if($userType =='HOD'){
+                                            
+                                            $sql = mysqli_query($conn,"SELECT * FROM `hods` WHERE `name`= '$userName'");
+                                            $row=mysqli_fetch_array( $sql);
+                                            $dept_id = $row['dept_id'];
+                                            $sql_department = "SELECT * FROM `course` WHERE `dept_id` = ' $dept_id'" ;
+                                        } else{
+                                            $sql_department = "SELECT * FROM course";
+                                        }
+                                        
+
+                                        $department_data = mysqli_query($conn, $sql_department);
+                                        while ($row = mysqli_fetch_assoc($department_data)) {
+                                            $departid = $row['c_id'];
+                                            $depart_name = $row['c_name'];
 
                                             // Option
-                                            echo "<option value='" . $surveyid . "' >" . $survey_name . "</option>";
-
-                                            
+                                            echo "<option value='" . $departid . "' >" . $depart_name . "</option>";
                                         }
                                         ?>
-
                                     </select></div>
                                     <div class="clear"></div>
 
                                   
 
                                     <div class="form-group col-md-6">
-                                <!-- <label for="sel_user">Courses</label> -->
+                                <label for="sel_user">Itreation</label>
                                 
-
+                                <select class="form-select" aria-label="Default select example" id="sel_user" name="iteration">
+                                    <option value="0">- Select -</option>
+                                </select>
                                 </div>
                             </div>
                                 </fieldset>
@@ -324,17 +325,12 @@ $userRoll = $_SESSION["userRoll"];
                     </div>
                 </div>
             </div>
+<div class="col-md-12">
+<div id="chartContainer" style="height: 380px; "></div></div>
 
-<div class="container">                
-    <div id="chartContainer" style="height: 380px; width: 85%;"></div>
-                    <script src="https://canvasjs.com/../assets/script/canvasjs.min.js"></script>
-
-                    </div>
+                    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
 
-
-
-                    <!-- <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
                     <script type="text/javascript" src="../../bower_components/jquery/js/jquery.min.js"></script>
                     <script type="text/javascript" src="../../bower_components/jquery-ui/js/jquery-ui.min.js"></script>
                     <script type="text/javascript" src="../../bower_components/popper.js/js/popper.min.js"></script>
@@ -368,10 +364,9 @@ $userRoll = $_SESSION["userRoll"];
                     <script type="text/javascript" src="../assets/js/script.js"></script>
                     <script src="../assets/js/pcoded.min.js"></script>
                     <script src="../assets/js/demo-12.js"></script>
-                    <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
-                    
+                    <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>           
                     <script src="../assets/js/jquery.mousewheel.min.js"></script>
-                    <!-- <script type="text/javascript">
+                    <script type="text/javascript">
                     
                         $(document).ready(function() {
 
@@ -379,7 +374,7 @@ $userRoll = $_SESSION["userRoll"];
                                 var deptid = $(this).val();
 
                                 $.ajax({
-                                    url: 'survey-reportAjax.php',
+                                    url: 'iterationajax.php',
                                     type: 'post',
                                     data: {
                                         depart: deptid
@@ -391,8 +386,8 @@ $userRoll = $_SESSION["userRoll"];
 
                                         $("#sel_user").empty();
                                         for (var i = 0; i < len; i++) {
-                                            var id = response[i]['c_id'];
-                                            var name = response[i]['c_name'];
+                                            var id = response[i]['it_id'];
+                                            var name = response[i]['it_title'];
 
                                             $("#sel_user").append("<option value='" + id + "'>" + name + "</option>");
 
@@ -402,6 +397,6 @@ $userRoll = $_SESSION["userRoll"];
                             });
 
                         });
-                    </script> -->
+                    </script>
 
-<?php include("../scripts.php"); ?>
+     <?php include("../scripts.php"); ?>

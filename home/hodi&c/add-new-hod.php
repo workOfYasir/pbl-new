@@ -27,7 +27,7 @@ if(empty($_SESSION["userName"]) || $_SESSION["userType"]=="Student") {
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 
     <head>
-        <title>PBL | <?php echo $userType; ?>HOD</title>
+        <title>PBL | <?php echo $userType; ?></title>
 
 
         <!--[if lt IE 9]>

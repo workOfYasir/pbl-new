@@ -31,7 +31,7 @@ include 'connection.php';
 
 <html>
 <head>
-<title>PBL | <?php echo $userType; ?>Evaluation </title>
+<title>PBL | <?php echo $userType; ?> </title>
 
 <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/css/bootstrap.min.css">
 <script type="text/javascript" src="../bower_components/bootstrap/js/bootstrap.min.js"></script>
@@ -518,16 +518,17 @@ $resultq = $conn->query($sqlq);
 if ($resultq->num_rows > 0) {
 
  $i=1;
+ echo' <div class="modal-header">
+ <h3> ___Level-2 Evaluation Form___
+</h3>
+</div>';
 while($roww = $resultq->fetch_assoc())
 {
 	
 	$rid =$roww['r_id'];
   
 	echo '  
- <div class="modal-header">
-            <h3> ___Level-2 Evaluation Form___
-</h3>
-        </div>
+
  <form action ="save-iteration-evaluation.php?it_id='.$it_id.'&grpid='.$gid.'&fall=F-19&cour='.$cour.'" method="post">
 		
            <div class="modal-header" style=" justify-content: flex-start; padding:12px; ">
@@ -536,12 +537,12 @@ while($roww = $resultq->fetch_assoc())
         </div> 
          <center> 
   <div class="quiz" id="quiz" data-toggle="buttons" style=" ;padding:10px;">
-           <label style="margin:10px;" class="element-animation1    btn-default  ">  0 <br>  <input  type="radio" name="'.$rid.'" value="0" style=" height:20px ; width:20px; " required/></label>
-           <label style="margin:10px;" class="element-animation1    btn-default  ">   1 <br> <input type="radio" name="'.$rid.'" value="1" style=" height:20px ; width:20px; "  required/></label>
-           <label style="margin:10px;" class="element-animation2   btn-default  ">   2 <br>  <input type="radio" name="'.$rid.'" value="2" style=" height:20px ; width:20px; " required/></label>
-           <label style="margin:10px;" class="element-animation3   btn-default  ">  3 <br> <input type="radio" name="'.$rid.'" value="3" style=" height:20px ; width:20px; "  required/></label>
-           <label style="margin:10px;" class="element-animation4   btn-default  "> 4 <br>  <input type="radio" name="'.$rid.'" value="4" style=" height:20px ; width:20px; "  required/></label>
-           <label style="margin:10px;" class="element-animation4   btn-default  "> 5 <br>  <input type="radio" name="'.$rid.'" value="5" style=" height:20px ; width:20px; " required /></label>
+           <label style="margin:10px;" class="element-animation1    btn-default  ">  0 <br>  <input  type="radio" name="'.$rid.'" title="'.$roww['rub0'].'" value="0"  style=" height:20px ; width:20px; " required/></label>
+           <label style="margin:10px;" class="element-animation1    btn-default  ">   1 <br> <input type="radio" name="'.$rid.'" title="'.$roww['rub1'].'" value="1" style=" height:20px ; width:20px; "  required/></label>
+           <label style="margin:10px;" class="element-animation2   btn-default  ">   2 <br>  <input type="radio" name="'.$rid.'" title="'.$roww['rub2'].'" value="2" style=" height:20px ; width:20px; " required/></label>
+           <label style="margin:10px;" class="element-animation3   btn-default  ">  3 <br> <input type="radio" name="'.$rid.'" title="'.$roww['rub3'].'" value="3" style=" height:20px ; width:20px; "  required/></label>
+           <label style="margin:10px;" class="element-animation4   btn-default  "> 4 <br>  <input type="radio" name="'.$rid.'" title="'.$roww['rub4'].'" value="4" style=" height:20px ; width:20px; "  required/></label>
+           <label style="margin:10px;" class="element-animation4   btn-default  "> 5 <br>  <input type="radio" name="'.$rid.'" title="'.$roww['rub5'].'" value="5" style=" height:20px ; width:20px; " required /></label>
       	  </div>
 	   </center>';
 	   $i =$i+1;

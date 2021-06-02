@@ -193,9 +193,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 												</label>
 											</div>
 										</div>
-										<div class="col-sm-5  forgot-phone float-right">
+										<!-- <div class="col-sm-5  forgot-phone float-right">
 											<a href="#" class="text-right f-w-600 text-inverse"> Forgot your Password?</a>
-										</div>
+										</div> -->
 									</div>
 								</div>
 								<div class="row m-t-30">

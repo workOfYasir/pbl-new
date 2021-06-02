@@ -1,5 +1,5 @@
 <?php
-
+ session_start();
  include 'connection.php';
 $it_id = $_GET['it_id'];
  $grpid = $_GET['grpid'];
@@ -23,9 +23,19 @@ while($roww = $resultq->fetch_assoc())
  VALUES ('$it_id','$grpid','$rid','$point','$fall')";							 
 
 if ($conn->query($sql) === TRUE) {
+echo $userType=$_SESSION['userType'];
+if($userType=='Evaluator')
+{
+	header("Location:evaluator-index.php");
+}else{
+	 header ("Location:evaluate-groups?iteration=".$it_id."&cour=".$cour."");
+}
+?>
+
   
+  <?php
 }
 
 }
-header ("Location:evaluate-groups?iteration=".$it_id."&cour=".$cour."")
+
 ?>

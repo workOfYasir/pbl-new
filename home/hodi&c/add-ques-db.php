@@ -25,7 +25,7 @@ if(isset($question)){
             ques_id = '$ques_id'                 
      ");
      if($result==true){
-        //  header('Location:add-new-survey.php');
+          header('Location:view-new-survey.php');
      }
      else{
         echo 'Error: query nhe chli';

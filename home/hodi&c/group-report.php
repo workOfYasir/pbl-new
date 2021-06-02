@@ -11,6 +11,7 @@ $userName = $_SESSION["userName"];
 $userType = $_SESSION["userType"];
 $userRoll = $_SESSION["userRoll"];
 
+
 $departmentQuery = mysqli_query($conn, "SELECT * FROM `department`")
 
 
@@ -25,7 +26,7 @@ $departmentQuery = mysqli_query($conn, "SELECT * FROM `department`")
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 
 <head>
-    <title>PBL | <?php echo $userType; ?>Students</title>
+    <title>PBL | <?php echo $userType; ?></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <?php
@@ -289,7 +290,56 @@ WHERE `sc`.`s_course`='$courseID' AND `teacher`.`t_dept`='$deptID'");
                                         <option value="0">- Select -</option>
                                         <?php
                                         // Fetch Department
-                                        $sql_department = "SELECT * FROM department";
+                                        
+if($_SESSION["userType"]=="HOD")
+{
+   $HOD = mysqli_query($conn,"SELECT * FROM `hods` WHERE `name` = '$userName'");
+   $fetchHOD = mysqli_fetch_assoc($HOD);
+   $dept_id=$fetchHOD['dept_id'];
+    
+   $department_data = mysqli_query($conn, "SELECT * FROM `department` WHERE `dept_id` = '$dept_id'");
+
+                                        // $sql_department = "SELECT * FROM department";
+                                        // $department_data = mysqli_query($conn, $sql_department);
+                                        while ($row = mysqli_fetch_assoc($department_data)) {
+                                            $departid = $row['dept_id'];
+                                            $depart_name = $row['dept_name'];
+
+                                            // Option
+                                            echo "<option value='" . $departid . "' selected>" . $depart_name . "</option>";
+                                        }
+
+                                        ?>
+                                    </select>              </div>
+                                    <div class="clear"></div>
+                         
+
+                                    <div class="form-group col-md-4">
+                                <label >Courses</label>
+                                
+                                <select class="form-select" aria-label="Default select example" name="course">
+                                <option value="0">- Select -</option>
+                                <?php
+                    
+    
+                                $course_data = mysqli_query($conn, "SELECT * FROM `course` WHERE `dept_id` = '$dept_id'");
+                            
+                        
+                                     while ($row = mysqli_fetch_assoc($course_data)) {
+                                        $c_id = $row['c_id'];
+                                        $c_name = $row['c_name'];
+
+                                        // Option
+                                        echo "<option value='" . $c_id . "' >" . $c_name . "</option>";
+                                    }
+
+                                    ?>
+                            
+                             
+                                </select>
+                                </div>
+                                    <?php }else{
+                                                          $sql_department = "SELECT * FROM department";
                                         $department_data = mysqli_query($conn, $sql_department);
                                         while ($row = mysqli_fetch_assoc($department_data)) {
                                             $departid = $row['dept_id'];
@@ -297,21 +347,28 @@ WHERE `sc`.`s_course`='$courseID' AND `teacher`.`t_dept`='$deptID'");
 
                                             // Option
                                             echo "<option value='" . $departid . "' >" . $depart_name . "</option>";
-                                        }
-                                        ?>
-                                    </select></div>
+                                        }?>
+
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                  <select>
+                                      <option></option>
+                                  </select>
+                                    </div>
                                     <div class="clear"></div>
 
-                                  
 
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-4">
                                 <label for="sel_user">Courses</label>
                                 
                                 <select class="form-select" aria-label="Default select example" id="sel_user" name="course">
                                     <option value="0">- Select -</option>
                                 </select>
                                 </div>
+                           
                             </div>
+                            <?php      }
+                                    ?>
                                 </fieldset>
                                 
                                 <div class="col-md-12 text-center">
@@ -406,3 +463,4 @@ WHERE `sc`.`s_course`='$courseID' AND `teacher`.`t_dept`='$deptID'");
                     </script>
 
      <?php include("../scripts.php"); ?>
+

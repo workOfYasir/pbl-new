@@ -23,7 +23,7 @@
 <!-- Mirrored from html.codedthemes.com/mash-able/light/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Sep 2019 13:52:50 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
-<title>PBL | <?php echo $userType; ?>Student</title>
+<title>PBL | <?php echo $userType; ?></title>
 
 
 <!--[if lt IE 9]>
@@ -912,7 +912,7 @@ $resul = $conn->query($sql);
 <i class="icofont icofont-file-pdf f-40 text-muted"></i>
 </div>
 <div class="media-body">
-<a target="_blank" href="'.$rw['path'].'" class="m-b-5 d-block">'.$rw['title'].'</a>
+<a target="_blank" href="'.$rw['path'].'" class="m-b-5 d-block" download>'.$rw['title'].'</a>
  <div class="text-muted">
 <span>Size: '.$rw['size'].'kb</span>
 <span>
@@ -921,10 +921,13 @@ Added by <a href="#">Mr.Zaman</a>
 </div>
 </div>
 <div class="f-right v-middle text-muted">
-<i class="icofont icofont-download-alt f-18" onclick="downloadFile('.$clr.$rw['path'].$clr.')"></i>
+
+<a href="'.$rw['path'].'" download>
+<i class="icofont icofont-download-alt f-18"></i>
+</a>
 </div> 
 </li>';
-
+// onclick="downloadFile('.$clr.$rw['path'].$clr.')"
  }}
  else
  {

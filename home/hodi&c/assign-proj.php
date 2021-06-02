@@ -22,7 +22,7 @@
 <!-- Mirrored from html.codedthemes.com/mash-able/light/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Sep 2019 13:52:50 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
-<title>PBL | <?php echo $userType; ?>Assign Projects</title>
+<title>PBL | <?php echo $userType; ?></title>
 
 
 <!--[if lt IE 9]>
@@ -696,7 +696,7 @@ include 'connection.php';
 
 
 
-$sqlq = "SELECT DISTINCT(s_sec),s_course FROM student_course   where fall='F-19' and s_course=3  ";
+$sqlq = "SELECT DISTINCT(s_sec),s_course FROM student_course   where fall='F-19'   ";
 $resultq = $conn->query($sqlq);
 $i=1;
 while($roww = $resultq->fetch_assoc())
@@ -893,7 +893,7 @@ table += '<select style="width:250px;height:250px;" name="path[]" id="public-met
 include 'connection.php';
 
  
-$sqlq = "SELECT DISTINCT(s_sec),s_course FROM student_course   where fall='F-19' and s_course=3  ";
+$sqlq = "SELECT DISTINCT(s_sec),s_course FROM student_course   where fall='F-19'  ";
 $resultq = $conn->query($sqlq);
 $i=1;
 while($roww = $resultq->fetch_assoc())
@@ -918,7 +918,7 @@ echo '
  
  $sc =$row['s_sec'];
  
- $sqlcounNAme = "SELECT count(fall) as total FROM groupleader where course=3 and fall='F-19' and section='$sc'  "; 
+ $sqlcounNAme = "SELECT count(fall) as total FROM groupleader where fall='F-19' and section='$sc'  "; 
 $resultcounName = $conn->query($sqlcounNAme);
 
 $rowcounName = $resultcounName->fetch_assoc();
@@ -926,7 +926,7 @@ $rowcounName = $resultcounName->fetch_assoc();
  $total = $rowcounName['total'];
  
  
- $sqlcounNAme = "SELECT count(fall) as total FROM groupleader where course=3 and fall='F-19' and section='$sc' and position ='open'"; 
+ $sqlcounNAme = "SELECT count(fall) as total FROM groupleader where fall='F-19' and section='$sc' and position ='open'"; 
 $resultcounName = $conn->query($sqlcounNAme);
 
 $rowcounName = $resultcounName->fetch_assoc();
