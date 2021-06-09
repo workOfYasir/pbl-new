@@ -134,7 +134,7 @@ session_start();
 
 <div class="card">
 <div class="card-header">
-<h5>View All Teachers</h5>
+<h5>View All  Deans</h5>
 <div class="card-header-right">
 <i class="icofont icofont-rounded-down"></i>
 <i class="icofont icofont-refresh"></i>
@@ -145,12 +145,6 @@ session_start();
 
 <div class="row">
 <div class="col-lg-12 col-xl-12">
-
- 
- 
-
-
-
 
 
  
@@ -164,9 +158,7 @@ session_start();
 <th>Sr#</th>
 <th>Dean Name</th>
 <th>Department</th>
-
 <th>Operation</th>
- 
 </tr>
 </thead>
 
@@ -176,7 +168,7 @@ session_start();
  
 
 include 'connection.php';
-$sql = "SELECT * FROM dean where is_dell='no'";
+$sql = "SELECT d.id as dean,dd.id as deptDean,dd.dept_id,dd.dean_id,d.name FROM dean as d join dean_dept as dd on d.id=dd.dean_id where is_dell='no'";
 
 $result = $conn->query($sql);
 
@@ -190,14 +182,18 @@ if ($result->num_rows > 0) {
      	echo "<tr>";
 		
 	echo "<td>".$ii."</td>";
+
 	echo "<td>".$rowe['name']."</td>";
   echo "<td>";
-    $sql = mysqli_query($conn,"SELECT * FROM `dean_dept`");
-    while( $sqlresult = $sql->fetch_assoc())
+
+
+
+//     $sql = mysqli_query($conn,"SELECT * FROM `dean_dept`");
+//     while( $sqlresult = $sql->fetch_assoc())
  
-{
+// {
    
-    	$id = $sqlresult['dept_id'];
+   	$id = $rowe['dept_id'];
 	
 	
 	$s = "SELECT * FROM department where dept_id= $id ";
@@ -206,13 +202,13 @@ $resultt = $conn->query($s);
 $roww = mysqli_fetch_assoc($resultt);
 
 	echo $roww['dept_name'],' ,';
+  // <a href="edit-dean?dean='.$rowe['dean'].'" class="m-r-15 text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="icofont icofont-ui-edit"></i></a>
 
-
-}
-echo "</td>";
+// }
+echo "</td.>";
 	echo '<td class="action-icon">
-<a href="edit-dean?dean='.$rowe['id'].'" class="m-r-15 text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="icofont icofont-ui-edit"></i></a>
-<a href="#" onclick="delete_dean('.$rowe['id'].')" class="text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="icofont icofont-delete-alt"></i>
+
+<a href="#" onclick="delete_dean('.$rowe['dean'].')" class="text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="icofont icofont-delete-alt"></i>
 </a>
 </td>';
  

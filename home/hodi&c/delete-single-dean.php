@@ -13,7 +13,7 @@ include 'connection.php';
 		         set 
 				 is_dell ='yes'
 					where 
-					t_id = '$teacher'
+					id = '$dean_id'
 		
 		";
 			

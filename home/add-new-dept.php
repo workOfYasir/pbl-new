@@ -403,7 +403,7 @@
 <?php
 
 
-include 'manager_nav.php';
+include 'hodi&c_nav.php';
 
 
 ?>

@@ -844,7 +844,7 @@ Added by <a href="#">Mr.Zaman</a>
                                                                             <tr class="text-uppercase">
                                                                                 <th>section</th>
                                                                                 <th>Project Name</th>
-                                                                                <th title="Total Students" colspan="2">Operation</th>
+                                                                                <th title="Total Students">Operation</th>
                                                                                 <th title="Deadline Status">Group Leader</th>
 
                                                                             </tr>

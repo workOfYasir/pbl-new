@@ -134,7 +134,7 @@ session_start();
 
 <div class="card">
 <div class="card-header">
-<h5>View All Teachers</h5>
+<h5>View All HODs</h5>
 <div class="card-header-right">
 <i class="icofont icofont-rounded-down"></i>
 <i class="icofont icofont-refresh"></i>
@@ -164,7 +164,6 @@ session_start();
 <th>Sr#</th>
 <th>Teacher Name</th>
 <th>Department</th>
-
 <th>Operation</th>
  
 </tr>
@@ -205,8 +204,8 @@ $resultt = $conn->query($s);
 	echo "<td>".$roww['dept_name']."</td>";
 	
 	echo '<td class="action-icon">
-<a href="edit-teacher?teacher='.$rowe['id'].'" class="m-r-15 text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="icofont icofont-ui-edit"></i></a>
-<a href="#" onclick="delete_teacher('.$rowe['id'].')" class="text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="icofont icofont-delete-alt"></i>
+
+<a href="delete_hod.php?id='.$rowe['id'].'" class="text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="icofont icofont-delete-alt"></i>
 </a>
 </td>';
  

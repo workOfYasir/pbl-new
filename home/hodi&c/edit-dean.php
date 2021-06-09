@@ -1,4 +1,6 @@
 <?php
+
+
 session_start();
  
   if(empty($_SESSION["userName"]) || $_SESSION["userType"]=="Student") 
@@ -11,6 +13,8 @@ session_start();
  $userName=$_SESSION["userName"];
  $userType=$_SESSION["userType"];
  $userRoll=$_SESSION["userRoll"];
+
+
 
 
 ?><!DOCTYPE html>
@@ -184,7 +188,7 @@ session_start();
 
 <div class="card">
 <div class="card-header">
-<h5>Manage Teachers</h5>
+<h5>Manage Dean</h5>
 <div class="card-header-right">
 <i class="icofont icofont-rounded-down"></i>
 <i class="icofont icofont-refresh"></i>
@@ -199,7 +203,7 @@ session_start();
  
 <ul class="nav nav-tabs md-tabs " role="tablist">
 <li class="nav-item">
-<a class="nav-link active" data-toggle="tab" href="#home7" role="tab"><i class="icofont icofont-home"></i>Edit teacher (Selected) </a>
+<a class="nav-link active" data-toggle="tab" href="#home7" role="tab"><i class="icofont icofont-home"></i>Edit Dean (Selected) </a>
 <div class="slide"></div>
 </li>
  
@@ -216,12 +220,18 @@ include 'connection.php';
 
 $dean = $_GET['dean'];
 
-$sql = "SELECT * FROM dean where id='$dean'";
-$sql2 = mysqli_query($conn,"SELECT * FROM dean_dept");
+// $sql = "SELECT * FROM dean where id='$dean'";
 
-$result = $conn->query($sql);
-$row = $result->fetch_assoc();
+$sql = mysqli_query($conn,"SELECT d.id as dean,dd.id as deptDean,dd.dept_id,dd.dean_id,d.name FROM dean as d join dean_dept as dd on d.id=dd.dean_id where is_dell='no' AND d.id='$dean'");
 
+
+// $result = $conn->query($sql);
+$row = mysqli_fetch_array($sql);
+$name = $row['name'];
+$departid=$row['dept_id'];
+$sql3 = mysqli_query($conn,"SELECT u_id FROM `users` as u JOIN `dean` as d ON u.u_name=d.name where u_type='DEAN' AND name='$name'");
+$idQuery=mysqli_fetch_array($sql3);
+$u_id=$idQuery['u_id'];
 ?>
 
  
@@ -238,6 +248,7 @@ $row = $result->fetch_assoc();
 <i class="icofont icofont-ui-user"></i>
 </label>
 <input type="text" id="Teacher_name" value="<?php echo $row['name']; ?>" name="name" placeholder="Enter Teacher name" required/>
+<input type="hidden"value="<?php echo $u_id;  ?>" name="u_id">
  </div>
 </div>
 </div>
@@ -251,29 +262,28 @@ $row = $result->fetch_assoc();
                     
    include 'connection.php';
 
-$sql = "SELECT * FROM department where is_dell='no'";
+$sql = "SELECT * FROM department where is_dell='no' AND dept_id='$departid'";
 
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-
+$result = mysqli_query($conn,$sql);
+$depts=mysqli_fetch_array($result);
+echo   "<option  value ='".$depts['dept_id']."' selected>".$depts['dept_name']."</option>";
 	
-    while($row3 = mysqli_fetch_assoc($result) )
-     {  
-        $row2 = mysqli_fetch_assoc($sql2);
-		 $apples = $row3['dept_id']; 
-		 $Apples = $row3['dept_name'];
-         $dept_id = $row2['dept_id'];
-if($dept_id==$apples)		 
-{  
+//     while($row3 = mysqli_fetch_assoc($result) )
+//      {  
+//         $row2 = mysqli_fetch_assoc($sql2);
+// 		 $apples = $row3['dept_id']; 
+// 		 $Apples = $row3['dept_name'];
+//          $dept_id = $row2['dept_id'];
+// if($dept_id==$apples)		 
+// {  
    
-	echo   "<option  value ='".$apples."' selected>".$Apples."</option>";
-}else
-     {  
-         echo   "<option value ='".$apples."'>".$Apples."</option>";
-     }
-}
-}
+// 	echo   "<option  value ='".$apples."' selected>".$Apples."</option>";
+// }else
+//      {  
+//          echo   "<option value ='".$apples."'>".$Apples."</option>";
+//      }
+// }
+// }
 		?>
 
 

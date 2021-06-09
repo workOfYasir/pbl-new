@@ -29,7 +29,7 @@ if ($sql == TRUE) {
       `u_email`='$email' , 
       u_idno='$email' ,
       `u_password`='pbl123*' , 
-      `u_type`='HOD', 
+      `u_type`='DEAN', 
       `f_password`='none', 
       `is_dell`='no'");
 

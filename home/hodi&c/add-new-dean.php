@@ -352,7 +352,7 @@ if(empty($_SESSION["userName"]) || $_SESSION["userType"]=="Student") {
                         <?php
 
 
-                        include 'dean_nav.php';
+                        include 'hodi&c_nav.php';
 
 
                         ?>

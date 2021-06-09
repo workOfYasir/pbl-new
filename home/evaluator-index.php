@@ -860,7 +860,7 @@ $resu = $conn->query($sql);
 <tr class="text-uppercase">
 <th>section</th>
 <th>Project Name</th>
-<th title="Total Students" colspan="2">Operation</th>
+<th title="Total Students" >Operation</th>
 <th title="Deadline Status">Group Leader</th>
  
 </tr>
@@ -887,8 +887,6 @@ while ($row = $resultq->fetch_assoc())
 	echo '<td>'.$i.' '.$row['section'].'</td>';
  echo '<td style="color:green;" >'.$row['proj'].'</td>';
  
- echo '<td><a href="evaluationSheet.php?eid='.$row['e_id'].'&&gid='.$row['grp_id'].'"><button type="button" class="btn btn-success btn-round btn-mini ">Evaluate</button></a></td>
- '; 
   
  echo '<td><a href="add-meeting.php?eid='.$row['e_id'].'&&gid='.$row['grp_id'].'"><button type="button" class="btn btn-success btn-round btn-mini ">Meetings</button></a>
  </td>';
